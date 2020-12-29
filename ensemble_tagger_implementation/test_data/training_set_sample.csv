@@ -1,0 +1,1423 @@
+IDENTIFIER,WORD,SWUM_TAG,POSSE_TAG,STANFORD_TAG,POSITION,MAXPOSITION,NORMALIZED_POSITION,CONTEXT,CORRECT_TAG,GRAMMAR_PATTERN
+crop node,crop,NM,N,N,0,2,0,1,NM,NM N
+crop node,node,N,N,N,1,2,2,1,N,NM N
+Detect Leaks,Detect,NM,V,V,0,2,0,1,V,V NPL
+Detect Leaks,Leaks,N,N,NPL,1,2,2,1,NPL,V NPL
+extract Events,extract,NM,V,N,0,2,0,1,V,V NPL
+extract Events,Events,N,N,NPL,1,2,2,1,NPL,V NPL
+float Day Counter,float,NM,N,V,0,3,0,1,NM,NM NM N
+float Day Counter,Day,NM,N,N,1,3,1,1,NM,NM NM N
+float Day Counter,Counter,N,N,N,2,3,2,1,N,NM NM N
+handled Boxes,handled,NM,NM,VBN,0,2,0,1,NM,NM NPL
+handled Boxes,Boxes,N,N,NPL,1,2,2,1,NPL,NM NPL
+history Action,history,NM,N,N,0,2,0,1,NM,NM N
+history Action,Action,N,N,N,1,2,2,1,N,NM N
+m window Width,m,NM,NM,N,0,3,0,1,PRE,PRE NM N
+m window Width,window,NM,N,N,1,3,1,1,NM,PRE NM N
+m window Width,Width,N,N,N,2,3,2,1,N,PRE NM N
+new Y,new,NM,NM,NM,0,2,0,1,NM,NM N
+new Y,Y,N,N,N,1,2,2,1,N,NM N
+prev Property,prev,NM,N,N,0,2,0,1,NM,NM N
+prev Property,Property,N,N,N,1,2,2,1,N,NM N
+statement,statement,N,N,N,0,1,0,1,N,N
+tcp Slave Agent Listener Lock,tcp,NM,N,V,0,5,0,1,NM,NM NM NM NM N
+tcp Slave Agent Listener Lock,Slave,NM,N,N,1,5,1,1,NM,NM NM NM NM N
+tcp Slave Agent Listener Lock,Agent,NM,N,N,2,5,1,1,NM,NM NM NM NM N
+tcp Slave Agent Listener Lock,Listener,NM,N,N,3,5,1,1,NM,NM NM NM NM N
+tcp Slave Agent Listener Lock,Lock,N,N,N,4,5,2,1,N,NM NM NM NM N
+validator Strategies,validator,NM,N,N,0,2,0,1,NM,NM NPL
+validator Strategies,Strategies,N,N,NPL,1,2,2,1,NPL,NM NPL
+ya Bottom,ya,NM,N,P,0,2,0,1,NM,NM N
+ya Bottom,Bottom,N,N,N,1,2,2,1,N,NM N
+color Conversion System,color,NM,NM,N,0,3,0,1,NM,NM NM N
+color Conversion System,Conversion,NM,N,N,1,3,1,1,NM,NM NM N
+color Conversion System,System,N,N,N,2,3,2,1,N,NM NM N
+DEFAULT FACTORY,DEFAULT,NM,N,N,0,2,0,1,NM,NM N
+DEFAULT FACTORY,FACTORY,N,N,N,1,2,2,1,N,NM N
+DEFAULT FLAGS,DEFAULT,NM,N,N,0,2,0,1,NM,NM NPL
+DEFAULT FLAGS,FLAGS,N,N,NPL,1,2,2,1,NPL,NM NPL
+DEVELOPMENT,DEVELOPMENT,N,N,N,0,1,0,1,N,N
+GEN SUBJ,GEN,NM,N,N,0,2,0,1,NM,NM N
+GEN SUBJ,SUBJ,N,N,N,1,2,2,1,N,NM N
+m First Render Queue,m,NM,NM,N,0,4,0,1,PRE,PRE NM NM N
+m First Render Queue,First,NM,NM,N,1,4,1,1,NM,PRE NM NM N
+m First Render Queue,Render,NM,N,N,2,4,1,1,NM,PRE NM NM N
+m First Render Queue,Queue,N,N,N,3,4,2,1,N,PRE NM NM N
+mtx,mtx,N,N,N,0,1,0,1,N,N
+name Container,name,NM,N,V,0,2,0,1,NM,NM N
+name Container,Container,N,N,N,1,2,2,1,N,NM N
+Num Active Tris,Num,NM,N,N,0,3,0,1,NM,NM NM NPL
+Num Active Tris,Active,NM,NM,NM,1,3,1,1,NM,NM NM NPL
+Num Active Tris,Tris,N,N,N,2,3,2,1,NPL,NM NM NPL
+num Outs,num,NM,N,N,0,2,0,1,NM,NM NPL
+num Outs,Outs,N,N,NPL,1,2,2,1,NPL,NM NPL
+pixel Width,pixel,NM,N,V,0,2,0,1,NM,NM N
+pixel Width,Width,N,N,N,1,2,2,1,N,NM N
+ref Point Offset Percent,ref,NM,N,V,0,4,0,1,NM,NM NM NM N
+ref Point Offset Percent,Point,NM,N,N,1,4,1,1,NM,NM NM NM N
+ref Point Offset Percent,Offset,NM,N,N,2,4,1,1,NM,NM NM NM N
+ref Point Offset Percent,Percent,N,N,N,3,4,2,1,N,NM NM NM N
+row limit,row,NM,N,N,0,2,0,1,NM,NM N
+row limit,limit,N,N,N,1,2,2,1,N,NM N
+unregistered request matcher,unregistered,NM,NM,NM,0,3,0,1,NM,NM NM N
+unregistered request matcher,request,NM,N,N,1,3,1,1,NM,NM NM N
+unregistered request matcher,matcher,N,N,N,2,3,2,1,N,NM NM N
+attribute Decls,attribute,NM,N,V,0,2,0,1,NM,NM NPL
+attribute Decls,Decls,N,N,N,1,2,2,1,NPL,NM NPL
+befores,befores,N,N,NPL,0,1,0,1,NPL,NPL
+EGLEW KHR stream fifo,EGLEW,NM,N,N,0,4,0,1,PRE,PRE PRE NM N
+EGLEW KHR stream fifo,KHR,NM,N,N,1,4,1,1,PRE,PRE PRE NM N
+EGLEW KHR stream fifo,stream,NM,N,N,2,4,1,1,NM,PRE PRE NM N
+EGLEW KHR stream fifo,fifo,N,N,N,3,4,2,1,N,PRE PRE NM N
+index To Loc Format,index,NM,V,N,0,4,0,1,N,N P NM N
+index To Loc Format,To,NM,P,P,1,4,1,1,P,N P NM N
+index To Loc Format,Loc,NM,N,N,2,4,1,1,NM,N P NM N
+index To Loc Format,Format,N,N,N,3,4,2,1,N,N P NM N
+locations,locations,N,N,NPL,0,1,0,1,NPL,NPL
+m post Fix,m,NM,NM,N,0,3,0,1,PRE,PRE NM N
+m post Fix,post,NM,N,N,1,3,1,1,NM,PRE NM N
+m post Fix,Fix,N,N,V,2,3,2,1,N,PRE NM N
+m text Types,m,NM,NM,N,0,3,0,1,PRE,PRE NM NPL
+m text Types,text,NM,N,N,1,3,1,1,NM,PRE NM NPL
+m text Types,Types,N,N,NPL,2,3,2,1,NPL,PRE NM NPL
+max Work Group Size,max,NM,N,V,0,4,0,1,NM,NM NM NM N
+max Work Group Size,Work,NM,N,N,1,4,1,1,NM,NM NM NM N
+max Work Group Size,Group,NM,N,N,2,4,1,1,NM,NM NM NM N
+max Work Group Size,Size,N,N,N,3,4,2,1,N,NM NM NM N
+min Font Size,min,NM,N,N,0,3,0,1,NM,NM NM N
+min Font Size,Font,NM,N,N,1,3,1,1,NM,NM NM N
+min Font Size,Size,N,N,N,2,3,2,1,N,NM NM N
+MORE,MORE,DT,N,NM,0,1,0,1,DT,DT
+num groups,num,NM,N,N,0,2,0,1,NM,NM NPL
+num groups,groups,N,N,NPL,1,2,2,1,NPL,NM NPL
+state To Grammar Region Map,state,NM,V,N,0,5,0,1,N,N P NM NM N
+state To Grammar Region Map,To,NM,P,P,1,5,1,1,P,N P NM NM N
+state To Grammar Region Map,Grammar,NM,N,N,2,5,1,1,NM,N P NM NM N
+state To Grammar Region Map,Region,NM,N,N,3,5,1,1,NM,N P NM NM N
+state To Grammar Region Map,Map,N,N,N,4,5,2,1,N,N P NM NM N
+stubbing Lookup Listeners,stubbing,NM,N,VBG,0,3,0,1,NM,NM NM NPL
+stubbing Lookup Listeners,Lookup,NM,N,N,1,3,1,1,NM,NM NM NPL
+stubbing Lookup Listeners,Listeners,N,N,NPL,2,3,2,1,NPL,NM NM NPL
+action View Show Master Pages,action,NM,N,N,0,5,0,1,NM,NM N V NM NPL
+action View Show Master Pages,View,NM,N,N,1,5,1,1,N,NM N V NM NPL
+action View Show Master Pages,Show,NM,N,N,2,5,1,1,V,NM N V NM NPL
+action View Show Master Pages,Master,NM,NM,N,3,5,1,1,NM,NM N V NM NPL
+action View Show Master Pages,Pages,N,N,N,4,5,2,1,NPL,NM N V NM NPL
+alt Label Ctxs,alt,NM,N,NM,0,3,0,1,NM,NM NM NPL
+alt Label Ctxs,Label,NM,N,N,1,3,1,1,NM,NM NM NPL
+alt Label Ctxs,Ctxs,N,N,NPL,2,3,2,1,NPL,NM NM NPL
+client,client,N,N,N,0,1,0,1,N,N
+Completion Handler I Unary Response Client Callback,Completion,NM,N,N,0,7,0,1,NM,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,Handler,NM,N,N,1,7,1,1,N,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,I,NM,NM,N,2,7,1,1,NM,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,Unary,NM,NM,N,3,7,1,1,NM,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,Response,NM,N,N,4,7,1,1,NM,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,Client,NM,N,N,5,7,1,1,NM,NM N NM NM NM NM N
+Completion Handler I Unary Response Client Callback,Callback,N,N,N,6,7,2,1,N,NM N NM NM NM NM N
+debug policy,debug,NM,N,V,0,2,0,1,NM,NM N
+debug policy,policy,N,N,N,1,2,2,1,N,NM N
+filtered Children,filtered,NM,N,VBD,0,2,0,1,NM,NM NPL
+filtered Children,Children,N,N,N,1,2,2,1,NPL,NM NPL
+m paste Mode,m,NM,NM,N,0,3,0,1,PRE,PRE NM N
+m paste Mode,paste,NM,N,V,1,3,1,1,NM,PRE NM N
+m paste Mode,Mode,N,N,N,2,3,2,1,N,PRE NM N
+print Features Up to,print,NM,V,N,0,4,0,1,V,V NPL VM P
+print Features Up to,Features,NM,N,VBZ,1,4,1,1,NPL,V NPL VM P
+print Features Up to,Up,NM,P,N,2,4,1,1,VM,V NPL VM P
+print Features Up to,to,N,P,P,3,4,2,1,P,V NPL VM P
+Replacement Length,Replacement,NM,N,N,0,2,0,1,NM,NM N
+Replacement Length,Length,N,N,N,1,2,2,1,N,NM N
+time spec,time,NM,N,N,0,2,0,1,NM,NM N
+time spec,spec,N,N,N,1,2,2,1,N,NM N
+user hook 3,user,NM,N,N,0,3,0,1,NM,NM N D
+user hook 3,hook,NM,N,N,1,3,1,1,N,NM N D
+user hook 3,3,N,N,D,2,3,2,1,D,NM N D
+X dnd Type List,X,NM,NM,N,0,4,0,1,NM,NM NM NM N
+X dnd Type List,dnd,NM,N,N,1,4,1,1,NM,NM NM NM N
+X dnd Type List,Type,NM,N,N,2,4,1,1,NM,NM NM NM N
+X dnd Type List,List,N,N,N,3,4,2,1,N,NM NM NM N
+x origin,x,NM,NM,N,0,2,0,1,NM,NM N
+x origin,origin,N,N,N,1,2,2,1,N,NM N
+action To Index Map,action,NM,V,N,0,4,0,1,N,N P NM N
+action To Index Map,To,NM,P,P,1,4,1,1,P,N P NM N
+action To Index Map,Index,NM,N,N,2,4,1,1,NM,N P NM N
+action To Index Map,Map,N,N,N,3,4,2,1,N,N P NM N
+active Copies,active,NM,NM,NM,0,2,0,1,NM,NM NPL
+active Copies,Copies,N,N,NPL,1,2,2,1,NPL,NM NPL
+add Bias To Embedding,add,NM,V,V,0,4,0,1,V,V N P N
+add Bias To Embedding,Bias,NM,N,N,1,4,1,1,N,V N P N
+add Bias To Embedding,To,NM,P,P,2,4,1,1,P,V N P N
+add Bias To Embedding,Embedding,N,N,N,3,4,2,1,N,V N P N
+caching Mock Bytecode Generator,caching,NM,N,VBG,0,4,0,1,NM,NM NM NM N
+caching Mock Bytecode Generator,Mock,NM,NM,N,1,4,1,1,NM,NM NM NM N
+caching Mock Bytecode Generator,Bytecode,NM,N,N,2,4,1,1,NM,NM NM NM N
+caching Mock Bytecode Generator,Generator,N,N,N,3,4,2,1,N,NM NM NM N
+calibration Phase,calibration,NM,N,N,0,2,0,1,NM,NM N
+calibration Phase,Phase,N,V,N,1,2,2,1,N,NM N
+file Descriptor Proto,file,NM,N,V,0,3,0,1,NM,NM NM N
+file Descriptor Proto,Descriptor,NM,N,N,1,3,1,1,NM,NM NM N
+file Descriptor Proto,Proto,N,NM,N,2,3,2,1,N,NM NM N
+idle Delay,idle,NM,NM,V,0,2,0,1,NM,NM N
+idle Delay,Delay,N,N,N,1,2,2,1,N,NM N
+index Data,index,NM,N,N,0,2,0,1,NM,NM NPL
+index Data,Data,N,N,N,1,2,2,1,NPL,NM NPL
+is partial,is,NM,N,VBZ,0,2,0,1,V,V N
+is partial,partial,N,N,NM,1,2,2,1,N,V N
+key sym,key,NM,NM,NM,0,2,0,1,NM,NM N
+key sym,sym,N,N,N,1,2,2,1,N,NM N
+last Saved Step,last,DT,NM,VM,0,3,0,1,NM,NM NM N
+last Saved Step,Saved,NM,NM,VBN,1,3,1,1,NM,NM NM N
+last Saved Step,Step,N,N,N,2,3,2,1,N,NM NM N
+show tags,show,NM,V,N,0,2,0,1,V,V NPL
+show tags,tags,N,N,NPL,1,2,2,1,NPL,V NPL
+Sub Module Name Visibility Pairs,Sub,NM,N,N,0,5,0,1,NM,NM NM NM NM NPL
+Sub Module Name Visibility Pairs,Module,NM,N,N,1,5,1,1,NM,NM NM NM NM NPL
+Sub Module Name Visibility Pairs,Name,NM,N,N,2,5,1,1,NM,NM NM NM NM NPL
+Sub Module Name Visibility Pairs,Visibility,NM,N,N,3,5,1,1,NM,NM NM NM NM NPL
+Sub Module Name Visibility Pairs,Pairs,N,N,NPL,4,5,2,1,NPL,NM NM NM NM NPL
+verification Strategy,verification,NM,N,N,0,2,0,1,NM,NM N
+verification Strategy,Strategy,N,N,N,1,2,2,1,N,NM N
+ADDRESS TYPE IPV4,ADDRESS,NM,N,N,0,3,0,1,NM,NM NM N
+ADDRESS TYPE IPV4,TYPE,NM,N,N,1,3,1,1,NM,NM NM N
+ADDRESS TYPE IPV4,IPV4,NM,N,N,2,3,2,1,N,NM NM N
+all Stubbings,all,DT,DT,DT,0,2,0,1,DT,DT NPL
+all Stubbings,Stubbings,N,N,N,1,2,2,1,NPL,DT NPL
+ambient,ambient,N,NM,NM,0,1,0,1,N,N
+build Timestamp,build,NM,N,V,0,2,0,1,NM,NM N
+build Timestamp,Timestamp,N,N,N,1,2,2,1,N,NM N
+bytes Received,bytes,NM,N,VBZ,0,2,0,1,NPL,NPL NM
+bytes Received,Received,N,NM,N,1,2,2,1,NM,NPL NM
+INITIALIZATION ERROR,INITIALIZATION,NM,N,N,0,2,0,1,NM,NM N
+INITIALIZATION ERROR,ERROR,N,N,N,1,2,2,1,N,NM N
+INVALID STATE NUMBER,INVALID,NM,NM,NM,0,3,0,1,NM,NM NM N
+INVALID STATE NUMBER,STATE,NM,N,N,1,3,1,1,NM,NM NM N
+INVALID STATE NUMBER,NUMBER,N,N,N,2,3,2,1,N,NM NM N
+m remove User Data Response Args,m,NM,NM,N,0,6,0,1,PRE,PRE NM NM NM NM NPL
+m remove User Data Response Args,remove,NM,N,V,1,6,1,1,NM,PRE NM NM NM NM NPL
+m remove User Data Response Args,User,NM,N,N,2,6,1,1,NM,PRE NM NM NM NM NPL
+m remove User Data Response Args,Data,NM,N,N,3,6,1,1,NM,PRE NM NM NM NM NPL
+m remove User Data Response Args,Response,NM,N,N,4,6,1,1,NM,PRE NM NM NM NM NPL
+m remove User Data Response Args,Args,N,N,N,5,6,2,1,NPL,PRE NM NM NM NM NPL
+m Sky Plane Render Queue,m,NM,NM,N,0,5,0,1,PRE,PRE NM NM NM N
+m Sky Plane Render Queue,Sky,NM,N,N,1,5,1,1,NM,PRE NM NM NM N
+m Sky Plane Render Queue,Plane,NM,NM,N,2,5,1,1,NM,PRE NM NM NM N
+m Sky Plane Render Queue,Render,NM,N,N,3,5,1,1,NM,PRE NM NM NM N
+m Sky Plane Render Queue,Queue,N,N,N,4,5,2,1,N,PRE NM NM NM N
+new Strokes,new,NM,NM,NM,0,2,0,1,NM,NM NPL
+new Strokes,Strokes,N,N,NPL,1,2,2,1,NPL,NM NPL
+reduction Indices,reduction,NM,N,N,0,2,0,1,NM,NM NPL
+reduction Indices,Indices,N,N,NPL,1,2,2,1,NPL,NM NPL
+script Event Action Factories,script,NM,N,N,0,4,0,1,NM,NM NM NM NPL
+script Event Action Factories,Event,NM,N,N,1,4,1,1,NM,NM NM NM NPL
+script Event Action Factories,Action,NM,N,N,2,4,1,1,NM,NM NM NM NPL
+script Event Action Factories,Factories,N,N,NPL,3,4,2,1,NPL,NM NM NM NPL
+Sprites,Sprites,N,N,NPL,0,1,0,1,NPL,NPL
+BUCKETS PATH FIELD,BUCKETS,NM,N,N,0,3,0,1,NM,NM NM N
+BUCKETS PATH FIELD,PATH,NM,N,N,1,3,1,1,NM,NM NM N
+BUCKETS PATH FIELD,FIELD,N,N,N,2,3,2,1,N,NM NM N
+certificate Chain Cleaner,certificate,NM,N,N,0,3,0,1,NM,NM NM N
+certificate Chain Cleaner,Chain,NM,N,N,1,3,1,1,NM,NM NM N
+certificate Chain Cleaner,Cleaner,N,N,N,2,3,2,1,N,NM NM N
+char strings,char,NM,N,N,0,2,0,1,NM,NM NPL
+char strings,strings,N,N,NPL,1,2,2,1,NPL,NM NPL
+component Type,component,NM,N,N,0,2,0,1,NM,NM N
+component Type,Type,N,N,N,1,2,2,1,N,NM N
+Current Scene Node,Current,NM,NM,N,0,3,0,1,NM,NM NM N
+Current Scene Node,Scene,NM,N,N,1,3,1,1,NM,NM NM N
+Current Scene Node,Node,N,N,N,2,3,2,1,N,NM NM N
+default Answer,default,NM,N,V,0,2,0,1,NM,NM N
+default Answer,Answer,N,N,N,1,2,2,1,N,NM N
+EMPTY DIRECTORY,EMPTY,NM,NM,NM,0,2,0,1,NM,NM N
+EMPTY DIRECTORY,DIRECTORY,N,N,N,1,2,2,1,N,NM N
+KEY PASSWORD PROFILES,KEY,NM,NM,NM,0,3,0,1,NM,NM NM NPL
+KEY PASSWORD PROFILES,PASSWORD,NM,N,N,1,3,1,1,NM,NM NM NPL
+KEY PASSWORD PROFILES,PROFILES,N,N,NPL,2,3,2,1,NPL,NM NM NPL
+m count Activities,m,NM,NM,N,0,3,0,1,PRE,PRE NM NPL
+m count Activities,count,NM,N,N,1,3,1,1,NM,PRE NM NPL
+m count Activities,Activities,N,N,NPL,2,3,2,1,NPL,PRE NM NPL
+m Resources,m,NM,NM,N,0,2,0,1,PRE,PRE NPL
+m Resources,Resources,N,N,N,1,2,2,1,NPL,PRE NPL
+max Buffer Size,max,NM,N,N,0,3,0,1,NM,NM NM N
+max Buffer Size,Buffer,NM,N,N,1,3,1,1,NM,NM NM N
+max Buffer Size,Size,N,N,N,2,3,2,1,N,NM NM N
+other Data Len Bits,other,DT,NM,NM,0,4,0,1,NM,NM NM NM NPL
+other Data Len Bits,Data,NM,N,N,1,4,1,1,NM,NM NM NM NPL
+other Data Len Bits,Len,NM,N,N,2,4,1,1,NM,NM NM NM NPL
+other Data Len Bits,Bits,N,N,N,3,4,2,1,NPL,NM NM NM NPL
+parser Errors,parser,NM,N,N,0,2,0,1,NM,NM NPL
+parser Errors,Errors,N,N,NPL,1,2,2,1,NPL,NM NPL
+average In Bucket Used Slot Count,average,NM,V,N,0,6,0,1,N,N P NM NM NM N
+average In Bucket Used Slot Count,In,NM,P,P,1,6,1,1,P,N P NM NM NM N
+average In Bucket Used Slot Count,Bucket,NM,N,N,2,6,1,1,NM,N P NM NM NM N
+average In Bucket Used Slot Count,Used,NM,NM,VBD,3,6,1,1,NM,N P NM NM NM N
+average In Bucket Used Slot Count,Slot,NM,N,N,4,6,1,1,NM,N P NM NM NM N
+average In Bucket Used Slot Count,Count,N,N,N,5,6,2,1,N,N P NM NM NM N
+buffers,buffers,N,N,NPL,0,1,0,1,NPL,NPL
+File,File,N,N,V,0,1,0,1,N,N
+fingerprint Dialog,fingerprint,NM,N,N,0,2,0,1,NM,NM N
+fingerprint Dialog,Dialog,N,N,N,1,2,2,1,N,NM N
+glew Render Mode,glew,NM,N,V,0,3,0,1,PRE,PRE NM N
+glew Render Mode,Render,NM,N,N,1,3,1,1,NM,PRE NM N
+glew Render Mode,Mode,N,N,N,2,3,2,1,N,PRE NM N
+img buffer original,img,NM,N,N,0,3,0,1,NM,NM N NM
+img buffer original,buffer,NM,N,N,1,3,1,1,N,NM N NM
+img buffer original,original,N,N,N,2,3,2,1,NM,NM N NM
+INDEX PREFIX WITH TEMPLATE,INDEX,NM,V,N,0,4,0,1,NM,NM N P N
+INDEX PREFIX WITH TEMPLATE,PREFIX,NM,N,N,1,4,1,1,N,NM N P N
+INDEX PREFIX WITH TEMPLATE,WITH,NM,P,P,2,4,1,1,P,NM N P N
+INDEX PREFIX WITH TEMPLATE,TEMPLATE,N,N,N,3,4,2,1,N,NM N P N
+m gpu Rays,m,NM,NM,N,0,3,0,1,PRE,PRE NM NPL
+m gpu Rays,gpu,NM,N,N,1,3,1,1,NM,PRE NM NPL
+m gpu Rays,Rays,N,N,NPL,2,3,2,1,NPL,PRE NM NPL
+MANIFEST FILE PREFIX,MANIFEST,NM,NM,N,0,3,0,1,NM,NM NM N
+MANIFEST FILE PREFIX,FILE,NM,N,N,1,3,1,1,NM,NM NM N
+MANIFEST FILE PREFIX,PREFIX,N,N,N,2,3,2,1,N,NM NM N
+mock Ref,mock,NM,NM,NM,0,2,0,1,NM,NM N
+mock Ref,Ref,N,N,N,1,2,2,1,N,NM N
+on Item Long Click Listener,on,NM,P,P,0,5,0,1,P,P NM NM NM N
+on Item Long Click Listener,Item,NM,N,N,1,5,1,1,NM,P NM NM NM N
+on Item Long Click Listener,Long,NM,NM,N,2,5,1,1,NM,P NM NM NM N
+on Item Long Click Listener,Click,NM,N,V,3,5,1,1,NM,P NM NM NM N
+on Item Long Click Listener,Listener,N,N,N,4,5,2,1,N,P NM NM NM N
+reference Index Meta Datas,reference,NM,N,V,0,4,0,1,NM,NM NM NM NPL
+reference Index Meta Datas,Index,NM,N,N,1,4,1,1,NM,NM NM NM NPL
+reference Index Meta Datas,Meta,NM,N,N,2,4,1,1,NM,NM NM NM NPL
+reference Index Meta Datas,Datas,N,N,N,3,4,2,1,NPL,NM NM NM NPL
+risky Annuity,risky,NM,NM,NM,0,2,0,1,NM,NM N
+risky Annuity,Annuity,N,N,N,1,2,2,1,N,NM N
+weak Ref Lost,weak,NM,NM,NM,0,3,0,1,NM,NM NM N
+weak Ref Lost,Ref,NM,N,N,1,3,1,1,NM,NM NM N
+weak Ref Lost,Lost,N,N,N,2,3,2,1,N,NM NM N
+current Filename,current,NM,NM,NM,0,2,0,1,NM,NM N
+current Filename,Filename,N,N,N,1,2,2,1,N,NM N
+footnotes Position,footnotes,NM,N,NPL,0,2,0,1,NM,NM N
+footnotes Position,Position,N,N,N,1,2,2,1,N,NM N
+is First Frame,is,NM,V,VBZ,0,3,0,1,V,V NM N
+is First Frame,First,NM,NM,N,1,3,1,1,NM,V NM N
+is First Frame,Frame,N,N,N,2,3,2,1,N,V NM N
+m num Visual Shapes Copied,m,NM,NM,N,0,5,0,1,PRE,PRE NM NM NM N
+m num Visual Shapes Copied,num,NM,N,N,1,5,1,1,NM,PRE NM NM NM N
+m num Visual Shapes Copied,Visual,NM,NM,N,2,5,1,1,NM,PRE NM NM NM N
+m num Visual Shapes Copied,Shapes,NM,N,N,3,5,1,1,NM,PRE NM NM NM N
+m num Visual Shapes Copied,Copied,N,V,N,4,5,2,1,N,PRE NM NM NM N
+m VS Out Light Position,m,NM,FAILURE,N,0,5,0,1,PRE,PRE NM NM NM N
+m VS Out Light Position,VS,NM,FAILURE,N,1,5,1,1,NM,PRE NM NM NM N
+m VS Out Light Position,Out,NM,FAILURE,P,2,5,1,1,NM,PRE NM NM NM N
+m VS Out Light Position,Light,NM,FAILURE,NM,3,5,1,1,NM,PRE NM NM NM N
+m VS Out Light Position,Position,N,FAILURE,N,4,5,2,1,N,PRE NM NM NM N
+max width,max,NM,N,N,0,2,0,1,NM,NM N
+max width,width,N,N,N,1,2,2,1,N,NM N
+Number Start,Number,NM,N,N,0,2,0,1,NM,NM N
+Number Start,Start,N,N,N,1,2,2,1,N,NM N
+RUN DIST CMD PROP,RUN,NM,N,N,0,4,0,1,NM,NM NM NM N
+RUN DIST CMD PROP,DIST,NM,N,N,1,4,1,1,NM,NM NM NM N
+RUN DIST CMD PROP,CMD,NM,N,N,2,4,1,1,NM,NM NM NM N
+RUN DIST CMD PROP,PROP,N,N,N,3,4,2,1,N,NM NM NM N
+Action Translator,Action,NM,N,N,0,2,0,2,NM,NM N
+Action Translator,Translator,N,N,N,1,2,2,2,N,NM N
+Alt And Context Config Equality Comparator,Alt,NM,N,N,0,6,0,2,N,N CJ NM NM NM N
+Alt And Context Config Equality Comparator,And,NM,N,CJ,1,6,1,2,CJ,N CJ NM NM NM N
+Alt And Context Config Equality Comparator,Context,NM,N,N,2,6,1,2,NM,N CJ NM NM NM N
+Alt And Context Config Equality Comparator,Config,NM,N,N,3,6,1,2,NM,N CJ NM NM NM N
+Alt And Context Config Equality Comparator,Equality,NM,N,N,4,6,1,2,NM,N CJ NM NM NM N
+Alt And Context Config Equality Comparator,Comparator,N,N,N,5,6,2,2,N,N CJ NM NM NM N
+Context Token List Indexed Getter Decl,Context,NM,N,N,0,6,0,2,NM,NM NM NM NM NM N
+Context Token List Indexed Getter Decl,Token,NM,NM,NM,1,6,1,2,NM,NM NM NM NM NM N
+Context Token List Indexed Getter Decl,List,NM,N,N,2,6,1,2,NM,NM NM NM NM NM N
+Context Token List Indexed Getter Decl,Indexed,NM,N,NM,3,6,1,2,NM,NM NM NM NM NM N
+Context Token List Indexed Getter Decl,Getter,NM,N,N,4,6,1,2,NM,NM NM NM NM NM N
+Context Token List Indexed Getter Decl,Decl,N,N,N,5,6,2,2,N,NM NM NM NM NM N
+DOT Generator,DOT,NM,N,N,0,2,0,2,NM,NM N
+DOT Generator,Generator,N,N,N,1,2,2,2,N,NM N
+Left Recursive Rule Function,Left,NM,NM,VBN,0,4,0,2,NM,NM NM NM N
+Left Recursive Rule Function,Recursive,NM,NM,NM,1,4,1,2,NM,NM NM NM N
+Left Recursive Rule Function,Rule,NM,N,N,2,4,1,2,NM,NM NM NM N
+Left Recursive Rule Function,Function,N,N,N,3,4,2,2,N,NM NM NM N
+Local Ref,Local,NM,NM,N,0,2,0,2,NM,NM N
+Local Ref,Ref,N,N,N,1,2,2,2,N,NM N
+Post Script Document,Post,NM,N,N,0,3,0,2,NM,NM NM N
+Post Script Document,Script,NM,N,N,1,3,1,2,NM,NM NM N
+Post Script Document,Document,N,N,N,2,3,2,2,N,NM NM N
+Rule Property Ref ctx,Rule,NM,N,N,0,4,0,2,NM,NM NM NM N
+Rule Property Ref ctx,Property,NM,N,N,1,4,1,2,NM,NM NM NM N
+Rule Property Ref ctx,Ref,NM,N,N,2,4,1,2,NM,NM NM NM N
+Rule Property Ref ctx,ctx,N,N,N,3,4,2,2,N,NM NM NM N
+Rule Property Ref start,Rule,NM,N,N,0,4,0,2,NM,NM NM NM N
+Rule Property Ref start,Property,NM,N,N,1,4,1,2,NM,NM NM NM N
+Rule Property Ref start,Ref,NM,N,N,2,4,1,2,NM,NM NM NM N
+Rule Property Ref start,start,N,N,N,3,4,2,2,N,NM NM NM N
+Rule Version Attribute,Rule,NM,N,N,0,3,0,2,NM,NM NM N
+Rule Version Attribute,Version,NM,N,N,1,3,1,2,NM,NM NM N
+Rule Version Attribute,Attribute,N,N,N,2,3,2,2,N,NM NM N
+Token Property Ref,Token,NM,NM,N,0,3,0,2,NM,NM NM N
+Token Property Ref,Property,NM,N,N,1,3,1,2,NM,NM NM N
+Token Property Ref,Ref,N,N,N,2,3,2,2,N,NM NM N
+Token Property Ref channel,Token,NM,NM,N,0,4,0,2,NM,NM NM NM N
+Token Property Ref channel,Property,NM,N,N,1,4,1,2,NM,NM NM NM N
+Token Property Ref channel,Ref,NM,N,N,2,4,1,2,NM,NM NM NM N
+Token Property Ref channel,channel,N,N,N,3,4,2,2,N,NM NM NM N
+Token Type Decl,Token,NM,NM,NM,0,3,0,2,NM,NM NM N
+Token Type Decl,Type,NM,N,N,1,3,1,2,NM,NM NM N
+Token Type Decl,Decl,N,N,N,2,3,2,2,N,NM NM N
+Tree Post Script Generator,Tree,NM,N,N,0,4,0,2,NM,NM NM NM N
+Tree Post Script Generator,Post,NM,N,N,1,4,1,2,NM,NM NM NM N
+Tree Post Script Generator,Script,NM,N,N,2,4,1,2,NM,NM NM NM N
+Tree Post Script Generator,Generator,N,N,N,3,4,2,2,N,NM NM NM N
+Controlled Object,Controlled,NM,NM,VBN,0,2,0,2,NM,NM N
+Controlled Object,Object,N,N,N,1,2,2,2,N,NM N
+Dual Con Input Reader,Dual,NM,NM,NM,0,4,0,2,NM,NM NM NM N
+Dual Con Input Reader,Con,NM,N,N,1,4,1,2,NM,NM NM NM N
+Dual Con Input Reader,Input,NM,N,N,2,4,1,2,NM,NM NM NM N
+Dual Con Input Reader,Reader,N,N,N,3,4,2,2,N,NM NM NM N
+Fixed Object,Fixed,NM,NM,N,0,2,0,2,NM,NM N
+Fixed Object,Object,N,N,N,1,2,2,2,N,NM N
+Frame 2,Frame,NM,N,N,0,2,0,2,N,N D
+Frame 2,2,N,N,D,1,2,2,2,D,N D
+Generic Emissive Closure,Generic,NM,NM,NM,0,3,0,2,NM,NM NM N
+Generic Emissive Closure,Emissive,NM,N,NM,1,3,1,2,NM,NM NM N
+Generic Emissive Closure,Closure,N,N,N,2,3,2,2,N,NM NM N
+Image Manager,Image,NM,N,N,0,2,0,2,NM,NM N
+Image Manager,Manager,N,N,N,1,2,2,2,N,NM N
+Jnt Array Acc,Jnt,NM,N,N,0,3,0,2,NM,NM NM N
+Jnt Array Acc,Array,NM,N,N,1,3,1,2,NM,NM NM N
+Jnt Array Acc,Acc,N,N,N,2,3,2,2,N,NM NM N
+Node Shape,Node,NM,N,V,0,2,0,2,NM,NM N
+Node Shape,Shape,N,N,VBG,1,2,2,2,N,NM N
+Patch Coord Buffer,Patch,NM,N,N,0,3,0,2,NM,NM NM N
+Patch Coord Buffer,Coord,NM,N,N,1,3,1,2,NM,NM NM N
+Patch Coord Buffer,Buffer,N,N,N,2,3,2,2,N,NM NM N
+Predicate Wrapper,Predicate,NM,N,N,0,2,0,2,NM,NM N
+Predicate Wrapper,Wrapper,N,N,N,1,2,2,2,N,NM N
+Quad,Quad,N,N,N,0,1,0,2,N,N
+Reconstruct Update Callback,Reconstruct,NM,N,V,0,3,0,2,NM,NM NM N
+Reconstruct Update Callback,Update,NM,N,N,1,3,1,2,NM,NM NM N
+Reconstruct Update Callback,Callback,N,N,N,2,3,2,2,N,NM NM N
+Tree Element,Tree,NM,N,N,0,2,0,2,NM,NM N
+Tree Element,Element,N,N,N,1,2,2,2,N,NM N
+WSDLS Solver,WSDLS,NM,N,N,0,2,0,2,NM,NM N
+WSDLS Solver,Solver,N,N,N,1,2,2,2,N,NM N
+Change Scroll,Change,NM,N,N,0,2,0,2,V,V N
+Change Scroll,Scroll,N,N,N,1,2,2,2,N,V N
+Define,Define,N,V,V,0,1,0,2,N,N
+File Item Delegate,File,NM,N,V,0,3,0,2,NM,NM NM N
+File Item Delegate,Item,NM,N,N,1,3,1,2,NM,NM NM N
+File Item Delegate,Delegate,N,N,N,2,3,2,2,N,NM NM N
+Ko Main Window Private,Ko,NM,N,N,0,4,0,2,PRE,PRE NM N NM
+Ko Main Window Private,Main,NM,NM,N,1,4,1,2,NM,PRE NM N NM
+Ko Main Window Private,Window,NM,N,N,2,4,1,2,N,PRE NM N NM
+Ko Main Window Private,Private,N,N,N,3,4,2,2,NM,PRE NM N NM
+Ko Path Point Remove Command Private,Ko,NM,N,N,0,6,0,2,PRE,PRE NM NM NM N NM
+Ko Path Point Remove Command Private,Path,NM,N,N,1,6,1,2,NM,PRE NM NM NM N NM
+Ko Path Point Remove Command Private,Point,NM,N,N,2,6,1,2,NM,PRE NM NM NM N NM
+Ko Path Point Remove Command Private,Remove,NM,N,V,3,6,1,2,NM,PRE NM NM NM N NM
+Ko Path Point Remove Command Private,Command,NM,N,N,4,6,1,2,N,PRE NM NM NM N NM
+Ko Path Point Remove Command Private,Private,N,N,N,5,6,2,2,NM,PRE NM NM NM N NM
+Ko Rgb U8 Invert Color Transformation,Ko,NM,N,N,0,6,0,2,PRE,PRE NM NM NM NM N
+Ko Rgb U8 Invert Color Transformation,Rgb,NM,N,N,1,6,1,2,NM,PRE NM NM NM NM N
+Ko Rgb U8 Invert Color Transformation,U8,NM,N,N,2,6,1,2,NM,PRE NM NM NM NM N
+Ko Rgb U8 Invert Color Transformation,Invert,NM,N,N,3,6,1,2,NM,PRE NM NM NM NM N
+Ko Rgb U8 Invert Color Transformation,Color,NM,NM,N,4,6,1,2,NM,PRE NM NM NM NM N
+Ko Rgb U8 Invert Color Transformation,Transformation,NM,N,N,5,6,2,2,N,PRE NM NM NM NM N
+Ko Section End Private,Ko,NM,N,N,0,4,0,2,PRE,PRE NM N NM
+Ko Section End Private,Section,NM,N,N,1,4,1,2,NM,PRE NM N NM
+Ko Section End Private,End,NM,N,N,2,4,1,2,N,PRE NM N NM
+Ko Section End Private,Private,N,N,N,3,4,2,2,NM,PRE NM N NM
+Ko Shadow Style Private,Ko,NM,N,N,0,4,0,2,PRE,PRE NM N NM
+Ko Shadow Style Private,Shadow,NM,N,N,1,4,1,2,NM,PRE NM N NM
+Ko Shadow Style Private,Style,NM,N,N,2,4,1,2,N,PRE NM N NM
+Ko Shadow Style Private,Private,N,N,N,3,4,2,2,NM,PRE NM N NM
+Label Action,Label,NM,N,N,0,2,0,2,NM,NM N
+Label Action,Action,N,N,N,1,2,2,2,N,NM N
+Label Drawing Widget,Label,NM,N,N,0,3,0,2,NM,NM NM N
+Label Drawing Widget,Drawing,NM,N,N,1,3,1,2,NM,NM NM N
+Label Drawing Widget,Widget,N,N,N,2,3,2,2,N,NM NM N
+Layout Data,Layout,NM,N,N,0,2,0,2,NM,NM N
+Layout Data,Data,N,N,N,1,2,2,2,N,NM N
+List Level,List,NM,N,N,0,2,0,2,NM,NM N
+List Level,Level,N,N,N,1,2,2,2,N,NM N
+Record Header,Record,NM,N,N,0,2,0,2,NM,NM N
+Record Header,Header,N,N,N,1,2,2,2,N,NM N
+Basic Replication Request,Basic,NM,NM,NM,0,3,0,2,NM,NM NM N
+Basic Replication Request,Replication,NM,N,N,1,3,1,2,NM,NM NM N
+Basic Replication Request,Request,N,N,N,2,3,2,2,N,NM NM N
+Bucket Collector,Bucket,NM,N,N,0,2,0,2,NM,NM N
+Bucket Collector,Collector,N,N,N,1,2,2,2,N,NM N
+Cbor X Content,Cbor,NM,N,N,0,3,0,2,NM,NM NM N
+Cbor X Content,X,NM,NM,N,1,3,1,2,NM,NM NM N
+Cbor X Content,Content,N,N,N,2,3,2,2,N,NM NM N
+Cluster Update Settings Response,Cluster,NM,N,N,0,4,0,2,NM,NM NM NM N
+Cluster Update Settings Response,Update,NM,N,N,1,4,1,2,NM,NM NM NM N
+Cluster Update Settings Response,Settings,NM,N,N,2,4,1,2,NM,NM NM NM N
+Cluster Update Settings Response,Response,N,N,N,3,4,2,2,N,NM NM NM N
+Content Path,Content,NM,NM,N,0,2,0,2,NM,NM N
+Content Path,Path,N,N,N,1,2,2,2,N,NM N
+Group By Context,Group,NM,V,N,0,3,0,2,N,N P N
+Group By Context,By,NM,P,P,1,3,1,2,P,N P N
+Group By Context,Context,N,N,N,2,3,2,2,N,N P N
+Handshake Mode,Handshake,NM,N,N,0,2,0,2,NM,NM N
+Handshake Mode,Mode,N,N,N,1,2,2,2,N,NM N
+MultiPolygon,MultiPolygon,N,N,N,0,1,0,2,N,N
+Publish Response,Publish,NM,N,V,0,2,0,2,NM,NM N
+Publish Response,Response,N,N,N,1,2,2,2,N,NM N
+Response Handlers,Response,NM,N,N,0,2,0,2,NM,NM NPL
+Response Handlers,Handlers,N,N,NPL,1,2,2,2,NPL,NM NPL
+Scroll Id For Node,Scroll,NM,V,N,0,4,0,2,NM,NM N P N
+Scroll Id For Node,Id,NM,N,N,1,4,1,2,N,NM N P N
+Scroll Id For Node,For,NM,P,P,2,4,1,2,P,NM N P N
+Scroll Id For Node,Node,N,N,N,3,4,2,2,N,NM N P N
+SINH,SINH,N,N,N,0,1,0,2,N,N
+Store,Store,N,N,N,0,1,0,2,N,N
+Transport Shard Refresh Action,Transport,NM,N,N,0,4,0,2,NM,NM NM NM N
+Transport Shard Refresh Action,Shard,NM,N,N,1,4,1,2,NM,NM NM NM N
+Transport Shard Refresh Action,Refresh,NM,N,N,2,4,1,2,NM,NM NM NM N
+Transport Shard Refresh Action,Action,N,N,N,3,4,2,2,N,NM NM NM N
+Area Info Dialog t,Area,NM,N,N,0,4,0,2,NM,NM NM NM N
+Area Info Dialog t,Info,NM,N,N,1,4,1,2,NM,NM NM NM N
+Area Info Dialog t,Dialog,NM,N,N,2,4,1,2,NM,NM NM NM N
+Area Info Dialog t,t,N,N,N,3,4,2,2,N,NM NM NM N
+Child Location,Child,NM,N,N,0,2,0,2,NM,NM N
+Child Location,Location,N,N,N,1,2,2,2,N,NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Combine,NM,FAILURE,V,0,10,0,2,NM,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Paint,NM,FAILURE,N,1,10,1,2,NM,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Mask,NM,FAILURE,N,2,10,1,2,N,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,To,NM,FAILURE,P,3,10,1,2,P,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Canvas,NM,FAILURE,N,4,10,1,2,NM,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Buffer,NM,FAILURE,N,5,10,1,2,N,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,To,NM,FAILURE,P,6,10,1,2,P,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Paint,NM,FAILURE,V,7,10,1,2,NM,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Buf,NM,FAILURE,N,8,10,1,2,NM,NM NM N P NM N P NM NM N
+Combine Paint Mask To Canvas Buffer To Paint Buf Alpha,Alpha,N,FAILURE,N,9,10,2,2,N,NM NM N P NM N P NM NM N
+Command t,Command,NM,N,N,0,2,0,2,NM,NM N
+Command t,t,N,N,N,1,2,2,2,N,NM N
+Comp Mask,Comp,NM,N,N,0,2,0,2,NM,NM N
+Comp Mask,Mask,N,N,N,1,2,2,2,N,NM N
+D obj Points,D,NM,NM,N,0,3,0,2,NM,NM NM NPL
+D obj Points,obj,NM,N,N,1,3,1,2,NM,NM NM NPL
+D obj Points,Points,N,N,NPL,2,3,2,2,NPL,NM NM NPL
+Dialog Elements,Dialog,NM,N,NM,0,2,0,2,NM,NM NPL
+Dialog Elements,Elements,N,N,NPL,1,2,2,2,NPL,NM NPL
+Dispatch Mask Buffer Iterator,Dispatch,NM,N,N,0,4,0,2,NM,NM NM NM N
+Dispatch Mask Buffer Iterator,Mask,NM,N,N,1,4,1,2,NM,NM NM NM N
+Dispatch Mask Buffer Iterator,Buffer,NM,N,N,2,4,1,2,NM,NM NM NM N
+Dispatch Mask Buffer Iterator,Iterator,N,N,N,3,4,2,2,N,NM NM NM N
+Dispatch Paint Mask,Dispatch,NM,N,N,0,3,0,2,NM,NM NM N
+Dispatch Paint Mask,Paint,NM,N,N,1,3,1,2,NM,NM NM N
+Dispatch Paint Mask,Mask,N,N,N,2,3,2,2,N,NM NM N
+Mask Components,Mask,NM,N,N,0,2,0,2,NM,NM NPL
+Mask Components,Components,N,N,N,1,2,2,2,NPL,NM NPL
+Process,Process,N,N,V,0,1,0,2,N,N
+Simple Pressure,Simple,NM,NM,NM,0,2,0,2,NM,NM N
+Simple Pressure,Pressure,N,N,N,1,2,2,2,N,NM N
+Temp Comp Mask,Temp,NM,N,N,0,3,0,2,NM,NM NM N
+Temp Comp Mask,Comp,NM,N,N,1,3,1,2,NM,NM NM N
+Temp Comp Mask,Mask,N,N,N,2,3,2,2,N,NM NM N
+Ares Dns Resolver,Ares,NM,N,N,0,3,0,2,NM,NM NM N
+Ares Dns Resolver,Dns,NM,N,N,1,3,1,2,NM,NM NM N
+Ares Dns Resolver,Resolver,N,N,N,2,3,2,2,N,NM NM N
+C http2 Connector,C,NM,NM,N,0,3,0,2,PRE,PRE NM N
+C http2 Connector,http2,NM,N,N,1,3,1,2,NM,PRE NM N
+C http2 Connector,Connector,NM,N,N,2,3,2,2,N,PRE NM N
+Call Error Extensions,Call,NM,N,V,0,3,0,2,NM,NM NM NPL
+Call Error Extensions,Error,NM,N,N,1,3,1,2,NM,NM NM NPL
+Call Error Extensions,Extensions,N,N,NPL,2,3,2,2,NPL,NM NM NPL
+Cpp Generator Services,Cpp,NM,N,N,0,3,0,2,NM,NM NM NPL
+Cpp Generator Services,Generator,NM,N,N,1,3,1,2,NM,NM NM NPL
+Cpp Generator Services,Services,N,N,NPL,2,3,2,2,NPL,NM NM NPL
+Cq Event Queue,Cq,NM,N,N,0,3,0,2,NM,NM NM N
+Cq Event Queue,Event,NM,N,N,1,3,1,2,NM,NM NM N
+Cq Event Queue,Queue,N,N,N,2,3,2,2,N,NM NM N
+Default Ssl Roots Override,Default,NM,N,N,0,4,0,2,NM,NM NM NPL NM
+Default Ssl Roots Override,Ssl,NM,N,N,1,4,1,2,NM,NM NM NPL NM
+Default Ssl Roots Override,Roots,NM,N,N,2,4,1,2,NPL,NM NM NPL NM
+Default Ssl Roots Override,Override,N,N,N,3,4,2,2,NM,NM NM NPL NM
+Deserialization Context,Deserialization,NM,N,N,0,2,0,2,NM,NM N
+Deserialization Context,Context,N,N,N,1,2,2,2,N,NM N
+Main Class,Main,NM,NM,N,0,2,0,2,NM,NM N
+Main Class,Class,N,N,N,1,2,2,2,N,NM N
+Mono P Invoke Callback Attribute,Mono,NM,NM,N,0,5,0,2,NM,NM NM NM NM N
+Mono P Invoke Callback Attribute,P,NM,N,N,1,5,1,2,NM,NM NM NM NM N
+Mono P Invoke Callback Attribute,Invoke,NM,N,N,2,5,1,2,NM,NM NM NM NM N
+Mono P Invoke Callback Attribute,Callback,NM,N,N,3,5,1,2,NM,NM NM NM NM N
+Mono P Invoke Callback Attribute,Attribute,N,N,N,4,5,2,2,N,NM NM NM NM N
+Num,Num,N,N,N,0,1,0,2,N,N
+Pointer Map,Pointer,NM,N,N,0,2,0,2,NM,NM N
+Pointer Map,Map,N,N,N,1,2,2,2,N,NM N
+Server Safe Handle,Server,NM,N,N,0,3,0,2,NM,NM NM N
+Server Safe Handle,Safe,NM,NM,N,1,3,1,2,NM,NM NM N
+Server Safe Handle,Handle,N,N,V,2,3,2,2,N,NM NM N
+To String Walker,To,NM,P,P,0,3,0,2,P,P N N
+To String Walker,String,NM,N,N,1,3,1,2,N,P N N
+To String Walker,Walker,N,N,N,2,3,2,2,N,P N N
+Write Context,Write,NM,N,V,0,2,0,2,NM,NM N
+Write Context,Context,N,N,N,1,2,2,2,N,NM N
+C Animated Mesh Scene Node,C,NM,NM,N,0,5,0,2,PRE,PRE NM NM NM N
+C Animated Mesh Scene Node,Animated,NM,NM,N,1,5,1,2,NM,PRE NM NM NM N
+C Animated Mesh Scene Node,Mesh,NM,N,N,2,5,1,2,NM,PRE NM NM NM N
+C Animated Mesh Scene Node,Scene,NM,N,N,3,5,1,2,NM,PRE NM NM NM N
+C Animated Mesh Scene Node,Node,N,N,N,4,5,2,2,N,PRE NM NM NM N
+C Archive Loader TAR,C,NM,NM,N,0,4,0,2,PRE,PRE NM N NM
+C Archive Loader TAR,Archive,NM,N,N,1,4,1,2,NM,PRE NM N NM
+C Archive Loader TAR,Loader,NM,N,N,2,4,1,2,N,PRE NM N NM
+C Archive Loader TAR,TAR,N,N,N,3,4,2,2,NM,PRE NM N NM
+C Burning Shader Raster Reference,C,NM,NM,N,0,5,0,2,PRE,PRE NM NM NM N
+C Burning Shader Raster Reference,Burning,NM,NM,N,1,5,1,2,NM,PRE NM NM NM N
+C Burning Shader Raster Reference,Shader,NM,N,N,2,5,1,2,NM,PRE NM NM NM N
+C Burning Shader Raster Reference,Raster,NM,N,N,3,5,1,2,NM,PRE NM NM NM N
+C Burning Shader Raster Reference,Reference,N,N,N,4,5,2,2,N,PRE NM NM NM N
+C D3D9 Render Target,C,NM,NM,N,0,4,0,2,PRE,PRE NM NM N
+C D3D9 Render Target,D3D9,NM,N,N,1,4,1,2,NM,PRE NM NM N
+C D3D9 Render Target,Render,NM,N,N,2,4,1,2,NM,PRE NM NM N
+C D3D9 Render Target,Target,NM,N,N,3,4,2,2,N,PRE NM NM N
+C File Read Callback,C,NM,NM,N,0,4,0,2,PRE,PRE NM NM N
+C File Read Callback,File,NM,N,N,1,4,1,2,NM,PRE NM NM N
+C File Read Callback,Read,NM,N,N,2,4,1,2,NM,PRE NM NM N
+C File Read Callback,Callback,N,N,N,3,4,2,2,N,PRE NM NM N
+C Image,C,NM,NM,N,0,2,0,2,PRE,PRE N
+C Image,Image,N,N,N,1,2,2,2,N,PRE N
+C Image Writer JPG,C,NM,NM,N,0,4,0,2,PRE,PRE NM N NM
+C Image Writer JPG,Image,NM,N,N,1,4,1,2,NM,PRE NM N NM
+C Image Writer JPG,Writer,NM,N,N,2,4,1,2,N,PRE NM N NM
+C Image Writer JPG,JPG,N,N,N,3,4,2,2,NM,PRE NM N NM
+C Skinned Mesh,C,NM,NM,N,0,3,0,2,PRE,PRE NM N
+C Skinned Mesh,Skinned,NM,NM,N,1,3,1,2,NM,PRE NM N
+C Skinned Mesh,Mesh,N,N,N,2,3,2,2,N,PRE NM N
+Camera Data,Camera,NM,N,N,0,2,0,2,NM,NM N
+Camera Data,Data,N,N,N,1,2,2,2,N,NM N
+I Read File,I,NM,NM,P,0,3,0,2,NM,NM NM N
+I Read File,Read,NM,N,N,1,3,1,2,NM,NM NM N
+I Read File,File,N,N,N,2,3,2,2,N,NM NM N
+Setting Manager,Setting,NM,N,VBG,0,2,0,2,NM,NM N
+Setting Manager,Manager,N,N,N,1,2,2,2,N,NM N
+Abstract Build Execution,Abstract,NM,NM,NM,0,3,0,2,NM,NM NM N
+Abstract Build Execution,Build,NM,N,NM,1,3,1,2,NM,NM NM N
+Abstract Build Execution,Execution,N,N,N,2,3,2,2,N,NM NM N
+Build Wrapper,Build,NM,N,V,0,2,0,2,NM,NM N
+Build Wrapper,Wrapper,N,N,N,1,2,2,2,N,NM N
+Env Vars Slave Info Display Name,Env,NM,N,N,0,6,0,2,NM,NM NM NM NM NM N
+Env Vars Slave Info Display Name,Vars,NM,N,N,1,6,1,2,NM,NM NM NM NM NM N
+Env Vars Slave Info Display Name,Slave,NM,N,N,2,6,1,2,NM,NM NM NM NM NM N
+Env Vars Slave Info Display Name,Info,NM,N,N,3,6,1,2,NM,NM NM NM NM NM N
+Env Vars Slave Info Display Name,Display,NM,N,V,4,6,1,2,NM,NM NM NM NM NM N
+Env Vars Slave Info Display Name,Name,N,N,N,5,6,2,2,N,NM NM NM NM NM N
+Executor,Executor,N,N,N,0,1,0,2,N,N
+File Path Filter,File,NM,N,V,0,3,0,2,NM,NM NM N
+File Path Filter,Path,NM,N,N,1,3,1,2,NM,NM NM N
+File Path Filter,Filter,N,N,N,2,3,2,2,N,NM NM N
+Get Home Directory,Get,NM,N,V,0,3,0,2,V,V NM N
+Get Home Directory,Home,NM,NM,N,1,3,1,2,NM,V NM N
+Get Home Directory,Directory,N,N,N,2,3,2,2,N,V NM N
+Get Total Disk Space,Get,NM,N,V,0,4,0,2,V,V NM NM N
+Get Total Disk Space,Total,NM,NM,NM,1,4,1,2,NM,V NM NM N
+Get Total Disk Space,Disk,NM,N,N,2,4,1,2,NM,V NM NM N
+Get Total Disk Space,Space,N,N,N,3,4,2,2,N,V NM NM N
+Install Uncaught Exception Handler,Install,NM,N,N,0,4,0,2,V,V NM NM N
+Install Uncaught Exception Handler,Uncaught,NM,N,N,1,4,1,2,NM,V NM NM N
+Install Uncaught Exception Handler,Exception,NM,N,N,2,4,1,2,NM,V NM NM N
+Install Uncaught Exception Handler,Handler,N,N,N,3,4,2,2,N,V NM NM N
+Lease,Lease,N,N,N,0,1,0,2,N,N
+MINIMUM SUPPORTED VERSION,MINIMUM,NM,NM,N,0,3,0,2,NM,NM NM N
+MINIMUM SUPPORTED VERSION,SUPPORTED,NM,NM,N,1,3,1,2,NM,NM NM N
+MINIMUM SUPPORTED VERSION,VERSION,N,N,N,2,3,2,2,N,NM NM N
+all action Roots,all,DT,DT,DT,0,3,0,3,DT,DT NM NPL
+all action Roots,action,NM,N,N,1,3,1,3,NM,DT NM NPL
+all action Roots,Roots,N,N,NPL,2,3,2,3,NPL,DT NM NPL
+atn State,atn,NM,N,V,0,2,0,3,NM,NM N
+atn State,State,N,N,N,1,2,2,3,N,NM N
+dependencies ST,dependencies,NM,N,NPL,0,2,0,3,NM,NM N
+dependencies ST,ST,N,N,VM,1,2,2,3,N,NM N
+end Of Input,end,NM,V,VBP,0,3,0,3,N,N P N
+end Of Input,Of,NM,P,P,1,3,1,3,P,N P N
+end Of Input,Input,N,N,N,2,3,2,3,N,N P N
+feature Iterator,feature,NM,N,V,0,2,0,3,NM,NM N
+feature Iterator,Iterator,N,N,N,1,2,2,3,N,NM N
+format OK,format,NM,V,N,0,2,0,3,N,N NM
+format OK,OK,N,N,NM,1,2,2,3,NM,N NM
+generate Rule Bypass Transitions,generate,NM,V,V,0,4,0,3,V,V NM NM NPL
+generate Rule Bypass Transitions,Rule,NM,N,N,1,4,1,3,NM,V NM NM NPL
+generate Rule Bypass Transitions,Bypass,NM,N,N,2,4,1,3,NM,V NM NM NPL
+generate Rule Bypass Transitions,Transitions,N,N,NPL,3,4,2,3,NPL,V NM NM NPL
+new Rule Text,new,NM,NM,NM,0,3,0,3,NM,NM NM N
+new Rule Text,Rule,NM,N,N,1,3,1,3,NM,NM NM N
+new Rule Text,Text,N,N,V,2,3,2,3,N,NM NM N
+non Greedy States Builder,non,NM,FAILURE,NM,0,4,0,3,NM,NM NM NM N
+non Greedy States Builder,Greedy,NM,FAILURE,N,1,4,1,3,NM,NM NM NM N
+non Greedy States Builder,States,NM,FAILURE,N,2,4,1,3,NM,NM NM NM N
+non Greedy States Builder,Builder,N,FAILURE,N,3,4,2,3,N,NM NM NM N
+set Prev Ctx Action,set,NM,NM,VBN,0,4,0,3,NM,NM NM NM N
+set Prev Ctx Action,Prev,NM,N,N,1,4,1,3,NM,NM NM NM N
+set Prev Ctx Action,Ctx,NM,N,N,2,4,1,3,NM,NM NM NM N
+set Prev Ctx Action,Action,N,N,N,3,4,2,3,N,NM NM NM N
+status File,status,NM,N,N,0,2,0,3,NM,NM N
+status File,File,N,N,N,1,2,2,3,N,NM N
+token Type S,token,NM,NM,NM,0,3,0,3,NM,NM NM N
+token Type S,Type,NM,N,N,1,3,1,3,NM,NM NM N
+token Type S,S,N,N,N,2,3,2,3,N,NM NM N
+trim Parse Trees,trim,NM,V,V,0,3,0,3,V,V NM NPL
+trim Parse Trees,Parse,NM,N,N,1,3,1,3,NM,V NM NPL
+trim Parse Trees,Trees,N,N,N,2,3,2,3,NPL,V NM NPL
+default look,default,NM,N,N,0,2,0,3,NM,NM N
+default look,look,N,N,N,1,2,2,3,N,NM N
+face index,face,NM,N,N,0,2,0,3,NM,NM N
+face index,index,N,N,N,1,2,2,3,N,NM N
+forked iter,forked,NM,NM,VBN,0,2,0,3,V,V N
+forked iter,iter,N,N,N,1,2,2,3,N,V N
+idx u,idx,NM,N,N,0,2,0,3,NM,NM N
+idx u,u,N,N,N,1,2,2,3,N,NM N
+inv unit scale,inv,NM,N,N,0,3,0,3,NM,NM NM N
+inv unit scale,unit,NM,N,N,1,3,1,3,NM,NM NM N
+inv unit scale,scale,N,N,N,2,3,2,3,N,NM NM N
+melanin ofs,melanin,NM,N,N,0,2,0,3,NM,NM N
+melanin ofs,ofs,N,N,NPL,1,2,2,3,N,NM N
+nbr gaps,nbr,NM,N,N,0,2,0,3,NM,NM NPL
+nbr gaps,gaps,N,N,NPL,1,2,2,3,NPL,NM NPL
+nearest point,nearest,NM,V,NM,0,2,0,3,NM,NM N
+nearest point,point,N,FAILURE,N,1,2,2,3,N,NM N
+need fallback,need,NM,V,N,0,2,0,3,V,V N
+need fallback,fallback,N,N,N,1,2,2,3,N,V N
+new order,new,NM,NM,NM,0,2,0,3,NM,NM N
+new order,order,N,N,N,1,2,2,3,N,NM N
+raw nor,raw,NM,NM,NM,0,2,0,3,NM,NM N
+raw nor,nor,N,N,CJ,1,2,2,3,N,NM N
+root ptr,root,NM,N,N,0,2,0,3,NM,NM N
+root ptr,ptr,N,N,N,1,2,2,3,N,NM N
+tmp vec,tmp,NM,N,N,0,2,0,3,NM,NM N
+tmp vec,vec,N,N,N,1,2,2,3,N,NM N
+v proj axis,v,NM,NM,N,0,3,0,3,NM,NM NM N
+v proj axis,proj,NM,N,N,1,3,1,3,NM,NM NM N
+v proj axis,axis,N,N,N,2,3,2,3,N,NM NM N
+active Tool Id,active,NM,NM,NM,0,3,0,3,NM,NM NM N
+active Tool Id,Tool,NM,N,N,1,3,1,3,NM,NM NM N
+active Tool Id,Id,N,N,N,2,3,2,3,N,NM NM N
+anchor Name,anchor,NM,N,N,0,2,0,3,NM,NM N
+anchor Name,Name,N,N,N,1,2,2,3,N,NM N
+angle In Radian,angle,NM,V,N,0,3,0,3,N,N P N
+angle In Radian,In,NM,P,P,1,3,1,3,P,N P N
+angle In Radian,Radian,N,N,N,2,3,2,3,N,N P N
+attrs,attrs,N,N,NPL,0,1,0,3,NPL,NPL
+cell Cursor,cell,NM,N,N,0,2,0,3,NM,NM N
+cell Cursor,Cursor,N,N,N,1,2,2,3,N,NM N
+control Points,control,NM,N,N,0,2,0,3,NM,NM NPL
+control Points,Points,N,N,NPL,1,2,2,3,NPL,NM NPL
+cp 1254,cp,NM,N,P,0,2,0,3,N,N D
+cp 1254,1254,N,N,D,1,2,2,3,D,N D
+dst Saturation,dst,NM,N,V,0,2,0,3,NM,NM N
+dst Saturation,Saturation,N,N,N,1,2,2,3,N,NM N
+line Y,line,NM,N,V,0,2,0,3,NM,NM N
+line Y,Y,N,N,N,1,2,2,3,N,NM N
+link URL,link,NM,N,N,0,2,0,3,NM,NM N
+link URL,URL,N,N,N,1,2,2,3,N,NM N
+lower tail,lower,NM,N,NM,0,2,0,3,NM,NM N
+lower tail,tail,N,N,N,1,2,2,3,N,NM N
+nd Formula,nd,NM,N,N,0,2,0,3,NM,NM N
+nd Formula,Formula,N,N,N,1,2,2,3,N,NM N
+numbering Path,numbering,NM,N,N,0,2,0,3,NM,NM N
+numbering Path,Path,N,N,N,1,2,2,3,N,NM N
+tagged Resources,tagged,NM,NM,VBD,0,2,0,3,NM,NM NPL
+tagged Resources,Resources,N,N,N,1,2,2,3,NPL,NM NPL
+all Open Indices,all,DT,DT,DT,0,3,0,3,DT,DT NM NPL
+all Open Indices,Open,NM,NM,N,1,3,1,3,NM,DT NM NPL
+all Open Indices,Indices,N,N,NPL,2,3,2,3,NPL,DT NM NPL
+cache Entity,cache,NM,N,N,0,2,0,3,NM,NM N
+cache Entity,Entity,N,N,N,1,2,2,3,N,NM N
+current Open Shards,current,NM,NM,NM,0,3,0,3,NM,NM NM NPL
+current Open Shards,Open,NM,NM,N,1,3,1,3,NM,NM NM NPL
+current Open Shards,Shards,N,N,NPL,2,3,2,3,NPL,NM NM NPL
+finished Normally,finished,NM,FAILURE,VBN,0,2,0,3,V,V VM
+finished Normally,Normally,N,FAILURE,VM,1,2,2,3,VM,V VM
+idp Configuration,idp,NM,N,N,0,2,0,3,NM,NM N
+idp Configuration,Configuration,N,N,N,1,2,2,3,N,NM N
+IMPLICIT GROUP KEY,IMPLICIT,NM,NM,N,0,3,0,3,NM,NM NM N
+IMPLICIT GROUP KEY,GROUP,NM,N,N,1,3,1,3,NM,NM NM N
+IMPLICIT GROUP KEY,KEY,N,N,N,2,3,2,3,N,NM NM N
+merged Type,merged,NM,NM,NM,0,2,0,3,NM,NM N
+merged Type,Type,N,N,N,1,2,2,3,N,NM N
+missing Classes,missing,NM,NM,VBG,0,2,0,3,NM,NM NPL
+missing Classes,Classes,N,N,NPL,1,2,2,3,NPL,NM NPL
+new Warning Header Size,new,NM,NM,NM,0,4,0,3,NM,NM NM NM N
+new Warning Header Size,Warning,NM,NM,N,1,4,1,3,NM,NM NM NM N
+new Warning Header Size,Header,NM,N,N,2,4,1,3,NM,NM NM NM N
+new Warning Header Size,Size,N,N,N,3,4,2,3,N,NM NM NM N
+next Search,next,DT,NM,VM,0,2,0,3,NM,NM N
+next Search,Search,N,N,V,1,2,2,3,N,NM N
+parts Size,parts,NM,N,NPL,0,2,0,3,NM,NM N
+parts Size,Size,N,N,N,1,2,2,3,N,NM N
+rounded Bounds,rounded,NM,NM,VBD,0,2,0,3,NM,NM NPL
+rounded Bounds,Bounds,N,N,N,1,2,2,3,NPL,NM NPL
+v Tok,v,NM,NM,N,0,2,0,3,NM,NM N
+v Tok,Tok,N,N,N,1,2,2,3,N,NM N
+always preview,always,NM,N,VM,0,2,0,3,VM,VM V
+always preview,preview,N,N,N,1,2,2,3,V,VM V
+animation box,animation,NM,N,N,0,2,0,3,NM,NM N
+animation box,box,N,N,N,1,2,2,3,N,NM N
+best b,best,NM,NM,NM,0,2,0,3,NM,NM N
+best b,b,N,N,N,1,2,2,3,N,NM N
+element spec,element,NM,N,N,0,2,0,3,NM,NM N
+element spec,spec,N,N,N,1,2,2,3,N,NM N
+identifier quark,identifier,NM,N,NM,0,2,0,3,NM,NM N
+identifier quark,quark,N,N,N,1,2,2,3,N,NM N
+label casefold,label,NM,N,N,0,2,0,3,NM,NM N
+label casefold,casefold,N,N,N,1,2,2,3,N,NM N
+line 1 grad,line,NM,N,N,0,3,0,3,NM,NM D N
+line 1 grad,1,NM,NM,D,1,3,1,3,D,NM D N
+line 1 grad,grad,N,N,N,2,3,2,3,N,NM D N
+neighbor pos,neighbor,NM,N,N,0,2,0,3,NM,NM N
+neighbor pos,pos,N,N,NPL,1,2,2,3,N,NM N
+new image height,new,NM,NM,NM,0,3,0,3,NM,NM NM N
+new image height,image,NM,N,N,1,3,1,3,NM,NM NM N
+new image height,height,N,N,N,2,3,2,3,N,NM NM N
+paint radio,paint,NM,N,N,0,2,0,3,NM,NM N
+paint radio,radio,N,N,N,1,2,2,3,N,NM N
+rgb real,rgb,NM,N,N,0,2,0,3,NM,NM N
+rgb real,real,N,N,N,1,2,2,3,N,NM N
+selection bounds,selection,NM,N,N,0,2,0,3,NM,NM NPL
+selection bounds,bounds,N,N,NPL,1,2,2,3,NPL,NM NPL
+update area,update,NM,N,V,0,2,0,3,NM,NM N
+update area,area,N,N,N,1,2,2,3,N,NM N
+within vertically,within,NM,FAILURE,P,0,2,0,3,P,P VM
+within vertically,vertically,N,FAILURE,VM,1,2,2,3,VM,P VM
+aead crypter seal,aead,NM,N,N,0,3,0,3,NM,NM NM N
+aead crypter seal,crypter,NM,N,N,1,3,1,3,NM,NM NM N
+aead crypter seal,seal,N,N,N,2,3,2,3,N,NM NM N
+cb result,cb,NM,N,P,0,2,0,3,NM,NM N
+cb result,result,N,N,N,1,2,2,3,N,NM N
+Ch,Ch,N,N,N,0,1,0,3,N,N
+is a empty,is,NM,FAILURE,VBZ,0,3,0,3,V,V DT N
+is a empty,a,NM,FAILURE,DT,1,3,1,3,DT,V DT N
+is a empty,empty,N,FAILURE,NM,2,3,2,3,N,V DT N
+items per second,items,NM,N,NPL,0,3,0,3,NPL,NPL P N
+items per second,per,NM,N,P,1,3,1,3,P,NPL P N
+items per second,second,N,N,N,2,3,2,3,N,NPL P N
+max input size,max,NM,N,N,0,3,0,3,NM,NM NM N
+max input size,input,NM,N,N,1,3,1,3,NM,NM NM N
+max input size,size,N,N,N,2,3,2,3,N,NM NM N
+method index,method,NM,N,N,0,2,0,3,NM,NM N
+method index,index,N,N,N,1,2,2,3,N,NM N
+num metadata,num,NM,N,N,0,2,0,3,NM,NM N
+num metadata,metadata,N,N,N,1,2,2,3,N,NM N
+prev num hooks,prev,NM,N,N,0,3,0,3,NM,NM NM NPL
+prev num hooks,num,NM,N,N,1,3,1,3,NM,NM NM NPL
+prev num hooks,hooks,N,N,NPL,2,3,2,3,NPL,NM NM NPL
+request bytes,request,NM,N,N,0,2,0,3,NM,NM NPL
+request bytes,bytes,N,N,NPL,1,2,2,3,NPL,NM NPL
+ssl creds,ssl,NM,N,N,0,2,0,3,NM,NM NPL
+ssl creds,creds,N,N,NPL,1,2,2,3,NPL,NM NPL
+target chars,target,NM,N,N,0,2,0,3,NM,NM NPL
+target chars,chars,N,N,VBZ,1,2,2,3,NPL,NM NPL
+txt alias,txt,NM,N,N,0,2,0,3,NM,NM N
+txt alias,alias,N,N,N,1,2,2,3,N,NM N
+Val Size,Val,NM,N,N,0,2,0,3,NM,NM N
+Val Size,Size,N,N,N,1,2,2,3,N,NM N
+best Style,best,NM,NM,NM,0,2,0,3,NM,NM N
+best Style,Style,N,N,N,1,2,2,3,N,NM N
+binormal type,binormal,NM,N,NM,0,2,0,3,NM,NM N
+binormal type,type,N,N,N,1,2,2,3,N,NM N
+fixed Cam,fixed,NM,NM,VBN,0,2,0,3,NM,NM N
+fixed Cam,Cam,N,N,N,1,2,2,3,N,NM N
+joint Start,joint,NM,NM,NM,0,2,0,3,NM,NM N
+joint Start,Start,N,N,N,1,2,2,3,N,NM N
+number Of Joysticks,number,NM,N,N,0,3,0,3,N,N P NPL
+number Of Joysticks,Of,NM,P,P,1,3,1,3,P,N P NPL
+number Of Joysticks,Joysticks,N,N,NPL,2,3,2,3,NPL,N P NPL
+progress out,progress,NM,FAILURE,V,0,2,0,3,V,V N
+progress out,out,N,FAILURE,N,1,2,2,3,N,V N
+rectangle Index,rectangle,NM,N,N,0,2,0,3,NM,NM N
+rectangle Index,Index,N,N,N,1,2,2,3,N,NM N
+rem F,rem,NM,N,V,0,2,0,3,NM,NM N
+rem F,F,N,N,N,1,2,2,3,N,NM N
+static Rect,static,NM,NM,NM,0,2,0,3,NM,NM N
+static Rect,Rect,N,N,N,1,2,2,3,N,NM N
+supported Style,supported,NM,NM,VBD,0,2,0,3,NM,NM N
+supported Style,Style,N,N,N,1,2,2,3,N,NM N
+use mat dirs,use,NM,V,V,0,3,0,3,V,V NM NPL
+use mat dirs,mat,NM,NM,N,1,3,1,3,NM,V NM NPL
+use mat dirs,dirs,N,N,N,2,3,2,3,NPL,V NM NPL
+wat id,wat,NM,N,VBN,0,2,0,3,NM,NM N
+wat id,id,N,N,N,1,2,2,3,N,NM N
+adding,adding,N,N,VBG,0,1,0,3,V,V
+cmd Lines,cmd,NM,N,VBD,0,2,0,3,NM,NM NPL
+cmd Lines,Lines,N,N,N,1,2,2,3,NPL,NM NPL
+DEFAULT BLOCKED ITEM COMPARATOR,DEFAULT,NM,N,N,0,4,0,3,NM,NM NM NM N
+DEFAULT BLOCKED ITEM COMPARATOR,BLOCKED,NM,NM,N,1,4,1,3,NM,NM NM NM N
+DEFAULT BLOCKED ITEM COMPARATOR,ITEM,NM,N,N,2,4,1,3,NM,NM NM NM N
+DEFAULT BLOCKED ITEM COMPARATOR,COMPARATOR,N,N,N,3,4,2,3,N,NM NM NM N
+executors,executors,N,N,NPL,0,1,0,3,NPL,NPL
+generated Token On Creation,generated,NM,FAILURE,VBD,0,4,0,3,NM,NM N P N
+generated Token On Creation,Token,NM,FAILURE,N,1,4,1,3,N,NM N P N
+generated Token On Creation,On,NM,FAILURE,N,2,4,1,3,P,NM N P N
+generated Token On Creation,Creation,N,FAILURE,N,3,4,2,3,N,NM N P N
+jar URL Connection,jar,NM,N,N,0,3,0,3,NM,NM NM N
+jar URL Connection,URL,NM,N,N,1,3,1,3,NM,NM NM N
+jar URL Connection,Connection,N,N,N,2,3,2,3,N,NM NM N
+logger Name Parts,logger,NM,N,N,0,3,0,3,NM,NM NM NPL
+logger Name Parts,Name,NM,N,N,1,3,1,3,NM,NM NM NPL
+logger Name Parts,Parts,N,N,NPL,2,3,2,3,NPL,NM NM NPL
+received Token Signature,received,NM,NM,VBD,0,3,0,3,NM,NM NM N
+received Token Signature,Token,NM,NM,N,1,3,1,3,NM,NM NM N
+received Token Signature,Signature,N,N,N,2,3,2,3,N,NM NM N
+reduced Json,reduced,NM,NM,VBD,0,2,0,3,NM,NM N
+reduced Json,Json,N,N,N,1,2,2,3,N,NM N
+requested Plugins,requested,NM,NM,VBD,0,2,0,3,NM,NM NPL
+requested Plugins,Plugins,N,N,N,1,2,2,3,NPL,NM NPL
+size Guess,size,NM,NM,N,0,2,0,3,NM,NM N
+size Guess,Guess,N,N,V,1,2,2,3,N,NM N
+token Data,token,NM,NM,NM,0,2,0,3,NM,NM N
+token Data,Data,N,N,N,1,2,2,3,N,NM N
+token Store Typed Data,token,NM,NM,NM,0,4,0,3,NM,NM NM NM N
+token Store Typed Data,Store,NM,N,N,1,4,1,3,NM,NM NM NM N
+token Store Typed Data,Typed,NM,N,N,2,4,1,3,NM,NM NM NM N
+token Store Typed Data,Data,N,N,N,3,4,2,3,N,NM NM NM N
+wait Until,wait,NM,V,V,0,2,0,3,V,V P
+wait Until,Until,N,P,P,1,2,2,3,P,V P
+check Next,check,NM,N,V,0,2,0,3,V,V N
+check Next,Next,DT,NM,N,1,2,2,3,N,V N
+compiling Contexts,compiling,NM,N,VBG,0,2,0,3,V,V NPL
+compiling Contexts,Contexts,N,N,NPL,1,2,2,3,NPL,V NPL
+DEPOT MESSAGE START,DEPOT,NM,N,N,0,3,0,3,NM,NM NM N
+DEPOT MESSAGE START,MESSAGE,NM,N,N,1,3,1,3,NM,NM NM N
+DEPOT MESSAGE START,START,N,N,N,2,3,2,3,N,NM NM N
+check Not Local,check,V,FAILURE,VBP,0,3,0,4,V,V VM N
+check Not Local,Not,DT,FAILURE,VM,1,3,1,4,VM,V VM N
+check Not Local,Local,N,FAILURE,N,2,3,2,4,N,V VM N
+deep Stub,deep,NM,NM,NM,0,2,0,4,NM,NM N
+deep Stub,Stub,N,N,N,1,2,2,4,N,NM N
+do Login Entry,do,V,V,VBP,0,3,0,4,V,V NM N
+do Login Entry,Login,NM,N,N,1,3,1,4,NM,V NM N
+do Login Entry,Entry,N,N,N,2,3,2,4,N,V NM N
+Get XCR 0,Get,V,V,VBP,0,3,0,4,V,V N D
+Get XCR 0,XCR,N,N,N,1,3,1,4,N,V N D
+Get XCR 0,0,D,N,D,2,3,2,4,D,V N D
+gimp devices check change,gimp,V,V,VBP,0,4,0,4,PRE,PRE NPL V V
+gimp devices check change,devices,NM,N,NPL,1,4,1,4,NPL,PRE NPL V V
+gimp devices check change,check,NM,N,N,2,4,1,4,V,PRE NPL V V
+gimp devices check change,change,N,N,N,3,4,2,4,V,PRE NPL V V
+gimp image file get thumbnail,gimp,V,V,VBP,0,5,0,4,PRE,PRE NM N V N
+gimp image file get thumbnail,image,NM,N,N,1,5,1,4,NM,PRE NM N V N
+gimp image file get thumbnail,file,NM,N,N,2,5,1,4,N,PRE NM N V N
+gimp image file get thumbnail,get,NM,N,V,3,5,1,4,V,PRE NM N V N
+gimp image file get thumbnail,thumbnail,N,N,NM,4,5,2,4,N,PRE NM N V N
+metadata Snapshot,metadata,NM,N,VBP,0,2,0,4,NM,NM N
+metadata Snapshot,Snapshot,N,N,N,1,2,2,4,N,NM N
+on Group Call Key Sent,on,NM,P,P,0,5,0,4,P,P NM NM N NM
+on Group Call Key Sent,Group,NM,N,N,1,5,1,4,NM,P NM NM N NM
+on Group Call Key Sent,Call,NM,N,N,2,5,1,4,NM,P NM NM N NM
+on Group Call Key Sent,Key,N,NM,N,3,5,1,4,N,P NM NM N NM
+on Group Call Key Sent,Sent,P,N,N,4,5,2,4,NM,P NM NM N NM
+parse Max Age,parse,V,V,VBP,0,3,0,4,V,V NM N
+parse Max Age,Max,NM,N,N,1,3,1,4,NM,V NM N
+parse Max Age,Age,N,N,N,2,3,2,4,N,V NM N
+pnm load raw pfm,pnm,V,V,VBP,0,4,0,4,NM,NM V NM N
+pnm load raw pfm,load,NM,NM,N,1,4,1,4,V,NM V NM N
+pnm load raw pfm,raw,NM,N,NM,2,4,1,4,NM,NM V NM N
+pnm load raw pfm,pfm,N,FAILURE,N,3,4,2,4,N,NM V NM N
+send Serial Config,send,V,V,VBP,0,3,0,4,V,V NM N
+send Serial Config,Serial,NM,NM,NM,1,3,1,4,NM,V NM N
+send Serial Config,Config,N,N,N,2,3,2,4,N,V NM N
+with Market Rate Accuracy,with,P,P,P,0,4,0,4,P,P NM NM N
+with Market Rate Accuracy,Market,NM,N,N,1,4,1,4,NM,P NM NM N
+with Market Rate Accuracy,Rate,NM,N,N,2,4,1,4,NM,P NM NM N
+with Market Rate Accuracy,Accuracy,N,N,N,3,4,2,4,N,P NM NM N
+wrap If Not Thread Safe,wrap,V,FAILURE,VBP,0,5,0,4,V,V CJ VM NM N
+wrap If Not Thread Safe,If,NM,FAILURE,P,1,5,1,4,CJ,V CJ VM NM N
+wrap If Not Thread Safe,Not,DT,FAILURE,VM,2,5,1,4,VM,V CJ VM NM N
+wrap If Not Thread Safe,Thread,NM,FAILURE,N,3,5,1,4,NM,V CJ VM NM N
+wrap If Not Thread Safe,Safe,N,FAILURE,N,4,5,2,4,N,V CJ VM NM N
+add Unicode Script Codes To Names,add,V,V,VBP,0,6,0,4,V,V NM NM NPL P NPL
+add Unicode Script Codes To Names,Unicode,NM,N,N,1,6,1,4,NM,V NM NM NPL P NPL
+add Unicode Script Codes To Names,Script,NM,N,N,2,6,1,4,NM,V NM NM NPL P NPL
+add Unicode Script Codes To Names,Codes,N,N,NPL,3,6,1,4,NPL,V NM NM NPL P NPL
+add Unicode Script Codes To Names,To,P,P,P,4,6,1,4,P,V NM NM NPL P NPL
+add Unicode Script Codes To Names,Names,N,N,NPL,5,6,2,4,NPL,V NM NM NPL P NPL
+biggest Constructor,biggest,NM,NM,NM,0,2,0,4,NM,NM N
+biggest Constructor,Constructor,N,N,N,1,2,2,4,N,NM N
+check Not Interface,check,V,FAILURE,VBP,0,3,0,4,V,V VM N
+check Not Interface,Not,DT,FAILURE,VM,1,3,1,4,VM,V VM N
+check Not Interface,Interface,N,FAILURE,N,2,3,2,4,N,V VM N
+find Source Subdir,find,V,V,VBP,0,3,0,4,V,V NM N
+find Source Subdir,Source,NM,N,N,1,3,1,4,NM,V NM N
+find Source Subdir,Subdir,N,N,N,2,3,2,4,N,V NM N
+get Phrase 1,get,V,V,VBP,0,3,0,4,V,V N D
+get Phrase 1,Phrase,N,N,N,1,3,1,4,N,V N D
+get Phrase 1,1,D,N,D,2,3,2,4,D,V N D
+gimp wire compare,gimp,V,V,VBP,0,3,0,4,PRE,PRE N V
+gimp wire compare,wire,NM,N,N,1,3,1,4,N,PRE N V
+gimp wire compare,compare,N,N,V,2,3,2,4,V,PRE N V
+imb stereo3d read interlace,imb,V,N,VBP,0,4,0,4,PRE,PRE NM V N
+imb stereo3d read interlace,stereo3d,NM,N,NM,1,4,1,4,NM,PRE NM V N
+imb stereo3d read interlace,read,D,N,N,2,4,1,4,V,PRE NM V N
+imb stereo3d read interlace,interlace,NM,V,V,3,4,2,4,N,PRE NM V N
+is Sum Supported,is,V,V,VBZ,0,3,0,4,V,V N V
+is Sum Supported,Sum,NM,N,N,1,3,1,4,N,V N V
+is Sum Supported,Supported,N,V,N,2,3,2,4,V,V N V
+maximize All,maximize,V,V,VBP,0,2,0,4,V,V DT
+maximize All,All,DT,N,N,1,2,2,4,DT,V DT
+png get rows,png,PRE,V,VBP,0,3,0,4,NM,NM V NPL
+png get rows,get,V,N,V,1,3,1,4,V,NM V NPL
+png get rows,rows,N,FAILURE,NPL,2,3,2,4,NPL,NM V NPL
+rgb 2 rgb565,rgb,V,N,VBP,0,3,0,4,N,N P N
+rgb 2 rgb565,2,D,NM,D,1,3,1,4,P,N P N
+rgb 2 rgb565,rgb565,N,N,N,2,3,2,4,N,N P N
+saturated cast,saturated,V,NM,VBD,0,2,0,4,NM,NM N
+saturated cast,cast,N,N,N,1,2,2,4,N,NM N
+verifier get mapping,verifier,NM,V,VM,0,3,0,4,N,N V N
+verifier get mapping,get,N,N,VBP,1,3,1,4,V,N V N
+verifier get mapping,mapping,V,FAILURE,N,2,3,2,4,N,N V N
+write Node Materials,write,V,V,VBP,0,3,0,4,V,V NM NPL
+write Node Materials,Node,NM,N,N,1,3,1,4,NM,V NM NPL
+write Node Materials,Materials,N,N,NPL,2,3,2,4,NPL,V NM NPL
+append Python Style Escaped Code Point,append,V,V,VBP,0,6,0,4,V,V NM N NM NM N
+append Python Style Escaped Code Point,Python,NM,N,N,1,6,1,4,NM,V NM N NM NM N
+append Python Style Escaped Code Point,Style,NM,N,N,2,6,1,4,N,V NM N NM NM N
+append Python Style Escaped Code Point,Escaped,NM,NM,VBD,3,6,1,4,NM,V NM N NM NM N
+append Python Style Escaped Code Point,Code,NM,N,N,4,6,1,4,NM,V NM N NM NM N
+append Python Style Escaped Code Point,Point,N,N,N,5,6,2,4,N,V NM N NM NM N
+ARGB Subtract Row C,ARGB,PRE,FAILURE,N,0,4,0,4,N,N V NM N
+ARGB Subtract Row C,Subtract,V,FAILURE,N,1,4,1,4,V,N V NM N
+ARGB Subtract Row C,Row,NM,FAILURE,N,2,4,1,4,NM,N V NM N
+ARGB Subtract Row C,C,NM,FAILURE,N,3,4,2,4,N,N V NM N
+BKE lattice index flip,BKE,V,N,N,0,4,0,4,PRE,PRE NM N V
+BKE lattice index flip,lattice,NM,N,N,1,4,1,4,NM,PRE NM N V
+BKE lattice index flip,index,NM,N,N,2,4,1,4,N,PRE NM N V
+BKE lattice index flip,flip,N,V,V,3,4,2,4,V,PRE NM N V
+build Lexer Rule Actions,build,V,V,VBP,0,4,0,4,V,V NM NM NPL
+build Lexer Rule Actions,Lexer,NM,N,N,1,4,1,4,NM,V NM NM NPL
+build Lexer Rule Actions,Rule,NM,N,N,2,4,1,4,NM,V NM NM NPL
+build Lexer Rule Actions,Actions,N,N,NPL,3,4,2,4,NPL,V NM NM NPL
+enable Background Opacity,enable,V,V,VBP,0,3,0,4,V,V NM N
+enable Background Opacity,Background,NM,N,N,1,3,1,4,NM,V NM N
+enable Background Opacity,Opacity,N,N,N,2,3,2,4,N,V NM N
+find Hashable Base Type,find,V,V,VBP,0,4,0,4,V,V NM NM N
+find Hashable Base Type,Hashable,NM,NM,N,1,4,1,4,NM,V NM NM N
+find Hashable Base Type,Base,NM,NM,N,2,4,1,4,NM,V NM NM N
+find Hashable Base Type,Type,N,N,N,3,4,2,4,N,V NM NM N
+has Composite Op,has,V,V,VBZ,0,3,0,4,V,V NM N
+has Composite Op,Composite,NM,NM,N,1,3,1,4,NM,V NM N
+has Composite Op,Op,N,N,N,2,3,2,4,N,V NM N
+Initialize Dual Graph,Initialize,V,V,VBP,0,3,0,4,V,V NM N
+Initialize Dual Graph,Dual,NM,NM,NM,1,3,1,4,NM,V NM N
+Initialize Dual Graph,Graph,N,N,N,2,3,2,4,N,V NM N
+of To Binary,of,P,FAILURE,P,0,3,0,4,PRE,PRE P N
+of To Binary,To,NM,FAILURE,P,1,3,1,4,P,PRE P N
+of To Binary,Binary,N,FAILURE,N,2,3,2,4,N,PRE P N
+order With,order,V,FAILURE,VBP,0,2,0,4,V,V P
+order With,With,P,FAILURE,N,1,2,2,4,P,V P
+png get row bytes,png,PRE,V,VBP,0,4,0,4,NM,NM V NM NPL
+png get row bytes,get,V,N,V,1,4,1,4,V,NM V NM NPL
+png get row bytes,row,NM,N,N,2,4,1,4,NM,NM V NM NPL
+png get row bytes,bytes,N,FAILURE,NPL,3,4,2,4,NPL,NM V NM NPL
+render result exr file end,render,V,V,VBP,0,5,0,4,V,V NM NM NM N
+render result exr file end,result,NM,N,N,1,5,1,4,NM,V NM NM NM N
+render result exr file end,exr,NM,N,N,2,5,1,4,NM,V NM NM NM N
+render result exr file end,file,NM,N,N,3,5,1,4,NM,V NM NM NM N
+render result exr file end,end,N,N,N,4,5,2,4,N,V NM NM NM N
+with Cms Leg Rule,with,P,P,P,0,4,0,4,P,P NM NM N
+with Cms Leg Rule,Cms,NM,N,N,1,4,1,4,NM,P NM NM N
+with Cms Leg Rule,Leg,NM,N,N,2,4,1,4,NM,P NM NM N
+with Cms Leg Rule,Rule,N,N,N,3,4,2,4,N,P NM NM N
+Add Bezier Curve,Add,V,V,VBP,0,3,0,4,V,V NM N
+Add Bezier Curve,Bezier,NM,N,N,1,3,1,4,NM,V NM N
+Add Bezier Curve,Curve,N,N,N,2,3,2,4,N,V NM N
+add Ordered List,add,V,V,VBP,0,3,0,4,V,V NM N
+add Ordered List,Ordered,NM,NM,NM,1,3,1,4,NM,V NM N
+add Ordered List,List,N,N,N,2,3,2,4,N,V NM N
+assign Lexer Token Types,assign,V,V,VBP,0,4,0,4,V,V NM NM NPL
+assign Lexer Token Types,Lexer,NM,N,N,1,4,1,4,NM,V NM NM NPL
+assign Lexer Token Types,Token,NM,NM,N,2,4,1,4,NM,V NM NM NPL
+assign Lexer Token Types,Types,N,N,N,3,4,2,4,NPL,V NM NM NPL
+Delete Input,Delete,V,V,VBP,0,2,0,4,V,V N
+Delete Input,Input,N,N,N,1,2,2,4,N,V N
+Get DMF Header,Get,V,V,VBP,0,3,0,4,V,V NM N
+Get DMF Header,DMF,NM,N,N,1,3,1,4,NM,V NM N
+Get DMF Header,Header,N,N,N,2,3,2,4,N,V NM N
+is Conscrypt Preferred,is,V,V,VBZ,0,3,0,4,V,V N V
+is Conscrypt Preferred,Conscrypt,NM,N,N,1,3,1,4,N,V N V
+is Conscrypt Preferred,Preferred,N,V,N,2,3,2,4,V,V N V
+matches Any Parent Categories,matches,V,N,VBZ,0,4,0,4,V,V DT NM NPL
+matches Any Parent Categories,Any,DT,DT,DT,1,4,1,4,DT,V DT NM NPL
+matches Any Parent Categories,Parent,NM,N,N,2,4,1,4,NM,V DT NM NPL
+matches Any Parent Categories,Categories,N,N,NPL,3,4,2,4,NPL,V DT NM NPL
+nla invert combine value,nla,V,N,VBP,0,4,0,4,NM,NM V NM N
+nla invert combine value,invert,NM,N,VM,1,4,1,4,V,NM V NM N
+nla invert combine value,combine,NM,N,V,2,4,1,4,NM,NM V NM N
+nla invert combine value,value,N,N,N,3,4,2,4,N,NM V NM N
+require Client Auth,require,V,V,VBP,0,3,0,4,V,V NM N
+require Client Auth,Client,NM,N,N,1,3,1,4,NM,V NM N
+require Client Auth,Auth,N,N,N,2,3,2,4,N,V NM N
+resize Linear Open CV,resize,V,V,VBP,0,4,0,4,V,V NM NM N
+resize Linear Open CV,Linear,NM,NM,N,1,4,1,4,NM,V NM NM N
+resize Linear Open CV,Open,NM,NM,N,2,4,1,4,NM,V NM NM N
+resize Linear Open CV,CV,N,N,N,3,4,2,4,N,V NM NM N
+skip Whitespace And Commas,skip,V,V,VBP,0,4,0,4,V,V N CJ NPL
+skip Whitespace And Commas,Whitespace,NM,N,N,1,4,1,4,N,V N CJ NPL
+skip Whitespace And Commas,And,NM,N,CJ,2,4,1,4,CJ,V N CJ NPL
+skip Whitespace And Commas,Commas,N,N,N,3,4,2,4,NPL,V N CJ NPL
+status Icon,status,NM,N,N,0,2,0,4,NM,NM N
+status Icon,Icon,N,N,N,1,2,2,4,N,NM N
+transform Path,transform,V,V,VBP,0,2,0,4,V,V N
+transform Path,Path,N,N,N,1,2,2,4,N,V N
+add Object Index,add,V,V,VBP,0,3,0,4,V,V NM N
+add Object Index,Object,NM,N,N,1,3,1,4,NM,V NM N
+add Object Index,Index,N,N,N,2,3,2,4,N,V NM N
+Clear Active ID,Clear,V,V,NM,0,3,0,4,V,V NM N
+Clear Active ID,Active,NM,NM,NM,1,3,1,4,NM,V NM N
+Clear Active ID,ID,N,N,N,2,3,2,4,N,V NM N
+Convert To Php Namespace,Convert,V,V,VBP,0,4,0,4,V,V P NM N
+Convert To Php Namespace,To,P,P,P,1,4,1,4,P,V P NM N
+Convert To Php Namespace,Php,NM,N,N,2,4,1,4,NM,V P NM N
+Convert To Php Namespace,Namespace,N,N,N,3,4,2,4,N,V P NM N
+get Actual Values,get,V,V,VBP,0,3,0,4,V,V NM NPL
+get Actual Values,Actual,NM,NM,NM,1,3,1,4,NM,V NM NPL
+get Actual Values,Values,N,N,NPL,2,3,2,4,NPL,V NM NPL
+get Commit Id,get,V,V,VBP,0,3,0,4,V,V NM N
+get Commit Id,Commit,NM,N,V,1,3,1,4,NM,V NM N
+get Commit Id,Id,N,N,N,2,3,2,4,N,V NM N
+get Constant Reference For Protocol Descriptor,get,V,V,VBP,0,6,0,4,V,V NM N P NM N
+get Constant Reference For Protocol Descriptor,Constant,NM,NM,NM,1,6,1,4,NM,V NM N P NM N
+get Constant Reference For Protocol Descriptor,Reference,N,N,N,2,6,1,4,N,V NM N P NM N
+get Constant Reference For Protocol Descriptor,For,P,P,P,3,6,1,4,P,V NM N P NM N
+get Constant Reference For Protocol Descriptor,Protocol,NM,N,N,4,6,1,4,NM,V NM N P NM N
+get Constant Reference For Protocol Descriptor,Descriptor,N,N,N,5,6,2,4,N,V NM N P NM N
+init For Group,init,V,V,VBP,0,3,0,4,V,V P N
+init For Group,For,P,P,P,1,3,1,4,P,V P N
+init For Group,Group,N,N,N,2,3,2,4,N,V P N
+presentation Start From First,presentation,NM,V,N,0,4,0,4,N,N V P NM
+presentation Start From First,Start,NM,P,N,1,4,1,4,V,N V P NM
+presentation Start From First,From,NM,N,P,2,4,1,4,P,N V P NM
+presentation Start From First,First,N,FAILURE,N,3,4,2,4,NM,N V P NM
+reapply Filter,reapply,V,V,VBP,0,2,0,4,V,V N
+reapply Filter,Filter,N,N,N,1,2,2,4,N,V N
+sanitize Path,sanitize,V,V,VBP,0,2,0,4,V,V N
+sanitize Path,Path,N,N,N,1,2,2,4,N,V N
+sqlite3 session config,sqlite3,V,N,VBP,0,3,0,4,PRE,PRE N V
+sqlite3 session config,session,D,N,N,1,3,1,4,N,PRE N V
+sqlite3 session config,config,NM,N,N,2,3,2,4,V,PRE N V
+uncompress If Needed,uncompress,NM,V,VBP,0,3,0,4,V,V CJ V
+uncompress If Needed,If,N,N,P,1,3,1,4,CJ,V CJ V
+uncompress If Needed,Needed,P,V,N,2,3,2,4,V,V CJ V
+visit SIL Argument,visit,V,V,VBP,0,3,0,4,V,V NM N
+visit SIL Argument,SIL,NM,NM,N,1,3,1,4,NM,V NM N
+visit SIL Argument,Argument,N,N,N,2,3,2,4,N,V NM N
+write tcp data,write,V,V,VBP,0,3,0,4,V,V NM N
+write tcp data,tcp,NM,N,NM,1,3,1,4,NM,V NM N
+write tcp data,data,N,N,NPL,2,3,2,4,N,V NM N
+after Channel,after,NM,P,P,0,2,0,4,P,P N
+after Channel,Channel,N,N,N,1,2,2,4,N,P N
+append Sequence,append,V,V,VBP,0,2,0,4,V,V N
+append Sequence,Sequence,N,N,N,1,2,2,4,N,V N
+Get Meta Index,Get,V,V,VBP,0,3,0,4,V,V NM N
+Get Meta Index,Meta,NM,N,N,1,3,1,4,NM,V NM N
+Get Meta Index,Index,N,N,N,2,3,2,4,N,V NM N
+gpencil primitive modal,gpencil,NM,N,VBP,0,3,0,4,NM,NM NM N
+gpencil primitive modal,primitive,NM,N,NM,1,3,1,4,NM,NM NM N
+gpencil primitive modal,modal,N,NM,N,2,3,2,4,N,NM NM N
+grpc chttp2 mark stream writable,grpc,V,N,VBP,0,5,0,4,PRE,PRE PRE V N NM
+grpc chttp2 mark stream writable,chttp2,NM,N,N,1,5,1,4,PRE,PRE PRE V N NM
+grpc chttp2 mark stream writable,mark,NM,N,N,2,5,1,4,V,PRE PRE V N NM
+grpc chttp2 mark stream writable,stream,NM,N,N,3,5,1,4,N,PRE PRE V N NM
+grpc chttp2 mark stream writable,writable,NM,NM,N,4,5,2,4,NM,PRE PRE V N NM
+match By IP,match,V,V,VBP,0,3,0,4,V,V P N
+match By IP,By,P,P,P,1,3,1,4,P,V P N
+match By IP,IP,N,N,N,2,3,2,4,N,V P N
+max Draw Buffers,max,V,V,VBP,0,3,0,4,NM,NM NM NPL
+max Draw Buffers,Draw,NM,N,V,1,3,1,4,NM,NM NM NPL
+max Draw Buffers,Buffers,N,FAILURE,NPL,2,3,2,4,NPL,NM NM NPL
+on Implies,on,NM,P,P,0,2,0,4,P,P V
+on Implies,Implies,N,N,NPL,1,2,2,4,V,P V
+parse Attribute Def,parse,V,V,VBP,0,3,0,4,V,V NM N
+parse Attribute Def,Attribute,NM,N,N,1,3,1,4,NM,V NM N
+parse Attribute Def,Def,N,N,N,2,3,2,4,N,V NM N
+set Custom Uniform 1 f,set,V,V,VBD,0,5,0,4,V,V NM N D NM
+set Custom Uniform 1 f,Custom,NM,NM,N,1,5,1,4,NM,V NM N D NM
+set Custom Uniform 1 f,Uniform,NM,NM,N,2,5,1,4,N,V NM N D NM
+set Custom Uniform 1 f,1,D,NM,D,3,5,1,4,D,V NM N D NM
+set Custom Uniform 1 f,f,N,N,N,4,5,2,4,NM,V NM N D NM
+shader data to shader globals,shader,NM,FAILURE,VBP,0,5,0,4,NM,NM NPL P NM NPL
+shader data to shader globals,data,NM,FAILURE,NPL,1,5,1,4,NPL,NM NPL P NM NPL
+shader data to shader globals,to,NM,FAILURE,P,2,5,1,4,P,NM NPL P NM NPL
+shader data to shader globals,shader,NM,FAILURE,V,3,5,1,4,NM,NM NPL P NM NPL
+shader data to shader globals,globals,N,FAILURE,NPL,4,5,2,4,NPL,NM NPL P NM NPL
+two Factor Response,two,NM,NM,D,0,3,0,4,NM,NM NM N
+two Factor Response,Factor,NM,N,N,1,3,1,4,NM,NM NM N
+two Factor Response,Response,N,N,N,2,3,2,4,N,NM NM N
+with Web Socket Upgrade,with,P,P,P,0,4,0,4,P,P NM NM N
+with Web Socket Upgrade,Web,NM,N,N,1,4,1,4,NM,P NM NM N
+with Web Socket Upgrade,Socket,NM,N,N,2,4,1,4,NM,P NM NM N
+with Web Socket Upgrade,Upgrade,N,N,N,3,4,2,4,N,P NM NM N
+binary Search Bytes,binary,NM,NM,NM,0,3,0,4,NM,NM N NPL
+binary Search Bytes,Search,NM,N,V,1,3,1,4,N,NM N NPL
+binary Search Bytes,Bytes,N,N,NPL,2,3,2,4,NPL,NM N NPL
+compare Inverse And Forward Dynamics,compare,V,V,VBP,0,5,0,4,V,V NM CJ NM NPL
+compare Inverse And Forward Dynamics,Inverse,NM,NM,N,1,5,1,4,NM,V NM CJ NM NPL
+compare Inverse And Forward Dynamics,And,NM,N,CJ,2,5,1,4,CJ,V NM CJ NM NPL
+compare Inverse And Forward Dynamics,Forward,NM,NM,N,3,5,1,4,NM,V NM CJ NM NPL
+compare Inverse And Forward Dynamics,Dynamics,N,N,N,4,5,2,4,NPL,V NM CJ NM NPL
+dump Frame buffer Formats,dump,V,V,VBP,0,4,0,4,V,V NM NM NPL
+dump Frame buffer Formats,Frame,NM,N,N,1,4,1,4,NM,V NM NM NPL
+dump Frame buffer Formats,buffer,NM,N,N,2,4,1,4,NM,V NM NM NPL
+dump Frame buffer Formats,Formats,N,N,NPL,3,4,2,4,NPL,V NM NM NPL
+get Default Install State,get,V,V,VBP,0,4,0,4,V,V NM NM N
+get Default Install State,Default,NM,N,N,1,4,1,4,NM,V NM NM N
+get Default Install State,Install,NM,N,N,2,4,1,4,NM,V NM NM N
+get Default Install State,State,N,N,N,3,4,2,4,N,V NM NM N
+keep Readability Only On Descendants,keep,V,FAILURE,VBP,0,5,0,4,V,V NM VM P NPL
+keep Readability Only On Descendants,Readability,NM,FAILURE,N,1,5,1,4,NM,V NM VM P NPL
+keep Readability Only On Descendants,Only,N,FAILURE,VM,2,5,1,4,VM,V NM VM P NPL
+keep Readability Only On Descendants,On,P,FAILURE,P,3,5,1,4,P,V NM VM P NPL
+keep Readability Only On Descendants,Descendants,N,FAILURE,NPL,4,5,2,4,NPL,V NM VM P NPL
+make HTML Table,make,V,V,VBP,0,3,0,4,V,V NM N
+make HTML Table,HTML,NM,N,N,1,3,1,4,NM,V NM N
+make HTML Table,Table,N,N,N,2,3,2,4,N,V NM N
+parent Pairs,parent,V,V,N,0,2,0,4,NM,NM NPL
+parent Pairs,Pairs,N,N,NPL,1,2,2,4,NPL,NM NPL
+send String,send,V,V,VBP,0,2,0,4,V,V N
+send String,String,N,N,N,1,2,2,4,N,V N
+set Destructor Callback,set,V,V,VBD,0,3,0,4,V,V NM N
+set Destructor Callback,Destructor,NM,N,N,1,3,1,4,NM,V NM N
+set Destructor Callback,Callback,N,N,N,2,3,2,4,N,V NM N
+set Invert,set,V,V,VBD,0,2,0,4,V,V N
+set Invert,Invert,N,N,N,1,2,2,4,N,V N
+set Layer Texture Name,set,V,V,VBD,0,4,0,4,V,V NM NM N
+set Layer Texture Name,Layer,NM,N,N,1,4,1,4,NM,V NM NM N
+set Layer Texture Name,Texture,NM,N,N,2,4,1,4,NM,V NM NM N
+set Layer Texture Name,Name,N,N,N,3,4,2,4,N,V NM NM N
+set Project Naming Strategy,set,V,V,VBD,0,4,0,4,V,V NM NM N
+set Project Naming Strategy,Project,NM,N,N,1,4,1,4,NM,V NM NM N
+set Project Naming Strategy,Naming,NM,NM,N,2,4,1,4,NM,V NM NM N
+set Project Naming Strategy,Strategy,N,N,N,3,4,2,4,N,V NM NM N
+stmt Close,stmt,V,V,VBP,0,2,0,4,N,N V
+stmt Close,Close,N,FAILURE,N,1,2,2,4,V,N V
+choose Document,choose,V,V,VBP,0,2,0,4,V,V N
+choose Document,Document,N,N,N,1,2,2,4,N,V N
+declare Component,declare,V,V,VBP,0,2,0,4,V,V N
+declare Component,Component,N,N,N,1,2,2,4,N,V N
+build Context,build,NM,N,V,0,2,0,5,NM,NM N
+build Context,Context,N,N,N,1,2,2,5,N,NM N
+code Point To,code,NM,V,V,0,3,0,5,NM,NM N P
+code Point To,Point,NM,N,N,1,3,1,5,N,NM N P
+code Point To,To,N,P,P,2,3,2,5,P,NM N P
+comparison Value,comparison,NM,N,N,0,2,0,5,NM,NM N
+comparison Value,Value,N,N,N,1,2,2,5,N,NM N
+env Name,env,NM,N,N,0,2,0,5,NM,NM N
+env Name,Name,N,N,N,1,2,2,5,N,NM N
+import G,import,NM,N,V,0,2,0,5,NM,NM N
+import G,G,N,N,N,1,2,2,5,N,NM N
+label Op,label,NM,N,N,0,2,0,5,NM,NM N
+label Op,Op,N,N,N,1,2,2,5,N,NM N
+label Pair,label,NM,N,N,0,2,0,5,NM,NM N
+label Pair,Pair,N,N,N,1,2,2,5,N,NM N
+property Interval Set,property,NM,N,N,0,3,0,5,NM,NM NM N
+property Interval Set,Interval,NM,N,N,1,3,1,5,NM,NM NM N
+property Interval Set,Set,N,N,V,2,3,2,5,N,NM NM N
+question AST,question,NM,N,V,0,2,0,5,NM,NM N
+question AST,AST,N,N,N,1,2,2,5,N,NM N
+status File,status,NM,N,N,0,2,0,5,NM,NM N
+status File,File,N,N,N,1,2,2,5,N,NM N
+target,target,N,N,N,0,1,0,5,N,N
+token Within Action,token,NM,N,NM,0,3,0,5,N,N P N
+token Within Action,Within,NM,V,P,1,3,1,5,P,N P N
+token Within Action,Action,N,FAILURE,N,2,3,2,5,N,N P N
+c problem,c,NM,NM,N,0,2,0,5,NM,NM N
+c problem,problem,N,N,N,1,2,2,5,N,NM N
+frame pixel coords,frame,NM,N,N,0,3,0,5,NM,NM NM NPL
+frame pixel coords,pixel,NM,N,N,1,3,1,5,NM,NM NM NPL
+frame pixel coords,coords,N,N,NPL,2,3,2,5,NPL,NM NM NPL
+l b layer,l,NM,NM,N,0,3,0,5,NM,NM NM N
+l b layer,b,NM,N,N,1,3,1,5,NM,NM NM N
+l b layer,layer,N,N,N,2,3,2,5,N,NM NM N
+line index mask len,line,NM,N,N,0,4,0,5,NM,NM NM NM N
+line index mask len,index,NM,N,N,1,4,1,5,NM,NM NM NM N
+line index mask len,mask,NM,N,N,2,4,1,5,NM,NM NM NM N
+line index mask len,len,N,N,N,3,4,2,5,N,NM NM NM N
+next func,next,DT,NM,NM,0,2,0,5,NM,NM N
+next func,func,N,N,N,1,2,2,5,N,NM N
+own flags,own,NM,NM,NM,0,2,0,5,NM,NM NPL
+own flags,flags,N,N,NPL,1,2,2,5,NPL,NM NPL
+point index,point,NM,N,N,0,2,0,5,NM,NM N
+point index,index,N,N,N,1,2,2,5,N,NM N
+progressive,progressive,N,NM,NM,0,1,0,5,N,N
+read Operation,read,NM,N,V,0,2,0,5,NM,NM N
+read Operation,Operation,N,N,N,1,2,2,5,N,NM N
+rets,rets,N,V,NPL,0,1,0,5,NPL,NPL
+rot axis,rot,NM,N,N,0,2,0,5,NM,NM N
+rot axis,axis,N,N,N,1,2,2,5,N,NM N
+strength,strength,N,N,N,0,1,0,5,N,N
+time range,time,NM,N,N,0,2,0,5,NM,NM N
+time range,range,N,N,N,1,2,2,5,N,NM N
+zoom x y,zoom,NM,N,V,0,3,0,5,NM,NM N N
+zoom x y,x,NM,NM,N,1,3,1,5,N,NM N N
+zoom x y,y,N,N,N,2,3,2,5,N,NM N N
+animations Data,animations,NM,N,NPL,0,2,0,5,NM,NM NPL
+animations Data,Data,N,N,N,1,2,2,5,NPL,NM NPL
+bibliography Type,bibliography,NM,N,N,0,2,0,5,NM,NM N
+bibliography Type,Type,N,N,N,1,2,2,5,N,NM N
+block Nr,block,NM,N,V,0,2,0,5,NM,NM N
+block Nr,Nr,N,N,N,1,2,2,5,N,NM N
+brush Hatch,brush,NM,N,V,0,2,0,5,NM,NM N
+brush Hatch,Hatch,N,N,N,1,2,2,5,N,NM N
+color Map,color,NM,NM,N,0,2,0,5,NM,NM N
+color Map,Map,N,N,N,1,2,2,5,N,NM N
+handle Pos,handle,NM,N,V,0,2,0,5,NM,NM N
+handle Pos,Pos,N,N,N,1,2,2,5,N,NM N
+html File,html,NM,N,N,0,2,0,5,NM,NM N
+html File,File,N,N,N,1,2,2,5,N,NM N
+institution,institution,N,N,N,0,1,0,5,N,N
+parsing,parsing,N,N,VBG,0,1,0,5,V,V
+pen Loaded,pen,NM,N,N,0,2,0,5,N,N V
+pen Loaded,Loaded,N,V,VBN,1,2,2,5,V,N V
+previous Index,previous,NM,NM,NM,0,2,0,5,NM,NM N
+previous Index,Index,N,N,N,1,2,2,5,N,NM N
+previous Is Valid,previous,NM,V,NM,0,3,0,5,N,N V NM
+previous Is Valid,Is,NM,NM,N,1,3,1,5,V,N V NM
+previous Is Valid,Valid,N,FAILURE,N,2,3,2,5,NM,N V NM
+separator Color,separator,NM,N,V,0,2,0,5,NM,NM N
+separator Color,Color,N,N,N,1,2,2,5,N,NM N
+src Gradient,src,NM,N,N,0,2,0,5,NM,NM N
+src Gradient,Gradient,N,N,N,1,2,2,5,N,NM N
+breaker Consumer,breaker,NM,N,N,0,2,0,5,NM,NM N
+breaker Consumer,Consumer,N,N,N,1,2,2,5,N,NM N
+concrete Follower Indices,concrete,NM,NM,NM,0,3,0,5,NM,NM NM NPL
+concrete Follower Indices,Follower,NM,N,N,1,3,1,5,NM,NM NM NPL
+concrete Follower Indices,Indices,N,N,NPL,2,3,2,5,NPL,NM NM NPL
+final Response,final,NM,NM,NM,0,2,0,5,NM,NM N
+final Response,Response,N,N,N,1,2,2,5,N,NM N
+highlighter,highlighter,N,N,N,0,1,0,5,N,N
+named Writeables,named,NM,N,VBN,0,2,0,5,NM,NM NPL
+named Writeables,Writeables,N,N,NPL,1,2,2,5,NPL,NM NPL
+new Field Type,new,NM,NM,NM,0,3,0,5,NM,NM NM N
+new Field Type,Field,NM,N,N,1,3,1,5,NM,NM NM N
+new Field Type,Type,N,N,N,2,3,2,5,N,NM NM N
+original Set,original,NM,NM,N,0,2,0,5,NM,NM N
+original Set,Set,N,N,V,1,2,2,5,N,NM N
+parent Had Big Change,parent,NM,V,N,0,4,0,5,N,N V NM N
+parent Had Big Change,Had,NM,N,VBD,1,4,1,5,V,N V NM N
+parent Had Big Change,Big,NM,NM,N,2,4,1,5,NM,N V NM N
+parent Had Big Change,Change,N,N,N,3,4,2,5,N,N V NM N
+put Watch Request,put,NM,N,V,0,3,0,5,NM,NM NM N
+put Watch Request,Watch,NM,N,N,1,3,1,5,NM,NM NM N
+put Watch Request,Request,N,N,N,2,3,2,5,N,NM NM N
+query Timeout In Ms,query,NM,V,V,0,4,0,5,NM,NM N P NPL
+query Timeout In Ms,Timeout,NM,N,N,1,4,1,5,N,NM N P NPL
+query Timeout In Ms,In,NM,P,P,2,4,1,5,P,NM N P NPL
+query Timeout In Ms,Ms,N,N,N,3,4,2,5,NPL,NM N P NPL
+refresh Metric,refresh,NM,N,V,0,2,0,5,NM,NM N
+refresh Metric,Metric,N,N,N,1,2,2,5,N,NM N
+remote Cluster Names,remote,NM,NM,NM,0,3,0,5,NM,NM NM NPL
+remote Cluster Names,Cluster,NM,N,N,1,3,1,5,NM,NM NM NPL
+remote Cluster Names,Names,N,N,NPL,2,3,2,5,NPL,NM NM NPL
+search Profile Results,search,NM,N,V,0,3,0,5,NM,NM NM NPL
+search Profile Results,Profile,NM,N,N,1,3,1,5,NM,NM NM NPL
+search Profile Results,Results,N,N,NPL,2,3,2,5,NPL,NM NM NPL
+timeout Task,timeout,NM,N,V,0,2,0,5,NM,NM N
+timeout Task,Task,N,N,N,1,2,2,5,N,NM N
+build time minor,build,NM,N,V,0,3,0,5,NM,NM NM N
+build time minor,time,NM,N,N,1,3,1,5,NM,NM NM N
+build time minor,minor,N,N,NM,2,3,2,5,N,NM NM N
+curvatures height,curvatures,NM,N,NPL,0,2,0,5,NM,NM N
+curvatures height,height,N,N,N,1,2,2,5,N,NM N
+default,default,N,N,N,0,1,0,5,N,N
+dest points,dest,NM,NM,N,0,2,0,5,NM,NM NPL
+dest points,points,N,N,NPL,1,2,2,5,NPL,NM NPL
+destroy with parent,destroy,NM,V,V,0,3,0,5,V,V P N
+destroy with parent,with,NM,P,P,1,3,1,5,P,V P N
+destroy with parent,parent,N,N,N,2,3,2,5,N,V P N
+dispose,dispose,N,V,V,0,1,0,5,N,N
+first type label,first,NM,NM,NM,0,3,0,5,NM,NM NM N
+first type label,type,NM,N,N,1,3,1,5,NM,NM NM N
+first type label,label,N,N,N,2,3,2,5,N,NM NM N
+full path,full,NM,NM,NM,0,2,0,5,NM,NM N
+full path,path,N,N,N,1,2,2,5,N,NM N
+mapped color,mapped,NM,N,VBN,0,2,0,5,NM,NM N
+mapped color,color,N,N,N,1,2,2,5,N,NM N
+n layers,n,NM,N,N,0,2,0,5,NM,NM NPL
+n layers,layers,N,N,NPL,1,2,2,5,NPL,NM NPL
+print t,print,NM,V,N,0,2,0,5,V,V N
+print t,t,N,N,N,1,2,2,5,N,V N
+radius,radius,N,N,N,0,1,0,5,N,N
+secondary range,secondary,NM,NM,NM,0,2,0,5,NM,NM N
+secondary range,range,N,N,N,1,2,2,5,N,NM N
+table 2 id,table,NM,N,N,0,3,0,5,N,N D N
+table 2 id,2,NM,NM,D,1,3,1,5,D,N D N
+table 2 id,id,N,N,N,2,3,2,5,N,N D N
+abs deadline n sec value,abs,NM,N,NM,0,5,0,5,NM,NM NM NM NM N
+abs deadline n sec value,deadline,NM,N,N,1,5,1,5,NM,NM NM NM NM N
+abs deadline n sec value,n,NM,N,N,2,5,1,5,NM,NM NM NM NM N
+abs deadline n sec value,sec,NM,NM,N,3,5,1,5,NM,NM NM NM NM N
+abs deadline n sec value,value,N,N,N,4,5,2,5,N,NM NM NM NM N
+addr,addr,N,N,N,0,1,0,5,N,N
+bound Port,bound,NM,NM,VBD,0,2,0,5,NM,NM N
+bound Port,Port,N,N,N,1,2,2,5,N,NM N
+connection state,connection,NM,N,N,0,2,0,5,NM,NM N
+connection state,state,N,N,N,1,2,2,5,N,NM N
+existing symlink,existing,NM,NM,VBG,0,2,0,5,NM,NM N
+existing symlink,symlink,N,N,N,1,2,2,5,N,NM N
+grouping,grouping,N,N,VBG,0,1,0,5,N,N
+locking,locking,N,N,VBG,0,1,0,5,V,V
+on connect,on,NM,FAILURE,P,0,2,0,5,P,P N
+on connect,connect,N,FAILURE,V,1,2,2,5,N,P N
+output array,output,NM,N,N,0,2,0,5,NM,NM N
+output array,array,N,N,N,1,2,2,5,N,NM N
+pem key,pem,NM,N,N,0,2,0,5,NM,NM N
+pem key,key,N,N,N,1,2,2,5,N,NM N
+server list,server,NM,N,N,0,2,0,5,NM,NM N
+server list,list,N,N,N,1,2,2,5,N,NM N
+tbl index,tbl,NM,N,N,0,2,0,5,NM,NM N
+tbl index,index,N,N,N,1,2,2,5,N,NM N
+Top Dir,Top,NM,V,N,0,2,0,5,NM,NM N
+Top Dir,Dir,N,N,N,1,2,2,5,N,NM N
+utf8 size,utf8,NM,N,N,0,2,0,5,NM,NM N
+utf8 size,size,NM,N,N,1,2,2,5,N,NM N
+alternative Cache Name,alternative,NM,NM,NM,0,3,0,5,NM,NM NM N
+alternative Cache Name,Cache,NM,N,N,1,3,1,5,NM,NM NM N
+alternative Cache Name,Name,N,N,N,2,3,2,5,N,NM NM N
+buf Num,buf,NM,N,N,0,2,0,5,NM,NM N
+buf Num,Num,N,N,N,1,2,2,5,N,NM N
+desktop Size,desktop,NM,N,N,0,2,0,5,NM,NM N
+desktop Size,Size,N,N,N,1,2,2,5,N,NM N
+esa,esa,N,N,N,0,1,0,5,N,N
+light Dim,light,NM,N,NM,0,2,0,5,NM,NM N
+light Dim,Dim,N,NM,N,1,2,2,5,N,NM N
+n vector,n,NM,N,N,0,2,0,5,NM,NM N
+n vector,vector,N,N,N,1,2,2,5,N,NM N
+out buf,out,NM,P,P,0,2,0,5,NM,NM N
+out buf,buf,N,N,N,1,2,2,5,N,NM N
+relative contrast,relative,NM,NM,NM,0,2,0,5,NM,NM N
+relative contrast,contrast,N,N,N,1,2,2,5,N,NM N
+return Path,return,NM,V,N,0,2,0,5,NM,NM N
+return Path,Path,N,N,N,1,2,2,5,N,NM N
+rotation Per Second,rotation,NM,N,N,0,3,0,5,N,N P N
+rotation Per Second,Per,NM,N,P,1,3,1,5,P,N P N
+rotation Per Second,Second,N,N,N,2,3,2,5,N,N P N
+scene Node Type Name,scene,NM,N,N,0,4,0,5,NM,NM NM NM N
+scene Node Type Name,Node,NM,N,N,1,4,1,5,NM,NM NM NM N
+scene Node Type Name,Type,NM,N,N,2,4,1,5,NM,NM NM NM N
+scene Node Type Name,Name,N,N,N,3,4,2,5,N,NM NM NM N
+validate On,validate,NM,V,V,0,2,0,5,V,V P
+validate On,On,N,P,N,1,2,2,5,P,V P
+write Root,write,NM,N,V,0,2,0,5,V,V N
+write Root,Root,N,N,N,1,2,2,5,N,V N
+accepting Tasks,accepting,NM,NM,VBG,0,2,0,5,NM,NM NPL
+accepting Tasks,Tasks,N,N,NPL,1,2,2,5,NPL,NM NPL
+auth Result,auth,NM,N,NM,0,2,0,5,NM,NM N
+auth Result,Result,N,N,N,1,2,2,5,N,NM N
+current Prefix,current,NM,NM,NM,0,2,0,5,NM,NM N
+current Prefix,Prefix,N,N,N,1,2,2,5,N,NM N
+default Role,default,NM,N,N,0,2,0,5,NM,NM N
+default Role,Role,N,N,N,1,2,2,5,N,NM N
+excess Workload,excess,NM,NM,NM,0,2,0,5,NM,NM N
+excess Workload,Workload,N,N,N,1,2,2,5,N,NM N
+group Role Attribute,group,NM,N,N,0,3,0,5,NM,NM NM N
+group Role Attribute,Role,NM,N,N,1,3,1,5,NM,NM NM N
+group Role Attribute,Attribute,N,N,N,2,3,2,5,N,NM NM N
+id A,id,NM,FAILURE,N,0,2,0,5,NM,NM N
+id A,A,N,FAILURE,N,1,2,2,5,N,NM N
+ios,ios,N,N,N,0,1,0,5,N,N
+lp Binary Path Name,lp,NM,N,N,0,4,0,5,PRE,PRE NM NM N
+lp Binary Path Name,Binary,NM,NM,NM,1,4,1,5,NM,PRE NM NM N
+lp Binary Path Name,Path,NM,N,N,2,4,1,5,NM,PRE NM NM N
+lp Binary Path Name,Name,N,N,N,3,4,2,5,N,PRE NM NM N
+number Str,number,NM,N,N,0,2,0,5,NM,NM N
+number Str,Str,N,N,N,1,2,2,5,N,NM N
+polling Log,polling,NM,N,N,0,2,0,5,NM,NM N
+polling Log,Log,N,N,N,1,2,2,5,N,NM N
+referee Set Map,referee,NM,N,N,0,3,0,5,NM,NM NM N
+referee Set Map,Set,NM,NM,V,1,3,1,5,NM,NM NM N
+referee Set Map,Map,N,N,N,2,3,2,5,N,NM NM N
