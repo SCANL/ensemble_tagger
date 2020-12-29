@@ -1,0 +1,15 @@
+[submodule "SWUM"]
+	path = SWUM
+	url = https://github.com/SCANL/SWUM
+[submodule "POSSE"]
+	path = POSSE
+	url = https://github.com/SCANL/POSSE
+[submodule "srcSAXEventDispatch"]
+	path = srcSAXEventDispatch
+	url = https://github.com/srcML/srcSAXEventDispatch.git
+[submodule "ensemble_sample_repo"]
+	path = ensemble_sample_repo
+	url = https://github.com/SCANL/ensemble_sample_repo.git
+[submodule "cpp-subprocess"]
+	path = cpp-subprocess
+	url = https://github.com/arun11299/cpp-subprocess.git
