@@ -1,0 +1,267 @@
+action to index map,N P N N
+action view show master pages,N N N N N
+active copies,NM NPL
+actual count,NM N
+add bias to embedding,V N P N
+added unicode smp,N N N
+address type ipv4,N N N
+all stubbings,DT N
+alt label ctxs,NM N NPL
+ambient,NM
+atom,N
+attribute decls,V N
+average in bucket used slot count,N P N VBD N N
+b is playing,N VBZ VBG
+b loop,N N
+bean configs,N NPL
+befores,NPL
+bitmap data size,N N N
+bm log,N N
+bounding radius,VBG N
+breakpoint,N
+buckets path field,N N N
+buffers,NPL
+build now,V VM
+build timestamp,V N
+bytes received,VBZ N
+caching mock bytecode generator,VBG N N N
+calibration phase,N N
+canvas item,N N
+cat risk,N N
+certificate chain cleaner,N N N
+char strings,N NPL
+chosen overrides,VBN NPL
+client,N
+client number,N N
+codes,NPL
+color conversion system,N N N
+colored count,NM N
+completion handler i unary response client callback,N N N N N N N
+component type,N N
+context length,N N
+cookie jar,N N
+core,N
+creds,NPL
+crop node,N N
+current filename,NM N
+current scene node,N N N
+debug policy,V N
+default answer,V N
+default factory,N N
+default flags,N NPL
+default instance void,N N N
+delay agnostic enabled,N NM VBD
+depth cb,N N
+depth stencil as texture,N N P N
+detect leaks,V NPL
+development,N
+dynamic table byte count,NM N N N
+edit count,V N
+eglew android frame buffer target,NM N N N N
+eglew create platform window surface,NPL VBP N N N
+eglew khr stream fifo,N N N N
+embedded version,N N
+empty directory,NM N
+enabled subdevices,VBN NPL
+encoded path segments,VBN N NPL
+exception channels,N NPL
+extract events,N NPL
+f context length,N N N
+f matcher,N N
+feed adapter,N N
+file,V
+file descriptor proto,V N N
+filtered children,VBD N
+fingerprint dialog,N N
+flag,N
+float day counter,V N N
+footnotes position,NPL N
+free cell,NM N
+gen subj,N N
+get source name,V N N
+glew index mask,V N N
+glew render mode,V N N
+glew validate program pipeline,V N N N
+group boxes,N NPL
+h wnd,N N
+handled boxes,VBN NPL
+height int,N N
+history action,N N
+id lumninance min,N N N
+idle delay,V N
+im out shape,N P N
+img buffer original,N N N
+in order wrapped verification mode,P N N N N
+index data,N N
+index prefix with template,N N P N
+index to loc format,N P N N
+inet socket address,V N N
+initialization error,N N
+inner alpha,NM N
+invalid,NM
+invalid host,NM N
+invalid state number,NM N N
+invert success,N N
+is bridged argument,VBZ N N
+is first capital,VBZ N N
+is first frame,VBZ N N
+is indirect result,VBZ NM N
+is partial,VBZ NM
+is return bridged,VBZ N N
+keep aspect,V N
+key password profiles,NM N NPL
+key sym,NM N
+label regex,V N
+language to rules files,N P NPL NPL
+last saved step,VM VBN N
+latency arg,N N
+layer mask source node,N N N N
+link name,N N
+locations,NPL
+m annotation,N N
+m contact motion 1,N N N D
+m count activities,N N NPL
+m execute on host,N V P N
+m fbo height,N N N
+m first render queue,N N N N
+m gpu rays,N N NPL
+m is indx present,N VBZ VM NM
+m is worker done,N VBZ N N
+m last changed location,N NM N N
+m line dash offset,N N N N
+m num visual shapes copied,N N N N N
+m paste mode,N V N
+m post fix,N N V
+m preview started,N N VBD
+m reference,N N
+m remove user data response args,N V N N N N
+m resources,N N
+m sbuf,N N
+m shadow receiver pass,N N N N
+m sky box orientation,N N N N
+m sky plane render queue,N N N N N
+m text types,N N NPL
+m transform change args,N V N N
+m vs out light position,N N P NM N
+m weaver,N N
+m window width,N N N
+m worker,N N
+m zoom controller,N N N
+manifest file prefix,N N N
+matcher builder,V N
+max buffer size,N N N
+max file open,V N N
+max width,N N
+max work group size,V N N N
+min font size,N N N
+mock ref,NM N
+module finder,N N
+more,NM
+move rbt surgeon,V N N
+mtx,N
+multiple occurences,NM NPL
+n d,N N
+name container,N N
+nav visible,N N
+new strokes,NM NPL
+new y,NM N
+next giphy search offset,P N V N
+nonce length,NM N
+num active tris,N NM N
+num axis events,N N NPL
+num body parts,N N NPL
+num cols,N NPL
+num groups,N NPL
+num light,N N
+num outs,N NPL
+num tess face data,N N N N
+number elementary vegas,N N N
+number start,N N
+odf symbol type,N N N
+on item long click listener,P N N V N
+ongoing call notification,NM N N
+op code continuation,N N N
+original mocking details,NM N N
+other data len bits,NM N N N
+other side x,NM NM N
+packet sent,N VBD
+parent,N
+parser errors,N NPL
+pickup,N
+pixel width,V N
+pref font,N N
+prev property,V N
+previous caption,NM N
+print features up to,N VBZ VM P
+proof profile,N N
+q tail,N N
+raw arguments,NM NPL
+rc identity,N N
+reduction indices,N NPL
+ref point offset percent,V N N N
+reference index meta datas,V N N N
+refresh interval in millis,N N P N
+replace text context,V V N
+replacement length,N N
+resamplers,NPL
+returned value,VBD N
+returns self,N N
+risky annuity,NM N
+rotate desc,V N
+row limit,N N
+rule options,N NPL
+run dist cmd prop,N N N N
+runner override,N N
+runtime mx bean,V N N
+samplers,NPL
+script event action factories,N N N NPL
+selected account,VBN N
+selection width label,N N N
+session factory,N N
+session ticket key,N N N
+shift values,N NPL
+show tags,N NPL
+skip vetoes,V N
+sort field data type,V N N N
+spline max len,N N N
+sprites,NPL
+st lib,N N
+stack,V
+state to grammar region map,N P N N N
+statement,N
+step no,V N
+struct ty,N N
+stubbing lookup listeners,VBG N NPL
+sub module name visibility pairs,N N N N NPL
+tcp slave agent listener lock,V N N N N
+then,VM
+time spec,N N
+tlv symbols,N NPL
+tot channel,N N
+tot elem,N N
+total merge throttled time,NM N N N
+trade price,V N
+type test rule,N N N
+type window update,N N N
+unknown username,N N
+unregistered request matcher,NM N N
+unrestricted,N
+use atm spread,V N N
+user hook 3,N N D
+uuid,N
+val 32,N D
+validator strategies,N NPL
+value hash,N N
+variables,NPL
+verification strategy,N N
+video chunk cb,N N N
+w width,N N
+weak ref lost,NM N N
+weights multipliers,NPL NPL
+whole regexp,NM N
+x dnd type list,N N N N
+x origin,N N
+x scale,N N
+ya bottom,PR N
+z weight,N N
+zero plane res,D N NPL

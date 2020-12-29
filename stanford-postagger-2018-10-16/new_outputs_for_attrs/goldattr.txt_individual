@@ -1,0 +1,267 @@
+n_NN d_NN ._.
+Added_NNP Unicode_NNP Smp_NNP ._.
+Replacement_NN Length_NN ._.
+INVALID_JJ ._.
+X_NN dnd_NN Type_NN List_NN ._.
+matcher_VB Builder_NNP ._.
+is_VBZ First_NNP Frame_NNP ._.
+ADDRESS_NN TYPE_NN IPV4_NN ._.
+idle_VB Delay_NNP ._.
+weak_JJ Ref_NNP Lost_NNP ._.
+label_VB Regex_NNP ._.
+core_NN ._.
+multiple_JJ Occurences_NNS ._.
+im_NN out_IN shape_NN ._.
+CODES_NNS ._.
+X_NN scale_NN ._.
+glew_VB Validate_NNP Program_NNP Pipeline_NNP ._.
+REFRESH_NNP INTERVAL_NNP IN_IN MILLIS_NNP ._.
+m_NN FBO_NN Height_NN ._.
+LATENCY_NN ARG_NN ._.
+Detect_VB Leaks_NNS ._.
+max_VB Work_NNP Group_NNP Size_NN ._.
+inet_VB Socket_NNP Address_NNP ._.
+Num_NN Active_JJ Tris_NNP ._.
+OP_NNP CODE_NNP CONTINUATION_NNP ._.
+color_NN Conversion_NN System_NN ._.
+current_JJ Filename_NNP ._.
+index_NN To_TO Loc_NNP Format_NNP ._.
+ref_VB Point_NNP Offset_NNP Percent_NN ._.
+chosen_VBN Overrides_NNPS ._.
+keep_VB Aspect_NNP ._.
+encoded_VBN Path_NN Segments_NNS ._.
+Step_VB No_NNP ._.
+key_JJ sym_NN ._.
+raw_JJ Arguments_NNS ._.
+m_NN Preview_NN Started_VBD ._.
+num_NN groups_NNS ._.
+exception_NN Channels_NNS ._.
+skip_VB Vetoes_NNP ._.
+Completion_NNP Handler_NNP I_NNP Unary_NNP Response_NNP Client_NNP Callback_NNP ._.
+Is_VBZ Return_NN Bridged_NNP ._.
+other_JJ side_JJ x_NN ._.
+depth_NN Stencil_NN As_IN Texture_NN ._.
+average_NN In_IN Bucket_NNP Used_VBD Slot_NNP Count_NNP ._.
+ya_PRP Bottom_NNP ._.
+new_JJ Strokes_NNS ._.
+active_JJ Copies_NNS ._.
+DEFAULT_NN FLAGS_NNS ._.
+video_NN chunk_NN cb_NN ._.
+Current_NNP Scene_NNP Node_NNP ._.
+num_NN axis_NN events_NNS ._.
+min_NN Font_NN Size_NN ._.
+certificate_NN Chain_NNP Cleaner_NNP ._.
+glew_VB Render_NNP Mode_NNP ._.
+m_NN zoom_NN Controller_NN ._.
+move_VB RBT_NNP surgeon_NN ._.
+PARENT_NN ._.
+reduction_NN Indices_NNS ._.
+original_JJ Mocking_NNP Details_NNP ._.
+rule_NN Options_NNS ._.
+TYPE_NN TEST_NN RULE_NN ._.
+Link_NN Name_NN ._.
+m_NN worker_NN ._.
+packet_NN sent_VBD ._.
+use_VB Atm_NNP Spread_NNP ._.
+x_NN origin_NN ._.
+runner_NN Override_NNP ._.
+canvas_NN item_NN ._.
+INDEX_NN PREFIX_NN WITH_IN TEMPLATE_NN ._.
+extract_NN Events_NNS ._.
+m_NN transform_VB Change_NNP Args_NNP ._.
+st_FW lib_FW ._.
+m_NN post_NN Fix_VB ._.
+val_NN 32_CD ._.
+last_RB Saved_VBN Step_NN ._.
+add_VB Bias_NNP To_TO Embedding_NNP ._.
+m_NN is_VBZ Worker_NNP Done_NNP ._.
+new_JJ Y_NNP ._.
+num_NN cols_NNS ._.
+filtered_VBD Children_NNP ._.
+spline_NN max_NN len_NN ._.
+enabled_VBN subdevices_NNS ._.
+m_NN num_NN Visual_NNP Shapes_NNP Copied_NNP ._.
+q_NN tail_NN ._.
+footnotes_NNS Position_NN ._.
+DEFAULT_NN FACTORY_NN ._.
+actual_JJ Count_NN ._.
+mtx_NN ._.
+row_NN limit_NN ._.
+m_NN count_NN Activities_NNS ._.
+MANIFEST_NNP FILE_NNP PREFIX_NNP ._.
+prev_VB Property_NNP ._.
+max_VB File_NNP Open_NNP ._.
+next_JJ Giphy_NNP Search_VB Offset_NNP ._.
+is_VBZ partial_JJ ._.
+history_NN Action_NNP ._.
+shift_NN Values_NNS ._.
+m_NN Line_NNP Dash_NNP Offset_NNP ._.
+pixel_VB Width_NNP ._.
+validator_NN Strategies_NNS ._.
+client_NN Number_NN ._.
+fingerprint_NN Dialog_NNP ._.
+rotate_VB desc_NN ._.
+verification_NN Strategy_NNP ._.
+RETURNS_NN SELF_NN ._.
+samplers_NNS ._.
+m_NN is_VBZ indx_RB present_JJ ._.
+m_NN Resources_NNP ._.
+creds_NNS ._.
+breakpoint_NN ._.
+Bounding_VBG Radius_NN ._.
+ID_NNP LUMNINANCE_NNP MIN_NNP ._.
+action_NN To_TO Index_NNP Map_NNP ._.
+Sub_NN Module_NN Name_NN Visibility_NN Pairs_NNS ._.
+context_NN Length_NN ._.
+m_NN gpu_NN Rays_NNS ._.
+height_NN int_NN ._.
+m_NN Shadow_NNP Receiver_NNP Pass_NN ._.
+statement_NN ._.
+GET_VB SOURCE_NNP NAME_NNP ._.
+Then_RB ._.
+reference_VB Index_NNP Meta_NNP Datas_NNP ._.
+caching_VBG Mock_NNP Bytecode_NNP Generator_NNP ._.
+index_NN Data_NNP ._.
+other_JJ Data_NNP Len_NNP Bits_NNP ._.
+char_NN strings_NNS ._.
+ongoing_JJ Call_NNP Notification_NNP ._.
+bean_NN Configs_NNS ._.
+runtime_VB Mx_NNP Bean_NNP ._.
+cookie_NN Jar_NN ._.
+cat_NN Risk_NN ._.
+odf_NN Symbol_NN Type_NN ._.
+Is_VBZ Bridged_NNP Argument_NNP ._.
+FEED_NN ADAPTER_NN ._.
+b_NN Is_VBZ Playing_VBG ._.
+befores_NNS ._.
+m_NN paste_VB Mode_NNP ._.
+num_NN Outs_NNS ._.
+File_VB ._.
+float_VB Day_NNP Counter_NNP ._.
+m_NN execute_VB On_IN Host_NNP ._.
+sort_VB Field_NNP Data_NNP Type_NN ._.
+f_LS Matcher_NNP ._.
+GEN_NNP SUBJ_NNP ._.
+session_NN ticket_NN key_NN ._.
+PREF_NNP FONT_NNP ._.
+unregistered_JJ request_NN matcher_NN ._.
+m_NN First_NNP Render_NNP Queue_NNP ._.
+Invert_NNP Success_NNP ._.
+name_VB Container_NNP ._.
+print_NN Features_VBZ Up_RP to_TO ._.
+session_NN Factory_NNP ._.
+colored_JJ Count_NN ._.
+tcp_VB Slave_NNP Agent_NNP Listener_NNP Lock_NNP ._.
+weights_NNS Multipliers_NNS ._.
+crop_NN node_NN ._.
+script_NN Event_NNP Action_NNP Factories_NNS ._.
+user_NN hook_NN 3_CD ._.
+Number_NN Start_NNP ._.
+time_NN spec_NN ._.
+RC_NN Identity_NN ._.
+debug_VB policy_NN ._.
+INITIALIZATION_NN ERROR_NN ._.
+RUN_NNP DIST_NNP CMD_NNP PROP_NNP ._.
+attribute_VB Decls_NNP ._.
+state_NN To_TO Grammar_NN Region_NN Map_NN ._.
+client_NN ._.
+TYPE_NNP WINDOW_NNP UPDATE_NNP ._.
+default_NN instance_NN void_NN ._.
+selected_VBN Account_NNP ._.
+INVALID_JJ STATE_NN NUMBER_NN ._.
+b_NN Loop_NNP ._.
+resamplers_NNS ._.
+stubbing_VBG Lookup_NNP Listeners_NNS ._.
+INVALID_JJ HOST_NN ._.
+EMBEDDED_NNP VERSION_NNP ._.
+w_SYM Width_NNP ._.
+ambient_JJ ._.
+m_NN reference_NN ._.
+parser_NN Errors_NNS ._.
+m_NN text_NN Types_NNS ._.
+m_NN Sky_NNP Plane_NNP Render_NNP Queue_NNP ._.
+inner_JJ Alpha_NNP ._.
+pickup_NN ._.
+buffers_NNS ._.
+component_NN Type_NN ._.
+DEVELOPMENT_NNP ._.
+handled_VBN Boxes_NNPS ._.
+locations_NNS ._.
+m_NN sbuf_NN ._.
+value_NN Hash_NN ._.
+in_IN Order_NNP Wrapped_NNP Verification_NNP Mode_NNP ._.
+EGLEW_NN KHR_NN stream_NN fifo_NN ._.
+action_NN View_NNP Show_NNP Master_NNP Pages_NNP ._.
+BUCKETS_NNP PATH_NNP FIELD_NNP ._.
+H_NN Wnd_NN ._.
+layer_NN mask_NN source_NN node_NN ._.
+edit_VB count_NN ._.
+Sprites_NNS ._.
+MORE_JJR ._.
+Nav_NNP Visible_NNP ._.
+on_IN Item_NNP Long_NNP Click_VB Listener_NN ._.
+Bitmap_NNP Data_NNP Size_NN ._.
+bytes_VBZ Received_NNP ._.
+tot_NN elem_NN ._.
+Replace_VB Text_VB Context_NNP ._.
+img_NN buffer_NN original_NN ._.
+Struct_NNP Ty_NNP ._.
+build_VB Timestamp_NNP ._.
+variables_NNS ._.
+IS_VBZ FIRST_NNP CAPITAL_NNP ._.
+default_VB Answer_NNP ._.
+risky_JJ Annuity_NNP ._.
+m_NN Sky_NNP Box_NNP Orientation_NNP ._.
+selection_NN width_NN label_NN ._.
+num_NN Tess_NNP Face_NNP Data_NNP ._.
+all_DT Stubbings_NNP ._.
+glew_VB Index_NNP Mask_NNP ._.
+max_FW Buffer_FW Size_NN ._.
+uuid_NN ._.
+tot_NN channel_NN ._.
+free_JJ cell_NN ._.
+nonce_JJ length_NN ._.
+f_FW Context_FW Length_NN ._.
+returned_VBD Value_NNP ._.
+flag_NN ._.
+mock_JJ Ref_NN ._.
+bm_NN log_NN ._.
+num_NN light_NN ._.
+previous_JJ Caption_NNP ._.
+num_NN body_NN parts_NNS ._.
+BUILD_VB NOW_RB ._.
+depth_NN cb_NN ._.
+calibration_NN Phase_NN ._.
+m_NN contact_NN Motion_NNP 1_CD ._.
+file_VB Descriptor_NNP Proto_NNP ._.
+module_NN Finder_NNP ._.
+ATOM_NN ._.
+tlv_NN Symbols_NNS ._.
+dynamic_JJ Table_NNP Byte_NNP Count_NNP ._.
+m_NN remove_VB User_NN Data_NNP Response_NNP Args_NNP ._.
+UNKNOWN_NNP USERNAME_NNP ._.
+zero_CD plane_NN res_NNS ._.
+KEY_JJ PASSWORD_NN PROFILES_NNS ._.
+total_JJ Merge_NNP Throttled_NNP Time_NNP ._.
+language_NN To_TO Rules_NNPS Files_NNPS ._.
+group_NN Boxes_NNPS ._.
+alt_JJ Label_NN Ctxs_NNS ._.
+m_NN weaver_NN ._.
+stack_VB ._.
+proof_NN profile_NN ._.
+delay_NN agnostic_JJ enabled_VBD ._.
+Is_VBZ Indirect_JJ Result_NN ._.
+m_NN annotation_NN ._.
+number_NN Elementary_NNP Vegas_NNP ._.
+show_NN tags_NNS ._.
+max_NN width_NN ._.
+m_NN VS_NN Out_IN Light_JJ Position_NN ._.
+m_NN window_NN Width_NNP ._.
+UNRESTRICTED_NN ._.
+whole_JJ regexp_NN ._.
+z_SYM weight_NN ._.
+m_NN last_JJ Changed_NNP Location_NNP ._.
+EMPTY_JJ DIRECTORY_NN ._.
+trade_VB Price_NNP ._.
+eglew_NNS Create_VBP Platform_NNP Window_NNP Surface_NN ._.
+EGLEW_JJ ANDROID_NN frame_NN buffer_NN target_NN ._.

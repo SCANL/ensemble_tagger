@@ -1,0 +1,60 @@
+goldparam.txt_individual
+['underlying_VBG', 'Fx_NN', 'Correlation_NN']
+['waiting_VBG', 'List_NN']
+['locking_VBG']
+['parsing_VBG']
+['grouping_VBG']
+['existing_VBG', 'symlink_NN']
+['accepting_VBG', 'Tasks_NNS']
+goldmethod.txt_individual_no_I
+all_stanford_vbz_tags
+gold_param_stanford
+['waiting_VBG', 'List_NN']
+['grouping_VBG']
+['accepting_VBG', 'Tasks_NNS']
+['underlying_VBG', 'Fx_NN', 'Correlation_NN']
+['existing_VBG', 'symlink_NN']
+['locking_VBG']
+['parsing_VBG']
+goldmethod.txt_individual
+['I_NN', 'setup_NN', 'Bounding_VBG', 'Box_NNP', 'Vertices_NNPS']
+goldclass.txt_individual
+['Stubbing_VBG', 'Comparator_NNP']
+['Node_VB', 'Shape_VBG']
+['Setting_VBG', 'Manager_NN']
+['bt_IN', 'Collision_NNP', 'Shape_VBG']
+goldattr.txt_individual
+['b_NN', 'Is_VBZ', 'Playing_VBG']
+['stubbing_VBG', 'Lookup_NNP', 'Listeners_NNS']
+['caching_VBG', 'Mock_NNP', 'Bytecode_NNP', 'Generator_NNP']
+['Bounding_VBG', 'Radius_NN']
+gold_class_stanford
+['Stubbing_VBG', 'Comparator_NNP']
+['bt_IN', 'Collision_NNP', 'Shape_VBG']
+['Setting_VBG', 'Manager_NN']
+['Node_VB', 'Shape_VBG']
+all_seen_stanford_tags
+gold_method_stanford_no_I
+gold_attr_stanford
+['caching_VBG', 'Mock_NNP', 'Bytecode_NNP', 'Generator_NNP']
+['stubbing_VBG', 'Lookup_NNP', 'Listeners_NNS']
+['Bounding_VBG', 'Radius_NN']
+['b_NN', 'Is_VBZ', 'Playing_VBG']
+all_stanford_vbn_tags
+all_stanford_vbd_tags
+golddecl.txt_individual
+['running_VBG', 'Log_NNP', 'Average_NNP']
+['s_NNS', 'Tracking_VBG', 'System_NN', 'Name_NN']
+['adding_VBG']
+['processing_VBG', 'Level_NNP']
+['missing_VBG', 'Classes_NNS']
+['compiling_VBG', 'Contexts_NNS']
+gold_method_stanford
+['I_NN', 'setup_NN', 'Bounding_VBG', 'Box_NNP', 'Vertices_NNPS']
+gold_decl_stanford
+['running_VBG', 'Log_NNP', 'Average_NNP']
+['compiling_VBG', 'Contexts_NNS']
+['missing_VBG', 'Classes_NNS']
+['processing_VBG', 'Level_NNP']
+['s_NNS', 'Tracking_VBG', 'System_NN', 'Name_NN']
+['adding_VBG']

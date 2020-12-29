@@ -1,0 +1,267 @@
+palette_NN poll_NN ._.
+adjusted_VBN Gradient_NN ._.
+send_VB Serial_JJ Config_NN ._.
+get_VB Red_NNP Adjust_VB 2_CD ._.
+worker_NN Thread_NNP Wait_VB ._.
+next_JJ Unassigned_NNP ._.
+gimp_JJ devices_NNS check_NN change_NN ._.
+after_IN Channel_NNP ._.
+Get_VB Longitude_NNP ._.
+with_IN Market_NNP Rate_NNP Accuracy_NNP ._.
+gimp_NN value_NN set_VBD int32_NN array_NN ._.
+deep_JJ Stub_NN ._.
+order_VB With_NNP ._.
+get_VB Max_NNP Shingle_NNP Diff_NNP ._.
+create_VB Duplicate_NNP Change_NNP Id_NN ._.
+wrap_VB If_IN Not_RB Thread_NNP Safe_NNP ._.
+get_VB Error_NN Listeners_NNS ._.
+saturated_JJ cast_NN ._.
+is_VBZ Blocked_VBN By_IN Shutdown_NNP ._.
+gpencil_NN primitive_JJ modal_NN ._.
+dynamic_JJ Table_NNP Index_NNP ._.
+null_JJ Passed_NNP To_TO Verify_VB No_DT More_JJR Interactions_NNS ._.
+get_VB PID_NNP No_NNP Exceptions_NNPS ._.
+png_NN get_VB row_NN bytes_NNS ._.
+read_NN subframe_NN ._.
+create_VB In_IN Indices_NNS ._.
+determine_VB Strictness_NNP ._.
+get_VB Phrase_NNP 1_CD ._.
+run_NN Methods_NNS ._.
+compare_VB Inverse_NNP And_CC Forward_NNP Dynamics_NNP ._.
+gimp_FW param_FW drawable_JJ id_NN init_NN ._.
+find_VB Source_NNP Subdir_NNP ._.
+str_NN array_NN len_NN ._.
+gimp_JJ status_NN bar_NN progress_NN canceled_VBN ._.
+resize_VB Nearest_NNP Neighbor_NNP ._.
+is_VBZ Generic_JJ Type_NN Disambiguating_NNP Token_NNP ._.
+png_NN read_VBD IDAT_NNP data_NNS ._.
+Float_VB ._.
+skip_VB Whitespace_NNP And_CC Commas_NNP ._.
+create_VB Sub_NN Buffer_NN ._.
+gimp_JJ image_NN file_NN get_VB thumbnail_JJ ._.
+reapply_VB Filter_NNP ._.
+dump_VB Frame_NNP buffer_NN Formats_NNS ._.
+ARGB_NNP Subtract_NNP Row_NNP C_NNP ._.
+write_VB Node_NNP Materials_NNPS ._.
+parse_VB Expires_NNP ._.
+add_VB Object_NNP Index_NNP ._.
+do_VB Login_NNP Entry_NNP ._.
+with_IN Charset_NNP ._.
+dialog_NN info_NN update_VB ._.
+png_NN get_VB rows_NNS ._.
+nulls_VBZ Ok_NNP ._.
+class_NN Annotations_NNS ._.
+Get_VB DMF_NNP Header_NNP ._.
+metadata_JJ Snapshot_NN ._.
+on_IN Implies_NNP ._.
+remap_VB Nearest_NNP Neighbor_NNP ._.
+rgbx_NN 2_CD bgrx_NN ._.
+Read_NNP Text_VB File_NNP ._.
+set_VBN Display_VB Index_NNP ._.
+two_CD Factor_NN Response_NN ._.
+grpc_FW json_FW writer_NN value_NN string_NN ._.
+maximize_VB All_NNP ._.
+register_NN With_IN Volatility_NN Spread_NN ._.
+url_NN From_IN Json_NNP ._.
+world_NN To_TO Screen_NNP ._.
+set_VBN Frame_NN Pen_NN ._.
+Check_VB Writeable_NNP ._.
+get_VB Operations_NNP Reads_NNPS ._.
+follow_VB Component_NNP ._.
+mark_NN As_IN Fetching_NN ._.
+sqlite3_NN Walk_VBP Expr_NN List_NN ._.
+is_VBZ Dependency_NNP Changed_NNP ._.
+validate_VB Public_NNP Static_JJ Void_NN Methods_NNS ._.
+global_JJ Scope_NNP ._.
+add_VB Unicode_NNP Script_NNP Codes_NNPS To_TO Names_NNS ._.
+init_NN For_IN Group_NNP ._.
+parse_VB Max_NNP Age_NNP ._.
+png_FW init_FW palette_NN transformations_NNS ._.
+get_VB Binary_NNP Side_NNP ._.
+split_JJ Argument_NN List_NN ._.
+find_VB Hashable_NNP Base_NNP Type_NN ._.
+is_VBZ canon_NN ._.
+resize_VB Linear_NNP Open_NNP CV_NNP ._.
+get_VB Controller_NNP Transform_NNP ._.
+do_VB Install_NNP Status_NNP ._.
+add_VB Ordered_NNP List_NN ._.
+optimize_VB Identity_NNP Cast_VBN Composition_NN ._.
+set_VBN Destructor_NNP Callback_NNP ._.
+has_VBZ View_NNP Relative_JJ Texture_NN Coordinate_JJ Generation_NN ._.
+new_JJ Exchange_NNP ._.
+repress_VB Ref_NNP At_IN Loc_NNP ._.
+node_NN find_VBP output_NN by_IN name_NN ._.
+path_NN With_IN Native_JJ Separators_NNS ._.
+gimp_NN filter_NN tool_NN set_NN gyroscope_NN ._.
+get_VB Jf_NNP ._.
+silk_NN bw_FW expander_FW 32_CD ._.
+is_VBZ Android_NNP ._.
+Render_NNP Text_VB ._.
+verification_NN Started_VBD ._.
+Convert_VB To_TO Php_NNP Namespace_NNP ._.
+get_VB Commit_VB Id_NN ._.
+set_VBN Custom_NNP Uniform_NNP 1_CD f_NN ._.
+widget_NN Destroyed_NNP ._.
+Set_VB Add_VB Faces_NNP Points_NNP ._.
+set_VBN Layer_NN Texture_NN Name_NN ._.
+inflation_NN Leg_NN NPV_NN ._.
+is_VBZ Valid_NNP Trailing_NNP Closure_NNP ._.
+delete_VB ._.
+build_VB Group_NNP Query_NNP ._.
+BLI_NN str_NN r_NN strip_NN ._.
+get_VB Leftmost_NNP Descendant_NNP ._.
+Add_VB Bezier_NNP Curve_NNP ._.
+target_NN Started_VBD ._.
+curves_NNS ._.
+in_IN SCC_NN ._.
+get_VB Item_NNP Type_NN Descriptor_NN ._.
+last_JJ Gradient_NN ._.
+stmt_VB Close_NNP ._.
+get_VB Diffuse_NNP Colour_NNP ._.
+tessellate_VB To_TO Mesh_VB ._.
+sanitize_VB Path_NN ._.
+check_VB Sign_NNP ._.
+get_VB Number_NN Of_IN Transitions_NNS ._.
+read_VB White_NNP Space_NNP ._.
+Clear_JJ Active_JJ ID_NN ._.
+read_VB Response_NNP ._.
+b3_NNP Push_NNP Profile_NNP Timing_NN ._.
+set_VBN Invert_NNP ._.
+declare_VB Component_NNP ._.
+choose_VB Document_NNP ._.
+read_NN Element_NN Text_VBP Span_NN ._.
+Get_VB XCR_NN 0_CD ._.
+Generate_NNP Service_NNP Descriptor_NNP Property_NNP ._.
+assign_VB Lexer_NNP Token_NNP Types_NNP ._.
+biggest_JJS Constructor_NNP ._.
+is_VBZ Conscrypt_NNP Preferred_NNP ._.
+presentation_NN Start_NNP From_IN First_NNP ._.
+get_VB Actual_JJ Values_NNS ._.
+get_VB Constant_JJ Reference_NNP For_IN Protocol_NNP Descriptor_NNP ._.
+ico_NN load_NN layer_NN ._.
+speaker_NN ._.
+from_IN Byte_NNP Buffers_NNP ._.
+get_VB Default_NNP Install_NNP State_NNP ._.
+shader_JJR data_NNS to_TO shader_VB globals_NNS ._.
+report_VB No_NNP Setter_NNP Found_NNP ._.
+unpack_JJ texture_NN Blend_NNP Func_NNP ._.
+imb_FW stereo3d_FW read_NN interlace_VB ._.
+get_VB Working_NNP Directory_NNP ._.
+parent_NN Pairs_NNS ._.
+reset_VB Meta_NNP Class_NNP Cache_NNP ._.
+sha256_FW hash_FW ._.
+create_VB metadata_NN array_NN ._.
+TEGRA_NNP MORPH_NNP INIT_NNP ._.
+with_IN Rate_NNP Bound_VBN ._.
+Delete_VB Input_NNP ._.
+set_VBN Project_NNP Naming_NNP Strategy_NNP ._.
+V_NN URL_NN Encode_NN ._.
+pybullet_RB compute_VB View_NNP Matrix_NNP ._.
+throw_VB Provision_NNP Exception_NNP If_IN Errors_NNP Exist_NNP ._.
+rgb_NN 2_CD rgb565_NN ._.
+dividend_NN Discount_NNP Mother_NNP ._.
+get_VB Plane_NNP Point_NNP ._.
+set_VBN Extra_NNP Interfaces_NNPS ._.
+ares_NNS expand_VBP name_NN for_IN response_NN ._.
+status_NN Icon_NN ._.
+context_NN Url_NN List_NN ._.
+uncompress_NN If_IN Needed_NNP ._.
+do_VB Print_VB After_IN ._.
+set_VB Tiling_NNP ._.
+get_VB Top_NNP Border_NNP Size_NN ._.
+AUD_NNP Sound_NNP envelope_NN ._.
+send_VB String_NNP ._.
+Stroke_NNP Attribute_NNP alpha_NN get_VB ._.
+Get_VB Related_NNP View_NNP Data_NNP Row_NNP Double_JJ ._.
+extract_NN Raw_NN Type_NN Of_IN ._.
+with_IN Cms_NNP Leg_NNP Rule_NNP ._.
+append_NN Sequence_NN ._.
+is_VBZ Stdlib_NNP Module_NNP ._.
+remove_VB Imported_NNP Parent_NNP Contexts_NNP ._.
+make_VB HTML_NNP Table_NNP ._.
+lower_JJR Boundary_NN Factor_NN ._.
+get_VB Raw_NN Arguments_NNS ._.
+render_VB result_NN exr_NN file_NN end_NN ._.
+calc_VB LUT_NNP ._.
+current_JJ Slide_NNP ._.
+effective_JJ Style_NN ._.
+get_VB Initial_JJ Window_NN Size_NN ._.
+grpc_NNS sock_VBP addr_JJ make_NN wildcards_NNS ._.
+keep_VB Readability_NN Only_RB On_IN Descendants_NNS ._.
+verifier_RB get_VB mapping_NN ._.
+get_VB Msg_NNP Send_VB Super_NNP Ty_NNP ._.
+extract_VB Component_NNP ._.
+Add_VB Log_NN To_TO Stream_NNP ._.
+build_VB Lexer_NNP Rule_NNP Actions_NNPS ._.
+get_VB Id_NN For_IN Name_NN ._.
+grpc_FW chttp2_FW mark_NN stream_NN writable_NN ._.
+enable_VB Background_NNP Opacity_NNP ._.
+sqlite3_NN session_NN config_NN ._.
+on_IN Group_NNP Call_NNP Key_NNP Sent_NNP ._.
+parse_VB Attribute_NNP Def_NNP ._.
+read_NN Pass_NN ._.
+binary_JJ Search_VB Bytes_NNPS ._.
+check_VB Not_RB Local_NNP ._.
+tool_NN View_NNP Position_NN ._.
+save_VB As_IN Quadratic_NNP Png_NNP ._.
+Get_VB Meta_NNP Index_NNP ._.
+strip_NN Left_VBD Recursion_NNP ._.
+check_VB Not_RB Interface_NNP ._.
+visit_NN SIL_NN Argument_NN ._.
+gimp_JJ canvas_NN rectangle_NN set_NN property_NN ._.
+do_VB Forward_RB ._.
+set_VBN Canonical_JJ Mention_NN Begin_NN ._.
+layer_NN get_VB composite_JJ mode_NN invoker_NN ._.
+setup_NN Bounding_NNP Box_NNP Vertices_NNP ._.
+process_VB Helper_NNP ._.
+all_DT Open_NNP Files_NNP String_NNP ._.
+get_VB Display_VB Path_NN ._.
+nla_FW invert_FW combine_VB value_NN ._.
+validate_VB Class_NNP Rules_NNP ._.
+TIFF_NN Get_VBP Size_NN Proc_NNP ._.
+get_VB Default_NNP Atlasing_NNP Attributes_NNPS ._.
+png_NN do_VBP strip_NN channel_NN ._.
+format_NN Display_VB Name_NN ._.
+session_NN Config_NNP ._.
+get_VB Completed_VBN ._.
+object_NN With_IN To_TO String_NNP ._.
+BKE_NN lattice_NN index_NN flip_VB ._.
+pnm_NN load_NN raw_JJ pfm_NN ._.
+require_VB Client_NNP Auth_NNP ._.
+png_NN get_VB unknown_JJ chunks_NNS ._.
+check_VB GL_NNP Support_NN ._.
+dump_VB Core_NNP Map_NNP To_TO String_NNP Builder_NNP ._.
+check_VB T_NNP ._.
+has_VBZ Composite_NNP Op_NNP ._.
+get_VB Artificial_NNP Op_NNP Prec_NNP Rule_NNP ._.
+of_IN To_TO Binary_NNP ._.
+apply_VB Margin_NN Insets_NNS ._.
+TIFF_NN Current_NNP Tile_NNP ._.
+emit_VB Address_NNP ._.
+is_VBZ Sum_NNP Supported_NNP ._.
+unload_VB Textures_NNP ._.
+x_NN Tilt_NN ._.
+gimp_JJ selection_NN tool_NN class_NN init_NN ._.
+training_NN Examples_NNS ._.
+gimp_JJ wire_NN compare_VB ._.
+get_VB Failure_NN Timestamp_NN ._.
+append_VB Python_NNP Style_NNP Escaped_VBD Code_NNP Point_NNP ._.
+matches_VBZ Any_DT Parent_NNP Categories_NNPS ._.
+start_VB Matched_NNP Count_NNP Dec_NNP ._.
+Reset_NNP Token_NNP Stats_NNP ._.
+dump_VB cemd_FW cmd_FW ._.
+gimp_FW eraser_FW default_NN ._.
+Handle_VB If_IN ._.
+push_VB Reset_NNP Later_RB ._.
+simulate_VB GC_NN ._.
+notify_VB Touch_NNP Down_NNP ._.
+match_NN By_IN IP_NNP ._.
+max_NN Draw_VB Buffers_NNPS ._.
+update_VB Mouse_NNP Pos_NNP ._.
+with_IN Web_NN Socket_NNP Upgrade_NNP ._.
+write_VB tcp_NN data_NNS ._.
+Initialize_VB Dual_JJ Graph_NN ._.
+fence_NN ._.
+transform_VB Path_NN ._.
+expand_VB Headers_NNP From_IN Request_NNP ._.
+enable_VB Materials_NNPS ._.

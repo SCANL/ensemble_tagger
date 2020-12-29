@@ -1,0 +1,267 @@
+Label_NN Action_NNP ._.
+Cpp_NNP Generator_NNP Services_NNPS ._.
+Child_NNP Location_NNP ._.
+Const_NNP Parameter_NNP Float_NNP ._.
+Basket_NNP Payoff_NNP ._.
+WSDLS_NNP Solver_NNP ._.
+MP4_NN Input_NN ._.
+Value_NN Label_NN ._.
+Process_VB ._.
+Text_VB Paint_NNP View_NNP ._.
+Action_NNP Translator_NNP ._.
+Pointer_NN Map_NN ._.
+Caplet_NNP Variance_NNP Curve_NNP ._.
+Code_NNP Generator_NNP Private_NNP ._.
+Dialog_JJ Elements_NNS ._.
+Light_JJ Attenuation_NN Value_NN ._.
+Android_NNP Byte_NNP Buddy_NNP Mock_NNP Maker_NNP ._.
+GL_NNP Config_NNP Attribs_NNP ._.
+QR_NNP Detect_NNP ._.
+Cmd_NN Output_NN Operation_NN Type_NN ._.
+Serialized_VBN Form_NN ._.
+OAuth_NN Session_NN ._.
+Response_NN Handlers_NNS ._.
+Dispatch_NNP Mask_NNP Buffer_NNP Iterator_NNP ._.
+To_TO String_NNP Walker_NNP ._.
+Get_VB Home_NNP Directory_NNP ._.
+Record_NNP Header_NNP ._.
+Image_NN Manager_NN ._.
+Rest_VB Client_NNP ._.
+Inverse_NNP Dynamics_NNP Example_NNP ._.
+Comp_NNP Mask_NNP ._.
+Content_NN Path_NN ._.
+Warning_NN Failure_NN Exception_NN ._.
+Handshake_NNP Mode_NNP ._.
+Array_NN Count_NN Propagation_NN ._.
+Category_NNP Filter_NNP Factory_NNP ._.
+OF_IN Android_NNP Object_NNP ._.
+Parse_NNP Job_NNP Private_NNP ._.
+Container_NNP Tab_NNP Bar_NNP ._.
+Max_NNP Core_NNP ._.
+SK_NNP Editor_NNP Consumer_NNP ._.
+Vertex_NNP Position_NN ._.
+Heat_NNP Vision_NNP Listener_NNP ._.
+Ko_NNP Rgb_NNP U8_NNP Invert_NNP Color_NNP Transformation_NN ._.
+Multiple_JJ Failure_NN Exception_NN ._.
+C_NN Image_NN Writer_NN JPG_NN ._.
+C_NN Burning_NN Shader_NNP Raster_NNP Reference_NNP ._.
+Lsm_NNP Basis_NNP System_NNP ._.
+Rule_NNP Property_NNP Ref_NNP start_NN ._.
+Explicit_NNP Euler_NNP Scheme_NNP ._.
+Less_RBR Dummy_NNP Gui_NNP Helper_NNP ._.
+Part_NNP Document_NNP Private_NNP ._.
+Post_NNP Script_NNP Document_NNP ._.
+Output_NN Delegate_NNP Private_NNP ._.
+Get_VB Total_JJ Disk_NN Space_NN ._.
+Attribute_NNP ._.
+Main_NNP Class_NNP ._.
+Dispatch_NNP Paint_NNP Mask_NNP ._.
+Stochastic_JJ Process_VBP ._.
+Data_NN Access_NN Repository_NNP Private_NNP ._.
+Tile_NNP Parameter_NNP Default_NNP Type_NN Internal_NNP ._.
+Compiler_NNP Item_NNP ._.
+Workspace_NNP File_NNP Mask_NNP ._.
+Publish_VB Response_NNP ._.
+Token_NNP Property_NNP Ref_NNP channel_NN ._.
+Configure_NNP Timeouts_NNP ._.
+Frame_NN 2_CD ._.
+File_VB Path_NNP Filter_NNP ._.
+OAuth_NN Session_NN Factory_NN ._.
+Runner_NNP Scheduler_NNP ._.
+Combine_VB Paint_NNP Mask_NNP To_TO Canvas_NNP Buffer_NNP To_TO Paint_VB Buf_NN Alpha_NN ._.
+Rule_NNP Member_NNP Validator_NNP ._.
+Parallel_JJ Computer_NN ._.
+Suite_NN Method_NN ._.
+Run_NNP Before_IN Params_NNP ._.
+Mp4_NN Extractor_NN ._.
+Layer_NN Parameter_NN ._.
+Internal_NNP FFMpeg_NNP Register_NNP ._.
+Mono_NN P_NN Invoke_NNP Callback_NNP Attribute_NNP ._.
+Left_VBN Recursive_JJ Rule_NN Function_NN ._.
+Cached_NNP Region_NNP Tracker_NNP ._.
+Resolved_VBN Failed_JJ Exception_NN ._.
+Strictness_NN Selector_NN ._.
+Voronoi_NNP Fracture_NNP Demo_NNP ._.
+Color_NN Map_NN ._.
+Clause_NN Matrix_NNP ._.
+Log_VB Mixed_NNP Linear_NNP Cubic_NNP Interpolation_NNP ._.
+Project_NNP Controller_NNP Private_NNP ._.
+Stubbing_VBG Comparator_NNP ._.
+Suite_NN Method_NN Builder_NN ._.
+Task_NNP Impl_NNP ._.
+Quote_NN ._.
+Expression_NN Finder_NN ._.
+File_VB Item_NNP Delegate_NNP ._.
+bt_IN Deformable_JJ Contact_NN Constraint_NN ._.
+C_NN At_IN Grayscale_NNP ._.
+Slack_NNP Client_NNP ._.
+Change_NNP Scroll_NNP ._.
+Controlled_VBN Object_NNP ._.
+MINIMUM_NNP SUPPORTED_NNP VERSION_NNP ._.
+H_NN pack_NN ._.
+Refutable_NNP Pattern_NNP Initialization_NNP ._.
+Declaration_NNP Context_NNP Private_NNP ._.
+I_PRP Read_NNP File_NNP ._.
+Default_NNP Injection_NN Engine_NNP ._.
+RS_NN Compute_NNP Operation_NNP ._.
+Deserialization_NNP Context_NNP ._.
+Arabic_JJ Segmenter_NN ._.
+Globals_NNS As_IN Members_NNP Table_NNP Reader_NNP Info_NNP ._.
+C_NNP File_NNP Read_NNP Callback_NNP ._.
+Write_VB Context_NNP ._.
+Temp_NNP Comp_NNP Mask_NNP ._.
+Class_NNP Loaders_NNP ._.
+Formatted_VBN Text_VBP ._.
+Transport_NNP Shard_NNP Refresh_NNP Action_NNP ._.
+Icy_NNP Decoder_NNP ._.
+Tree_NNP Post_NNP Script_NNP Generator_NNP ._.
+Ko_NNP Section_NNP End_NNP Private_NNP ._.
+Dynamic_NNP Textured_NNP Cube_NN Demo_NN ._.
+Camera_NNP Data_NNP ._.
+Chapter_NNP Toc_NNP Frame_NNP ._.
+Background_NNP Parser_NNP Private_NNP ._.
+Clock_NN ._.
+Temporary_JJ Folder_NN ._.
+File_VB Operator_NNP ._.
+Context_NN Token_JJ List_NN Indexed_JJ Getter_NNP Decl_NNP ._.
+Point_NN 3_CD ._.
+OF_IN Orientation_NNP Listener_NNP ._.
+Print_VB Events_NNS ._.
+Value_NNP ._.
+Expected_NNP Exception_NNP ._.
+Http1_NN Exchange_NNP Codec_NNP ._.
+OF_IN Android_NNP Sound_NNP Player_NNP ._.
+Tsurgeon_NNP Parse_NNP Exception_NNP ._.
+Fd_NNP Black_NNP Scholes_NNP Vanilla_NNP Engine_NNP ._.
+GLX_NNP Configurator_NNP ._.
+Null_NNP Program_NNP ._.
+Area_NNP Info_NNP Dialog_NNP t_NNP ._.
+Read_NNP Bitstream_NNP ._.
+Contextualize_NNP Closures_NNPS ._.
+Chinese_NNP Treebank_NNP Parser_NNP Params_NNP ._.
+Parameter_NNP Signature_NNP ._.
+bt_IN Material_NNP ._.
+Cbor_NNP X_NNP Content_NNP ._.
+C_NN Image_NN ._.
+Accessor_NNP Conformance_NNP Info_NNP ._.
+Build_VB Wrapper_NNP ._.
+Vanilla_NNP Forward_NNP Payoff_NNP ._.
+Dual_JJ Con_NN Input_NNP Reader_NNP ._.
+Bucket_NNP Collector_NNP ._.
+Device_NNP Handler_NNP ._.
+User_NN 2_CD Internal_NNP Index_NNP ._.
+Binary_JJ Rule_NN ._.
+D_NN obj_NN Points_NNS ._.
+Abstract_JJ Build_JJ Execution_NN ._.
+Label_NN Drawing_NNP Widget_NNP ._.
+bt_IN Collision_NNP Shape_VBG ._.
+DOT_NNP Generator_NNP ._.
+Layout_NNP Data_NNP ._.
+Rule_NNP Property_NNP Ref_NNP ctx_NN ._.
+Template_NNP Preview_NNP Icon_NNP Data_NNP ._.
+Base_NNP Loader_NNP Callback_NNP ._.
+Problem_NNP Reporter_NN Factory_NN ._.
+Ko_NNP Main_NNP Window_NNP Private_NNP ._.
+Ares_NNP Dns_NNP Resolver_NNP ._.
+C_NNP Animated_NNP Mesh_NNP Scene_NNP Node_NNP ._.
+LVL_NNP Currency_NNP ._.
+HDR_NNP Listener_NNP ._.
+Install_NNP Uncaught_NNP Exception_NNP Handler_NNP ._.
+C_NNP Skinned_NNP Mesh_NNP ._.
+Top_NNP NGram_NNP Record_NNP ._.
+Simple_JJ Pressure_NN ._.
+SINH_NN ._.
+MultiPolygon_NNP ._.
+Media_NNP Chunk_NNP Iterator_NNP ._.
+Mask_NNP Components_NNP ._.
+Shift_NN Reduce_NNP Train_NNP Options_NNPS ._.
+Predicate_NNP Wrapper_NNP ._.
+Ko_NNP Shadow_NNP Style_NNP Private_NNP ._.
+C_NNP D3D9_NNP Render_NNP Target_NN ._.
+C_NNP http2_NNP Connector_NNP ._.
+Disk_NN Lru_NNP Cache_NNP ._.
+Cache_NNP Strategy_NNP ._.
+Call_VB Error_NN Extensions_NNS ._.
+Timelapser_NNP ._.
+Reconstruct_VB Update_NNP Callback_NNP ._.
+Remoting_NNP Diagnostics_NNPS ._.
+Apply_NNP Rewriter_NNP ._.
+RS_NN Stencil_NNP Operation_NNP ._.
+C_NN At_IN Font_NNP ._.
+Mention_NN Detection_NN Evaluator_NN ._.
+SU_NNP Time_NNP ._.
+Controller_NNP Value_NNP ._.
+Define_VB ._.
+Run_NNP After_IN Params_NNP ._.
+Temperature_NNP Cauchy_NNP 1_CD D_NNP ._.
+D3D11_NNP Unsupported_NNP Gpu_NNP Program_NNP ._.
+Video_NNP Capture_NNP DShow_NN ._.
+Dvb_NNP Subtitle_NNP Reader_NNP ._.
+Rolling_NNP Friction_NNP Demo_NNP ._.
+D_NNP Bus_NNP Proxy_NNP ._.
+Address_NNP Lowering_NNP ._.
+Mock_NNP Creation_NNP Validator_NNP ._.
+Verification_NNP Mode_NNP Factory_NNP ._.
+Alt_NNP And_CC Context_NNP Config_NNP Equality_NNP Comparator_NNP ._.
+Setting_VBG Manager_NN ._.
+Tree_NN Element_NN ._.
+Generic_JJ Type_NN Extractor_NN ._.
+Local_NNP Ref_NNP ._.
+File_VB System_NNP Archive_NNP ._.
+C_NNP Archive_NNP Loader_NNP TAR_NN ._.
+CRF_NNP Non_NNP Linear_NNP Log_NNP Conditional_NNP Objective_NNP Function_NN ._.
+MultiCubic_NNP Spline_NNP ._.
+Cq_NNP Event_NNP Queue_NNP ._.
+Default_NNP Ssl_NNP Roots_NNP Override_NNP ._.
+Token_JJ Type_NN Decl_NN ._.
+Maps_NNS ._.
+Mpeg_NNP Audio_NNP Reader_NNP ._.
+Jnt_NNP Array_NNP Acc_NNP ._.
+Sei_NNP Reader_NNP ._.
+Time_NNP Signal_NNP Command_NN ._.
+Tuple_NNP LValue_NNP Emitter_NNP ._.
+Returns_VBZ Empty_JJ Values_NNS ._.
+Command_NN t_NN ._.
+Ko_NNP Path_NNP Point_NNP Remove_VB Command_NN Private_NNP ._.
+Web_NN Socket_NNP Listener_NNP ._.
+Quad_NNP ._.
+ABC_NNP Opt_NNP ._.
+Executor_NN ._.
+JFlex_NNP Dummy_NNP Lexer_NNP ._.
+Module_NNP Handler_NNP ._.
+Post_NNP File_NNP ._.
+Cipher_NNP Suite_NNP ._.
+Mockito_NNP Assertion_NNP Error_NNP ._.
+Env_NN Vars_NNP Slave_NNP Info_NNP Display_VB Name_NN ._.
+List_NN Level_NN ._.
+Single_JJ Period_NN Timeline_NN ._.
+OF_IN Android_NNP Life_NNP Cycle_NNP Helper_NNP ._.
+Patch_NNP Coord_NNP Buffer_NNP ._.
+C_NN At_IN Background_NNP Color_NNP ._.
+Key_NNP Status_NNP ._.
+Num_NN ._.
+New_JJ Aggregate_JJ Builder_NN Map_NN ._.
+Lease_NNP ._.
+Group_NNP By_IN Context_NNP ._.
+Declaration_NNP Item_NNP ._.
+Generic_JJ Emissive_JJ Closure_NN ._.
+Default_NNP Mocking_NNP Details_NNP ._.
+Risky_NNP Bond_NNP ._.
+Piecewise_JJ Constant_JJ Abcd_NNP Variance_NNP ._.
+Geometry_NNP Interface_NNP ._.
+Scroll_NN Id_NN For_IN Node_NNP ._.
+Op_NNP Pool_NNP ._.
+Patterns_NN Annotations_NNS ._.
+Physics_NN Client_NNP Example_NNP ._.
+Node_VB Shape_VBG ._.
+Fixed_NNP Object_NNP ._.
+Segmenter_NNP Core_NNP Annotations_NNPS ._.
+Store_NNP ._.
+Token_NNP Property_NNP Ref_NNP ._.
+Basic_JJ Replication_NN Request_NN ._.
+Rule_NNP Version_NNP Attribute_NNP ._.
+Server_NN Safe_NNP Handle_VB ._.
+OF_IN Android_NNP Window_NNP ._.
+Internal_NNP ._.
+Net_NNP State_NNP Rule_NNP Default_NNP Type_NN Internal_NNP ._.
+Cluster_NNP Update_NNP Settings_NNP Response_NNP ._.

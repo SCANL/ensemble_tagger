@@ -1,0 +1,267 @@
+a pos,DT N
+abs deadline n sec value,NM N N N N
+accelerometer data,N N
+accepting tasks,VBG NPL
+addr,N
+all factors,DT NPL
+alt name,N N
+alternative cache name,NM N N
+ambient coefficient,NM N
+animations data,NPL N
+app id,N N
+arg mismatch stubbings,N N NPL
+array class,N N
+array struct value,N N N
+assigns,VBZ
+auth result,NM N
+b d c,N N N
+b flip horizontally,N N N
+b multi fullscreen,N N N
+backprop training,NM N
+bibliography type,N N
+block nr,V N
+bone positions,N NPL
+bound port,VBD N
+breaker consumer,N N
+bridged value fun arg,N N N N
+brush hatch,V N
+buf num,N N
+build context,V N
+build time minor,V N NM
+built url,VBN N
+byte array view,V N N
+c problem,N N
+cache file,N N
+call id,V N
+cause matcher,V N
+child statement,N N
+classfile buffer,V N
+cmd str,N N
+code point to,V N P
+color map,N N
+comparison value,N N
+concrete follower indices,NM N NPL
+connection state,N N
+content type string,N N N
+convex shapes,N N
+current invocation,NM N
+current median,NM N
+current prefix,NM N
+current root,NM N
+curvatures height,NPL N
+d mat,N N
+data point method,NPL N N
+default,N
+default auto entry,N N N
+default mat x,N N N
+default open,N NM
+default role,N N
+dep h,V N
+desktop size,N N
+dest points,N NPL
+destroy with parent,V P N
+discount factor,N N
+dispose,V
+do caps,V N
+docking area,N N
+down sample,P N
+driver type name,N N N
+dst map 2,N N D
+echo path change,V N N
+edit length,V N
+encoded values,VBN NPL
+end snapshot,N N
+env name,N N
+eps,NPL
+err ret,V N
+esa,N
+excess workload,NM N
+existing symlink,VBG N
+f tolerance,N N
+file channel,V N
+final response,NM N
+fine priority,NM N
+first type label,NM N N
+flags classifier pair,NPL N N
+folder names,N NPL
+force direct,V N
+frame,N
+frame pixel coords,N N NPL
+from server,P N
+full path,NM N
+func,N
+gauss lobatto eps,VBZ N N
+get protocol method,V N N
+group role attribute,N N N
+grouping,VBG
+handle pos,V N
+highlighter,N
+html file,N N
+http2 error code,N N N
+i ar e,N N N
+i var initializer,N N N
+id a,N N
+import g,N N
+in,N
+in buffer,P N
+inbound,NM
+index tensor,N N
+inner angle,NM N
+institution,N
+int hex string,V N N
+ios,N
+is friend,VBZ N
+is v,VBZ N
+is vaild,VBZ N
+key,NM
+key frame 2,NM N D
+l b layer,N N N
+label op,N N
+label pair,N N
+labels,NPL
+labels file,VBZ N
+learned lop expert weights 2 d,VBD N N N D N
+led color,VBD N
+len r,N N
+light dim,NM N
+line index mask len,N N N N
+literal bucket,NM N
+locking,VBG
+lp binary path name,N NM N N
+mapped color,VBN N
+max intermediate cas,V N N
+max requests per host,N NPL P N
+max scale f,N N N
+media chunk index,NPL N N
+method name prefixes,N N NPL
+min error,N N
+min fresh,N NM
+min fresh seconds,N NM NPL
+mkt factors,N NPL
+mock creation settings,NM N NPL
+n layers,N NPL
+n shininess,N N
+n vector,N N
+named writeables,VBN NPL
+new field type,NM N N
+new files,NM NPL
+new verification mode,NM N N
+next func,NM N
+next line,P N
+nullable class,NM N
+num active contexts,N NM NPL
+num factors,N NPL
+num files,N NPL
+num keys,V N
+number str,N N
+on connect,P V
+operator method decls,N N N
+ordered invocations,VBN NPL
+original set,N V
+out buf,P N
+out table,P N
+outer rule,NM N
+output array,N N
+overlap,V
+own flags,NM NPL
+p global info 32,N NM N D
+packet sample count,N N N
+palette size,N N
+parameter assignment,N N
+parent field,N N
+parent had big change,N VBD N N
+parsing,VBG
+pass machine instructions,V N NPL
+pem key,N N
+pen loaded,N VBN
+pi hash,N N
+point index,N N
+polling log,N N
+pre map,NM N
+previous index,NM N
+previous initial value,NM NM N
+previous is valid,NM N N
+print label flag,N N N
+print t,N N
+progressive,NM
+project file,N N
+projects dir,NPL N
+promises,NPL
+pronoun,N
+property interval set,N N V
+put watch request,V N N
+query timeout in ms,V N P N
+question ast,N N
+r,N
+radius,N
+random walk,NM V
+rate pointer,N N
+read operation,V N
+reader flags,N NPL
+referee set map,N V N
+reference range,N N
+refresh metric,V N
+relative contrast,NM N
+remote cluster names,NM N NPL
+res width,VBZ N
+reserve fn,N N
+resume,V
+retain function,V N
+rets,NPL
+return path,N N
+rot axis,N N
+rotation per second,N P N
+runner factory,N N
+save dual cells,P NM NPL
+scene node type name,N N N N
+search profile results,V N NPL
+secondary range,NM N
+separator color,V N
+server list,N N
+set protocol method,VBN N N
+settings,NPL
+sibling info,N N
+size contents,N NPL
+size on first use,N P NM N
+sorted indices buf,VBD N N
+speech in,N P
+src gradient,N N
+start dirs,V N
+start slot,N N
+start up fix cost,V VM V N
+status file,N N
+strength,N
+subroutine slot name,N N N
+super method,NM N
+supplier class,N N
+suppress file,V N
+table 2 id,N D N
+target,N
+tbl index,N N
+tex id,V N
+the invocation,DT N
+tick freq,V N
+time range,N N
+timeout task,V N
+times to append last matcher,NPL P V NM N
+token within action,NM P N
+top dir,N N
+typed array,VBD N
+underlying fx correlation,VBG N N
+undiscounted amount,NM N
+usage,N
+use shadows 1,V N D
+use tabs,V N
+utf8 size,N N
+validate on,V N
+waiting list,VBG N
+want x,V N
+will return last parameter,V N NM N
+word lemma tag,N N N
+wrapped verification,VBD N
+write root,V N
+y in,N N
+yield mvs,N NPL
+z p i,N N N
+z probs,N NPL
+zoom x y,V N N

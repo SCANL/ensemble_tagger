@@ -1,0 +1,267 @@
+a_DT pos_NN ._.
+abs_JJ deadline_NN n_NN sec_NN value_NN ._.
+accelerometer_NN Data_NN ._.
+accepting_VBG Tasks_NNS ._.
+addr_NN ._.
+all_DT Factors_NNS ._.
+alt_NN Name_NN ._.
+alternative_JJ Cache_NN Name_NN ._.
+ambient_JJ coefficient_NN ._.
+animations_NNS Data_NNP ._.
+App_NNP ID_NNP ._.
+arg_NN Mismatch_NN Stubbings_NNS ._.
+array_NN Class_NN ._.
+Array_NNP Struct_NNP Value_NNP ._.
+assigns_VBZ ._.
+auth_JJ Result_NN ._.
+b_NN d_NN c_NN ._.
+b_NN Flip_NNP Horizontally_NNP ._.
+b_NN Multi_NNP Fullscreen_NNP ._.
+backprop_JJ Training_NN ._.
+bibliography_NN Type_NN ._.
+block_VB Nr_NNP ._.
+bone_NN Positions_NNS ._.
+bound_VBD Port_NNP ._.
+breaker_NN Consumer_NNP ._.
+Bridged_NNP Value_NNP Fun_NNP Arg_NN ._.
+brush_VB Hatch_NNP ._.
+buf_NN Num_NN ._.
+build_VB Context_NNP ._.
+build_VB time_NN minor_JJ ._.
+built_VBN Url_NN ._.
+byte_VB Array_NNP View_NNP ._.
+c_NN problem_NN ._.
+cache_NN file_NN ._.
+call_VB Id_NN ._.
+cause_VB Matcher_NNP ._.
+child_NN Statement_NN ._.
+classfile_VB Buffer_NNP ._.
+cmd_FW Str_FW ._.
+code_VB Point_NNP To_TO ._.
+color_NN Map_NN ._.
+comparison_NN Value_NNP ._.
+concrete_JJ Follower_NNP Indices_NNPS ._.
+connection_NN state_NN ._.
+content_NN Type_NN String_NNP ._.
+convex_FW Shapes_FW ._.
+current_JJ Invocation_NNP ._.
+current_JJ median_NN ._.
+current_JJ Prefix_NNP ._.
+current_JJ Root_NN ._.
+curvatures_NNS height_NN ._.
+D_NN mat_NN ._.
+data_NNS Point_NNP Method_NNP ._.
+default_NN ._.
+default_NN Auto_NNP Entry_NNP ._.
+default_NN mat_FW x_FW ._.
+default_NN open_JJ ._.
+default_NN Role_NN ._.
+dep_VB H_NNP ._.
+desktop_NN Size_NN ._.
+dest_NN points_NNS ._.
+destroy_VB with_IN parent_NN ._.
+discount_NN Factor_NN ._.
+dispose_VB ._.
+do_VB Caps_NNP ._.
+docking_NN Area_NNP ._.
+down_IN sample_NN ._.
+driver_NN Type_NN Name_NN ._.
+dst_NN map_NN 2_CD ._.
+echo_VB path_NN change_NN ._.
+Edit_VB Length_NN ._.
+encoded_VBN Values_NNS ._.
+End_NNP Snapshot_NNP ._.
+env_NN Name_NN ._.
+EPS_NNS ._.
+err_VB ret_NN ._.
+esa_NN ._.
+excess_JJ Workload_NNP ._.
+existing_VBG symlink_NN ._.
+f_LS Tolerance_NN ._.
+file_VB Channel_NNP ._.
+final_JJ Response_NNP ._.
+fine_JJ priority_NN ._.
+first_JJ type_NN label_NN ._.
+flags_NNS Classifier_NNP Pair_NNP ._.
+folder_NN Names_NNS ._.
+force_VB Direct_NNP ._.
+frame_NN ._.
+frame_NN pixel_NN coords_NNS ._.
+from_IN Server_NN ._.
+full_JJ path_NN ._.
+Func_NN ._.
+gauss_VBZ Lobatto_NNP Eps_NNP ._.
+get_VB Protocol_NNP Method_NNP ._.
+group_NN Role_NN Attribute_NN ._.
+grouping_VBG ._.
+handle_VB Pos_NNP ._.
+highlighter_NN ._.
+html_FW File_FW ._.
+http2_NN Error_NNP Code_NNP ._.
+i_FW ar_FW e_FW ._.
+i_FW var_FW Initializer_NNP ._.
+id_FW A_FW ._.
+import_NN G_FW ._.
+in_FW ._.
+in_IN buffer_NN ._.
+inbound_JJ ._.
+index_NN Tensor_NNP ._.
+inner_JJ Angle_NNP ._.
+institution_NN ._.
+int_VB Hex_NNP String_NNP ._.
+ios_NN ._.
+is_VBZ Friend_NN ._.
+is_VBZ V_NNP ._.
+is_VBZ Vaild_NNP ._.
+key_JJ ._.
+key_JJ Frame_NN 2_CD ._.
+l_NN b_NN layer_NN ._.
+label_NN Op_NN ._.
+label_NN Pair_NN ._.
+labels_NNS ._.
+labels_VBZ File_NNP ._.
+learned_VBD Lop_NNP Expert_NNP Weights_NNP 2_CD D_NNP ._.
+led_VBD Color_NNP ._.
+len_NN r_NN ._.
+light_JJ Dim_NN ._.
+line_NN index_NN mask_NN len_NN ._.
+literal_JJ Bucket_NNP ._.
+locking_VBG ._.
+lp_NN Binary_JJ Path_NN Name_NN ._.
+mapped_VBN color_NN ._.
+max_VB Intermediate_NNP Cas_NNP ._.
+max_NN Requests_NNS Per_IN Host_NNP ._.
+max_NN scale_NN f_NN ._.
+media_NNS Chunk_NNP Index_NNP ._.
+method_NN Name_NN Prefixes_NNS ._.
+Min_NN Error_NN ._.
+min_NN Fresh_JJ ._.
+min_NN Fresh_JJ Seconds_NNS ._.
+mkt_NN Factors_NNS ._.
+mock_JJ Creation_NN Settings_NNS ._.
+n_NN layers_NNS ._.
+n_NN Shininess_NN ._.
+n_NN vector_NN ._.
+named_VBN Writeables_NNS ._.
+new_JJ Field_NNP Type_NN ._.
+new_JJ Files_NNS ._.
+new_JJ Verification_NNP Mode_NNP ._.
+next_JJ func_NN ._.
+next_IN Line_NNP ._.
+nullable_JJ Class_NN ._.
+num_NN Active_JJ Contexts_NNS ._.
+num_NN Factors_NNS ._.
+num_NN Files_NNS ._.
+num_VB Keys_NNP ._.
+number_NN Str_NN ._.
+on_IN connect_VB ._.
+operator_NN Method_NNP Decls_NNP ._.
+ordered_VBN Invocations_NNS ._.
+original_NN Set_VB ._.
+out_IN buf_NN ._.
+out_IN table_NN ._.
+outer_JJ Rule_NN ._.
+output_NN array_NN ._.
+overlap_VB ._.
+own_JJ flags_NNS ._.
+p_NN global_JJ info_NN 32_CD ._.
+packet_NN Sample_NNP Count_NNP ._.
+palette_NN size_NN ._.
+parameter_NN Assignment_NN ._.
+parent_NN field_NN ._.
+parent_NN Had_VBD Big_NNP Change_NNP ._.
+parsing_VBG ._.
+Pass_VB Machine_NNP Instructions_NNPS ._.
+pem_NN key_NN ._.
+pen_NN Loaded_VBN ._.
+pi_NN Hash_NN ._.
+point_NN index_NN ._.
+polling_NN Log_NN ._.
+pre_JJ Map_NN ._.
+previous_JJ Index_NNP ._.
+previous_JJ Initial_JJ Value_NN ._.
+previous_JJ Is_NNP Valid_NNP ._.
+print_NN label_NN flag_NN ._.
+print_NN t_NN ._.
+progressive_JJ ._.
+project_NN file_NN ._.
+projects_NNS Dir_NNP ._.
+promises_NNS ._.
+pronoun_NN ._.
+property_NN Interval_NNP Set_VB ._.
+put_VB Watch_NNP Request_NNP ._.
+query_VB Timeout_NNP In_IN Ms_NNP ._.
+question_NN AST_NNP ._.
+r_FW ._.
+radius_FW ._.
+random_JJ Walk_VB ._.
+rate_NN Pointer_NN ._.
+read_VB Operation_NNP ._.
+reader_NN Flags_NNS ._.
+referee_NN Set_VB Map_NN ._.
+Reference_NNP Range_NNP ._.
+refresh_VB Metric_NNP ._.
+relative_JJ contrast_NN ._.
+remote_JJ Cluster_NN Names_NNS ._.
+res_VBZ Width_NNP ._.
+Reserve_NNP Fn_NNP ._.
+resume_VB ._.
+retain_VB Function_NN ._.
+rets_NNS ._.
+return_NN Path_NN ._.
+rot_NN axis_NN ._.
+rotation_NN Per_IN Second_NNP ._.
+runner_NN Factory_NNP ._.
+save_IN Dual_JJ Cells_NNS ._.
+scene_NN Node_NN Type_NN Name_NN ._.
+search_VB Profile_NNP Results_NNS ._.
+secondary_JJ range_NN ._.
+separator_VB Color_NNP ._.
+server_NN list_NN ._.
+set_VBN Protocol_NNP Method_NNP ._.
+settings_NNS ._.
+Sibling_NNP Info_NNP ._.
+size_NN contents_NNS ._.
+size_NN on_IN first_JJ use_NN ._.
+sorted_VBD Indices_NNP Buf_NNP ._.
+speech_NN in_IN ._.
+src_NN Gradient_NN ._.
+start_VB Dirs_NNP ._.
+Start_NNP Slot_NNP ._.
+start_VB Up_RP Fix_VB Cost_NN ._.
+status_NN File_NN ._.
+strength_NN ._.
+subroutine_NN Slot_NN Name_NN ._.
+super_JJ Method_NNP ._.
+supplier_NN Class_NN ._.
+suppress_VB File_NNP ._.
+table_NN 2_CD id_NN ._.
+target_NN ._.
+tbl_NN index_NN ._.
+tex_VB ID_NNP ._.
+the_DT Invocation_NNP ._.
+tick_VB Freq_NNP ._.
+time_NN range_NN ._.
+timeout_VB Task_NNP ._.
+times_NNS To_TO Append_VB Last_JJ Matcher_NNP ._.
+token_JJ Within_IN Action_NNP ._.
+Top_NNP Dir_NNP ._.
+typed_VBD Array_NNP ._.
+underlying_VBG Fx_NN Correlation_NN ._.
+undiscounted_JJ Amount_NN ._.
+usage_NN ._.
+use_VB Shadows_NNP 1_CD ._.
+use_VB Tabs_NNP ._.
+utf8_NN size_NN ._.
+validate_VB On_NNP ._.
+waiting_VBG List_NN ._.
+want_VB x_NNP ._.
+will_MD Return_NN Last_JJ Parameter_NN ._.
+word_NN Lemma_NNP Tag_NNP ._.
+wrapped_VBD Verification_NNP ._.
+write_VB Root_NN ._.
+y_FW In_FW ._.
+yield_NN MVs_NNS ._.
+z_SYM p_NN i_NN ._.
+z_SYM probs_NNS ._.
+zoom_VB x_NN y_NN ._.

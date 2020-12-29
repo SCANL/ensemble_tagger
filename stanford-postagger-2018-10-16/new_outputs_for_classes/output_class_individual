@@ -1,0 +1,267 @@
+problem reporter factory,N N N
+wsdls solver,N N
+alt and context config equality comparator,N CJ N N N N
+h pack,N N
+rule version attribute,N N N
+device handler,N N
+deserialization context,N N
+mp4 input,N N
+task impl,N N
+store,N
+formatted text,VBN VBP
+heat vision listener,N N N
+base loader callback,N N N
+quote,N
+category filter factory,N N N
+of android window,P N N
+voronoi fracture demo,N N N
+mock creation validator,N N N
+file operator,V N
+tree post script generator,N N N N
+attribute,N
+abstract build execution,NM NM N
+change scroll,N N
+c skinned mesh,N N N
+cache strategy,N N
+of android object,P N N
+c image writer jpg,N N N N
+slack client,N N
+d bus proxy,N N N
+warning failure exception,N N N
+write context,V N
+configure timeouts,N N
+post file,N N
+class loaders,N N
+video capture dshow,N N N
+fd black scholes vanilla engine,N N N N N
+multipolygon,N
+frame 2,N D
+command t,N N
+container tab bar,N N N
+c file read callback,N N N N
+reconstruct update callback,V N N
+get total disk space,V NM N N
+caplet variance curve,N N N
+internal,N
+c animated mesh scene node,N N N N N
+child location,N N
+less dummy gui helper,VM N N N
+fixed object,N N
+c burning shader raster reference,N N N N N
+top ngram record,N N N
+label drawing widget,N N N
+comp mask,N N
+strictness selector,N N
+dual con input reader,NM N N N
+rule property ref ctx,N N N N
+apply rewriter,N N
+rolling friction demo,N N N
+call error extensions,V N NPL
+crf non linear log conditional objective function,N N N N N N N
+lease,N
+dynamic textured cube demo,N N N N
+vanilla forward payoff,N N N
+remoting diagnostics,N NPL
+risky bond,N N
+server safe handle,N N V
+cq event queue,N N N
+rest client,V N
+c at grayscale,N P N
+file path filter,V N N
+cbor x content,N N N
+abc opt,N N
+tsurgeon parse exception,N N N
+scroll id for node,N N P N
+icy decoder,N N
+basket payoff,N N
+print events,V NPL
+lvl currency,N N
+sinh,N
+suite method,N N
+web socket listener,N N N
+token property ref channel,N N N N
+http1 exchange codec,N N N
+d3d11 unsupported gpu program,N N N N
+internal ffmpeg register,N N N
+explicit euler scheme,N N N
+const parameter float,N N N
+template preview icon data,N N N N
+c archive loader tar,N N N N
+clock,N
+bucket collector,N N
+controller value,N N
+binary rule,NM N
+hdr listener,N N
+globals as members table reader info,NPL P N N N N
+stubbing comparator,VBG N
+tuple lvalue emitter,N N N
+expected exception,N N
+mention detection evaluator,N N N
+op pool,N N
+array count propagation,N N N
+run before params,N P N
+file system archive,V N N
+node shape,V VBG
+generic type extractor,NM N N
+token type decl,NM N N
+of orientation listener,P N N
+area info dialog t,N N N N
+ko rgb u8 invert color transformation,N N N N N N
+serialized form,VBN N
+cmd output operation type,N N N N
+suite method builder,N N N
+label action,N N
+env vars slave info display name,N N N N V N
+sk editor consumer,N N N
+point 3,N D
+project controller private,N N N
+contextualize closures,N NPL
+module handler,N N
+cached region tracker,N N N
+single period timeline,NM N N
+address lowering,N N
+record header,N N
+bt deformable contact constraint,P NM N N
+timelapser,N
+content path,N N
+disk lru cache,N N N
+light attenuation value,NM N N
+default ssl roots override,N N N N
+vertex position,N N
+inverse dynamics example,N N N
+c d3d9 render target,N N N N
+default injection engine,N N N
+combine paint mask to canvas buffer to paint buf alpha,V N N P N N P V N N
+code generator private,N N N
+android byte buddy mock maker,N N N N N
+of android sound player,P N N N
+mask components,N N
+rule member validator,N N N
+layer parameter,N N
+temporary folder,NM N
+ko path point remove command private,N N N V N N
+runner scheduler,N N
+left recursive rule function,VBN NM N N
+time signal command,N N N
+su time,N N
+generic emissive closure,NM NM N
+context token list indexed getter decl,N NM N NM N N
+i read file,PR N N
+ko main window private,N N N N
+run after params,N P N
+sei reader,N N
+parse job private,N N N
+list level,N N
+token property ref,N N N
+multiple failure exception,NM N N
+maps,NPL
+piecewise constant abcd variance,NM NM N N
+ko shadow style private,N N N N
+of android life cycle helper,P N N N N
+dvb subtitle reader,N N N
+lsm basis system,N N N
+controlled object,VBN N
+multicubic spline,N N
+pointer map,N N
+jflex dummy lexer,N N N
+handshake mode,N N
+group by context,N P N
+part document private,N N N
+mpeg audio reader,N N N
+declaration context private,N N N
+dialog elements,NM NPL
+setting manager,VBG N
+mockito assertion error,N N N
+refutable pattern initialization,N N N
+workspace file mask,N N N
+segmenter core annotations,N N NPL
+text paint view,V N N
+glx configurator,N N
+rs stencil operation,N N N
+bt material,P N
+parameter signature,N N
+minimum supported version,N N N
+c at font,N P N
+response handlers,N NPL
+max core,N N
+main class,N N
+log mixed linear cubic interpolation,V N N N N
+camera data,N N
+read bitstream,N N
+patterns annotations,N NPL
+file item delegate,V N N
+compiler item,N N
+cpp generator services,N N NPL
+oauth session,N N
+clause matrix,N N
+ko section end private,N N N N
+stochastic process,NM VBP
+quad,N
+layout data,N N
+ares dns resolver,N N N
+c http2 connector,N N N
+gl config attribs,N N N
+get home directory,V N N
+key status,N N
+verification mode factory,N N N
+expression finder,N N
+cipher suite,N N
+to string walker,P N N
+physics client example,N N N
+rs compute operation,N N N
+rule property ref start,N N N N
+local ref,N N
+chinese treebank parser params,N N N N
+jnt array acc,N N N
+shift reduce train options,N N N NPL
+value label,N N
+resolved failed exception,VBN NM N
+user 2 internal index,N D N N
+geometry interface,N N
+c at background color,N P N N
+mono p invoke callback attribute,N N N N N
+install uncaught exception handler,N N N N
+oauth session factory,N N N
+tree element,N N
+mp4 extractor,N N
+bt collision shape,P N VBG
+qr detect,N N
+media chunk iterator,N N N
+define,V
+simple pressure,NM N
+dispatch mask buffer iterator,N N N N
+output delegate private,N N N
+image manager,N N
+background parser private,N N N
+parallel computer,NM N
+dot generator,N N
+action translator,N N
+patch coord buffer,N N N
+dispatch paint mask,N N N
+null program,N N
+declaration item,N N
+cluster update settings response,N N N N
+temp comp mask,N N N
+num,N
+transport shard refresh action,N N N N
+color map,N N
+process,V
+accessor conformance info,N N N
+executor,N
+temperature cauchy 1 d,N N D N
+post script document,N N N
+arabic segmenter,NM N
+chapter toc frame,N N N
+predicate wrapper,N N
+returns empty values,VBZ NM NPL
+d obj points,N N NPL
+c image,N N
+build wrapper,V N
+default mocking details,N N N
+basic replication request,NM N N
+net state rule default type internal,N N N N N N
+value,N
+publish response,V N
+new aggregate builder map,NM NM N N
+tile parameter default type internal,N N N N N
+data access repository private,N N N N

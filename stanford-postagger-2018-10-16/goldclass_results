@@ -1,0 +1,74 @@
+initial_JJ delay_NN milliseconds_NNS ._.
+sx_NN ._.
+accelerometer_NN Data_NN ._.
+b_NN Flip_NN Horizontally_RB ._.
+b_NN Multi_NNP Fullscreen_NNP ._.
+folder_NN Names_NNS ._.
+in_IN buffer_NN ._.
+int_VB Hex_NNP String_NNP ._.
+n_NN Shininess_NN ._.
+num_NN Files_NNS ._.
+res_VBZ Width_NNP ._.
+settings_NNS ._.
+tex_VB ID_NNP ._.
+usage_NN ._.
+want_VB x_NNP ._.
+z_SYM p_NN i_NN ._.
+message_NN ._.
+alt_NN Name_NN ._.
+call_VB Id_NN ._.
+content_NN Type_NN String_NNP ._.
+encoded_VBN Values_NNS ._.
+file_VB Channel_NNP ._.
+get_VB Protocol_NNP Method_NNP ._.
+http2_NN Error_NNP Code_NNP ._.
+inbound_JJ ._.
+max_VB Intermediate_NNP Cas_NNP ._.
+max_NN Requests_NNS Per_IN Host_NNP ._.
+min_NN Fresh_JJ ._.
+min_NN Fresh_JJ Seconds_NNS ._.
+promises_NNS ._.
+set_VBN Protocol_NNP Method_NNP ._.
+the_DT Class_NNP ._.
+array_NN Class_NN ._.
+assigns_VBZ ._.
+cause_VB Matcher_NNP ._.
+child_NN Statement_NN ._.
+data_NNS Point_NNP Method_NNP ._.
+i_FW ar_FW e_FW ._.
+method_NN Name_NN Prefixes_NNS ._.
+nullable_JJ Class_NN ._.
+outer_JJ Rule_NN ._.
+parameter_NN Assignment_NN ._.
+runner_NN Factory_NNP ._.
+supplier_NN Class_NN ._.
+backprop_JJ Training_NN ._.
+cmd_FW Str_FW ._.
+dep_VB H_NNP ._.
+flags_NNS Classifier_NNP Pair_NNP ._.
+labels_VBZ File_NNP ._.
+learned_VBD Lop_NNP Expert_NNP Weights_NNP 2_CD D_NNP ._.
+new_JJ Files_NNS ._.
+num_VB Keys_NNP ._.
+pre_JJ Map_NN ._.
+pronoun_NN ._.
+retain_VB Function_NN ._.
+word_NN Lemma_NNP Tag_NNP ._.
+z_SYM probs_NNS ._.
+child_NN joint_NN ._.
+rconde_NN ._.
+planes_NNS ._.
+mesh_VB scale_NN ._.
+ambient_JJ coefficient_NN ._.
+convex_FW Shapes_FW ._.
+default_NN open_JJ ._.
+in_IN ._.
+len_NN r_FW ._.
+num_FW Active_JJ Contexts_NNS ._.
+out_IN table_NN ._.
+p_NN global_JJ info_NN 32_CD ._.
+palette_NN size_NN ._.
+rate_NN Pointer_NN ._.
+size_NN contents_NNS ._.
+size_NN on_IN first_JJ use_NN ._.
+use_VB Shadows_NNP 1_CD ._.

@@ -1,0 +1,267 @@
+add bezier curve,V N N
+add log to stream,V N P N
+add object index,V N N
+add ordered list,V N N
+add unicode script codes to names,V N N NPL P NPL
+adjusted gradient,VBN N
+after channel,P N
+all open files string,DT N N N
+append python style escaped code point,V N N VBD N N
+append sequence,N N
+apply margin insets,V N NPL
+ares expand name for response,NPL VBP N P N
+argb subtract row c,N N N N
+assign lexer token types,V N N N
+aud sound envelope,N N N
+b3 push profile timing,N N N N
+biggest constructor,NM N
+binary search bytes,NM V NPL
+bke lattice index flip,N N N V
+bli str r strip,N N N N
+build group query,V N N
+build lexer rule actions,V N N NPL
+calc lut,V N
+check gl support,V N N
+check not interface,V VM N
+check not local,V VM N
+check sign,V N
+check t,V N
+check writeable,V N
+choose document,V N
+class annotations,N NPL
+clear active id,NM NM N
+compare inverse and forward dynamics,V N CJ N N
+context url list,N N N
+convert to php namespace,V P N N
+create duplicate change id,V N N N
+create in indices,V P NPL
+create metadata array,V N N
+create sub buffer,V N N
+current slide,NM N
+curves,NPL
+declare component,V N
+deep stub,NM N
+delete,V
+delete input,V N
+determine strictness,V N
+dialog info update,N N V
+dividend discount mother,N N N
+do forward,V VM
+do install status,V N N
+do login entry,V N N
+do print after,V V P
+dump cemd cmd,V N N
+dump core map to string builder,V N N P N N
+dump frame buffer formats,V N N NPL
+dynamic table index,NM N N
+effective style,NM N
+emit address,V N
+enable background opacity,V N N
+enable materials,V NPL
+expand headers from request,V N P N
+extract component,V N
+extract raw type of,N N N P
+fence,N
+find hashable base type,V N N N
+find source subdir,V N N
+float,V
+follow component,V N
+format display name,N V N
+from byte buffers,P N N
+generate service descriptor property,N N N N
+get actual values,V NM NPL
+get artificial op prec rule,V N N N N
+get binary side,V N N
+get commit id,V V N
+get completed,V VBN
+get constant reference for protocol descriptor,V NM N P N N
+get controller transform,V N N
+get default atlasing attributes,V N N NPL
+get default install state,V N N N
+get diffuse colour,V N N
+get display path,V V N
+get dmf header,V N N
+get error listeners,V N NPL
+get failure timestamp,V N N
+get id for name,V N P N
+get initial window size,V NM N N
+get item type descriptor,V N N N
+get jf,V N
+get leftmost descendant,V N N
+get longitude,V N
+get max shingle diff,V N N N
+get meta index,V N N
+get msg send super ty,V N V N N
+get number of transitions,V N P NPL
+get operations reads,V N NPL
+get phrase 1,V N D
+get pid no exceptions,V N N NPL
+get plane point,V N N
+get raw arguments,V N NPL
+get red adjust 2,V N V D
+get related view data row double,V N N N N NM
+get top border size,V N N N
+get working directory,V N N
+get xcr 0,V N D
+gimp canvas rectangle set property,NM N N N N
+gimp devices check change,NM NPL N N
+gimp eraser default,N N N
+gimp filter tool set gyroscope,N N N N N
+gimp image file get thumbnail,NM N N V NM
+gimp param drawable id init,N N NM N N
+gimp selection tool class init,NM N N N N
+gimp status bar progress canceled,NM N N N VBN
+gimp value set int32 array,N N VBD N N
+gimp wire compare,NM N V
+global scope,NM N
+gpencil primitive modal,N NM N
+grpc chttp2 mark stream writable,N N N N N
+grpc json writer value string,N N N N N
+grpc sock addr make wildcards,NPL VBP NM N NPL
+handle if,V P
+has composite op,VBZ N N
+has view relative texture coordinate generation,VBZ N NM N NM N
+ico load layer,N N N
+is blocked by shutdown,VBZ VBN P N
+imb stereo3d read interlace,N N N V
+in scc,P N
+inflation leg npv,N N N
+init for group,N P N
+initialize dual graph,V NM N
+is android,VBZ N
+is canon,VBZ N
+is conscrypt preferred,VBZ N N
+is dependency changed,VBZ N N
+is generic type disambiguating token,VBZ NM N N N
+is stdlib module,VBZ N N
+is sum supported,VBZ N N
+is valid trailing closure,VBZ N N N
+keep readability only on descendants,V N VM P NPL
+last gradient,NM N
+layer get composite mode invoker,N V NM N N
+lower boundary factor,NM N N
+make html table,V N N
+mark as fetching,N P N
+match by ip,N P N
+matches any parent categories,VBZ DT N NPL
+max draw buffers,N V NPL
+maximize all,V N
+metadata snapshot,NM N
+new exchange,NM N
+next unassigned,NM N
+nla invert combine value,N N V N
+node find output by name,N VBP N P N
+notify touch down,V N N
+null passed to verify no more interactions,NM N P V DT NM NPL
+nulls ok,VBZ N
+object with to string,N P P N
+of to binary,P P N
+on group call key sent,P N N N N
+on implies,P N
+optimize identity cast composition,V N VBN N
+order with,V N
+palette poll,N N
+parent pairs,N NPL
+parse attribute def,V N N
+parse expires,V N
+parse max age,V N N
+path with native separators,N P NM NPL
+png do strip channel,N VBP N N
+png get row bytes,N V N NPL
+png get rows,N V NPL
+png get unknown chunks,N V NM NPL
+png init palette transformations,N N N NPL
+png read idat data,N VBD N NPL
+pnm load raw pfm,N N NM N
+presentation start from first,N N P N
+process helper,V N
+push reset later,V N VM
+pybullet compute view matrix,VM V N N
+read element text span,N N VBP N
+read pass,N N
+read response,V N
+read subframe,N N
+read text file,N V N
+read white space,V N N
+reapply filter,V N
+register with volatility spread,N P N N
+remap nearest neighbor,V N N
+remove imported parent contexts,V N N N
+render result exr file end,V N N N N
+render text,N V
+report no setter found,V N N N
+repress ref at loc,V N P N
+require client auth,V N N
+reset meta class cache,V N N N
+reset token stats,N N N
+resize linear open cv,V N N N
+resize nearest neighbor,V N N
+rgb 2 rgb565,N D N
+rgbx 2 bgrx,N D N
+run methods,N NPL
+sanitize path,V N
+saturated cast,NM N
+save as quadratic png,V P N N
+send serial config,V NM N
+send string,V N
+session config,N N
+set add faces points,V V N N
+set canonical mention begin,VBN NM N N
+set custom uniform 1 f,VBN N N D N
+set destructor callback,VBN N N
+set display index,VBN V N
+set extra interfaces,VBN N NPL
+set frame pen,VBN N N
+set invert,VBN N
+set layer texture name,VBN N N N
+set project naming strategy,VBN N N N
+set tiling,V N
+setup bounding box vertices,N N N N
+sha256 hash,N N
+shader data to shader globals,NM NPL P V NPL
+silk bw expander 32,N N N D
+simulate gc,V N
+skip whitespace and commas,V N CJ N
+speaker,N
+split argument list,NM N N
+sqlite3 session config,N N N
+sqlite3 walk expr list,N VBP N N
+start matched count dec,V N N N
+status icon,N N
+stmt close,V N
+str array len,N N N
+strip left recursion,N VBD N
+stroke attribute alpha get,N N N V
+target started,N VBD
+tegra morph init,N N N
+tessellate to mesh,V P V
+throw provision exception if errors exist,V N N P N N
+tiff current tile,N N N
+tiff get size proc,N VBP N N
+tool view position,N N N
+training examples,N NPL
+transform path,V N
+two factor response,D N N
+uncompress if needed,N P N
+unload textures,V N
+unpack texture blend func,NM N N N
+update mouse pos,V N N
+url from json,N P N
+v url encode,N N N
+validate class rules,V N N
+validate public static void methods,V N NM N NPL
+verification started,N VBD
+verifier get mapping,VM V N
+visit sil argument,N N N
+widget destroyed,N N
+with charset,P N
+with cms leg rule,P N N N
+with market rate accuracy,P N N N
+with rate bound,P N VBN
+with web socket upgrade,P N N N
+worker thread wait,N N V
+world to screen,N P N
+wrap if not thread safe,V P VM N N
+write node materials,V N NPL
+write tcp data,V N NPL
+x tilt,N N
