@@ -4,34 +4,86 @@ import joblib
 import pandas as pd
 import subprocess
 from spiral import ronin
+from enum import Enum
+
+def getIdentifierType(id_type):
+   IDENTIFIER_TYPE = {}
+   IDENTIFIER_TYPE['DECL'] = 1
+   IDENTIFIER_TYPE['FUNCTION'] = 2
+   IDENTIFIER_TYPE['CLASS'] = 3
+   if id_type in IDENTIFIER_TYPE:
+        return IDENTIFIER_TYPE[id_type]
+   else:
+        print("ERROR")
+        sys.exit()
 
 #java -mx3g -cp '../stanford-postagger-2018-10-16/stanford-postagger.jar:' edu.stanford.nlp.tagger.maxent.MaxentTagger -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger
+    # if swum_annotation.split('#')[0] == 'FIELD':
+    #     pass
+    # else:
+    #     pass
+def split_raw_identifier(identifier_data):
+    if '(' in identifier_data: 
+        identifier_data = identifier_data.split('(')[0]
+    identifier_type_and_name = identifier_data.split()
+    if len(identifier_type_and_name) < 2: 
+        print("IDENTIFIER MALFORMED")
+        sys.exit()
+    return identifier_type_and_name
 
-def run_external_taggers(data):
-    #split and process identifier data
-    identifier_type_name = data.split()[0]
-    identifier_name = data.split()[1]
-    split_identifier_name = ' '.join(ronin.split(identifier_name))
-
+def process_identifier_with_swum(identifier_data, type_of_identifier):
     #format identifier string in preparation to send it to SWUM
-    swum_string = "{data}".format(data = data)    
-    process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    out, err = process.communicate()
-    print("swum: " + out.decode('utf-8').strip())
+    identifier_type_and_name = split_raw_identifier(identifier_data)
+    split_identifier_name = '_'.join(ronin.split(identifier_type_and_name[1]))
+    if getIdentifierType(type_of_identifier) == 1 or getIdentifierType(type_of_identifier) == 3:
+        swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
+        swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    else:
+        split_identifier_name = split_identifier_name+'('+identifier_data.split('(')[1]
+        swum_string = " {identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
+        swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '1', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
+    swum_out, swum_err = swum_process.communicate()
+    print("swum: " + swum_out.decode('utf-8').strip())
+
+def process_identifier_with_posse(identifier_data, type_of_identifier):
     #format identifier string in preparation to send it to POSSE
-    posse_string = "{data} | {identifier_name}".format(data = data, identifier_name = split_identifier_name)
-    print(posse_string)
-    process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'A', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    out, err = process.communicate()
-    print("posse: " + out.decode('utf-8').strip())
+    identifier_type_and_name = split_raw_identifier(identifier_data)
+    split_identifier_name = ' '.join(ronin.split(identifier_type_and_name[1]))
+    posse_string = "{data} | {identifier_name}".format(data = identifier_data, identifier_name = split_identifier_name)
+    
+    if getIdentifierType(type_of_identifier) == 1:
+        posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'A', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    elif getIdentifierType(type_of_identifier) == 3:
+        posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'C', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    else:
+        posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    
+    posse_out, posse_err = posse_process.communicate()
+    print("posse: " + posse_out.decode('utf-8').strip())
+def process_identifier_with_stanford(identifier_data, type_of_identifier):
+    identifier_type_and_name = identifier_data.split()
+    identifier_type_and_name = split_raw_identifier(identifier_data)
+    
+    if getIdentifierType(type_of_identifier) == 1 or getIdentifierType(type_of_identifier) == 3:
+        split_identifier_name = "{identifier_name}".format(identifier_name=' '.join(ronin.split(identifier_type_and_name[1])))
+    else:
+        split_identifier_name = "I {identifier_name}".format(identifier_name=' '.join(ronin.split(identifier_type_and_name[1])))
 
-    process = subprocess.Popen(['java', '-mx3g', '-cp',
+    stanford_process = subprocess.Popen(['java', '-mx3g', '-cp',
         '../stanford-postagger-2018-10-16/stanford-postagger.jar:','edu.stanford.nlp.tagger.maxent.MaxentTagger', '-model', '../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger'],
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
-    process.stdin.write('asd'.encode('utf-8'))
-    out, err = process.communicate()
-    print("stanford: " + out.decode('utf-8').strip())
+    stanford_process.stdin.write(split_identifier_name.encode('utf-8'))
+    
+    stanford_out, stanford_err = stanford_process.communicate()
+    print("stanford: " + stanford_out.decode('utf-8').strip())
+
+    
+def run_external_taggers(identifier_data, type_of_identifier):
+    #split and process identifier data
+    process_identifier_with_swum(identifier_data, type_of_identifier)
+    process_identifier_with_posse(identifier_data, type_of_identifier)
+    process_identifier_with_stanford(identifier_data, type_of_identifier)
 
 def categorize(key_swum, key_posse, key_stanford):
     #DTCP or RFCP
@@ -91,7 +143,7 @@ def annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_con
     return (y_pred[0])
 
 def read_from_cmd_line():
-    run_external_taggers(sys.argv[1])
+    run_external_taggers(sys.argv[1], sys.argv[2])
     print("IDENTIFIER,GRAMMAR_PATTERN,WORD,SWUM,POSSE,STANFORD,CORRECT,PREDICTION,MATCH,SYSTEM,CONTEXT,IDENT", file=open("predictions.csv", "a"))
     # result = annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context)
     # print("{identifier},{pattern},{word},{swum},{posse},{stanford},{correct},{prediction},{agreement},{system_name},{context},{ident}"
