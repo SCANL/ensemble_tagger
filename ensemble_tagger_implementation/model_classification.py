@@ -3,14 +3,24 @@ import sys
 import joblib
 import pandas as pd
 import subprocess
+import re
 from spiral import ronin
-from enum import Enum
+from enum import IntEnum
+
+class CODE_CONTEXT(IntEnum):
+    ATTRIBUTE = 1
+    CLASS = 2
+    DECLARATION = 3
+    FUNCTION = 4
+    PARAMETER = 5
 
 def getIdentifierType(id_type):
    IDENTIFIER_TYPE = {}
-   IDENTIFIER_TYPE['DECL'] = 1
-   IDENTIFIER_TYPE['FUNCTION'] = 2
-   IDENTIFIER_TYPE['CLASS'] = 3
+   IDENTIFIER_TYPE['ATTRIBUTE'] = CODE_CONTEXT.ATTRIBUTE
+   IDENTIFIER_TYPE['CLASS'] = CODE_CONTEXT.CLASS
+   IDENTIFIER_TYPE['DECLARATION'] = CODE_CONTEXT.DECLARATION
+   IDENTIFIER_TYPE['FUNCTION'] = CODE_CONTEXT.FUNCTION
+   IDENTIFIER_TYPE['PARAMETER'] = CODE_CONTEXT.PARAMETER
    if id_type in IDENTIFIER_TYPE:
         return IDENTIFIER_TYPE[id_type]
    else:
@@ -22,36 +32,49 @@ pos_dictionary = {
     "PP":"P"
 }
 
-pos_dictionary = {
+
+def ParseSwum(swum_output, split_identifier_name):
+    code_context = swum_output.split('#')
+    grammar_pattern = identifier = str()
+    if code_context[0] == 'FIELD':
+        identifier = code_context[1].split('-')[1].split()
+        grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
+    else:
+        identifier = code_context[1].split('@')[1].split('|')
+        grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
+
+    #Sanity check: Identifier name can't be longer than grammar pattern
+    if len(split_identifier_name) != len(grammar_pattern):
+        raise Exception("Mismatch between name and grammar pattern")
+
+    return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(grammar_pattern)))
+    
+    return swum_output
+
+posse_pos_dictionary = {
     "verb":"V",
     "noun":"N",
     "closedlist":"P",
     "adjective":"NM",
 }
-def ParsePosse(posse_output):
-    final_string_left = []
-    final_string_right = []
-    signature_result = posse_output.split('|')
-    signature = signature_result[0]
-    result = signature_result[1]
-    tokens = result.split(',')
-    for token in tokens:
-        tokenPair = token.split(':')
-        if len(tokenPair)>1:
-            final_string_left.append(tokenPair[0].strip())
-            if tokenPair[1].strip() in pos_dictionary:
-                final_string_right.append(pos_dictionary.get(tokenPair[1].strip()))
-            else:
-                final_string_right.append(tokenPair[1].strip())
+def ParsePosse(posse_output, split_identifier_name):
+    grammar_pattern = []
+    raw_grammar_pattern = re.findall(':([A-Z-a-z]+)', posse_output)
+    for pos_token in raw_grammar_pattern:
+        if pos_token in posse_pos_dictionary:
+            grammar_pattern.append(posse_pos_dictionary[pos_token])
         else:
-            final_string_left.append(' '.join(ronin.split(signature.split()[1])).lower())
-            final_string_right.append("POSSEFAILURE")
-
-    if len(final_string_left) != len(final_string_right):
-        print("ERROR: "+ str(final_string_left) +' '+ str(final_string_right))
-        sys.exit()
-
-    return ' '.join(final_string_left) +','+ ' '.join(final_string_right)
+            grammar_pattern.append(pos_token)
+    
+    #Sanity check: Identifier name can't be longer than grammar pattern
+    if len(split_identifier_name) != len(grammar_pattern):
+        raise Exception("Mismatch between name and grammar pattern")
+    
+    return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(grammar_pattern)))
 
 stanford_pos_dictionary = {
 "CC":"CJ",
@@ -87,36 +110,44 @@ stanford_pos_dictionary = {
 "WRB":"VM"
 }
 
-def ParseStanford(stanford_output):
-    line = stanford_output.split(' ')
-    grammarPattern = str()
-    identifier = str()
-    for id_pair in line:
-        this_pair = id_pair.split('_')
-        if this_pair[1].upper() in stanford_pos_dictionary:
-            this_pair[1] = stanford_pos_dictionary[this_pair[1]]
-        grammarPattern+=this_pair[1]+' '
-        identifier+=this_pair[0]+' '
-    if(len(identifier.split()) != len(grammarPattern.split())):
-        print("ERROR: " + str(identifier) +' '+ str(grammarPattern))
-        sys.exit()
-
-    return identifier.lower().strip()+","+grammarPattern.strip()
-
 def split_raw_identifier(identifier_data):
     if '(' in identifier_data: 
         identifier_data = identifier_data.split('(')[0]
     identifier_type_and_name = identifier_data.split()
     if len(identifier_type_and_name) < 2: 
-        print("IDENTIFIER MALFORMED")
-        sys.exit()
+        raise Exception("Malformed identifier")
     return identifier_type_and_name
+
+def ParseStanford(stanford_output, split_identifier_name):
+    grammar_pattern = []
+    
+    #We append 'I' to function names for Stanford. Remove it here.
+    if stanford_output[0] == 'I' and not split_identifier_name[0] == 'I':
+        stanford_output = ' '.join(stanford_output.split()[1:])
+
+    raw_grammar_pattern = re.findall("_([A-Za-z]+)", stanford_output)
+    for pos_token in raw_grammar_pattern:
+        if pos_token in stanford_pos_dictionary:
+            grammar_pattern.append(stanford_pos_dictionary[pos_token])
+        else:
+            grammar_pattern.append(pos_token)
+
+    #Sanity check: Identifier name can't be longer than grammar pattern
+    if len(split_identifier_name) != len(grammar_pattern):
+        raise Exception("Mismatch between name and grammar pattern")
+    
+    return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(grammar_pattern)))
+
+
 
 def process_identifier_with_swum(identifier_data, type_of_identifier):
     #format identifier string in preparation to send it to SWUM
     identifier_type_and_name = split_raw_identifier(identifier_data)
+    split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
     split_identifier_name = '_'.join(ronin.split(identifier_type_and_name[1]))
-    if getIdentifierType(type_of_identifier) == 1 or getIdentifierType(type_of_identifier) == 3:
+    if getIdentifierType(type_of_identifier) != CODE_CONTEXT.FUNCTION:
         swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
@@ -125,31 +156,33 @@ def process_identifier_with_swum(identifier_data, type_of_identifier):
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '1', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     swum_out, swum_err = swum_process.communicate()
-    print("swum: " + swum_out.decode('utf-8').strip())
+    return ParseSwum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
 
 def process_identifier_with_posse(identifier_data, type_of_identifier):
     #format identifier string in preparation to send it to POSSE
     identifier_type_and_name = split_raw_identifier(identifier_data)
-    split_identifier_name = ' '.join(ronin.split(identifier_type_and_name[1]))
+    split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
+    split_identifier_name = ' '.join(split_identifier_name_raw)
     posse_string = "{data} | {identifier_name}".format(data = identifier_data, identifier_name = split_identifier_name)
     
-    if getIdentifierType(type_of_identifier) == 1:
+    if getIdentifierType(type_of_identifier) and ((CODE_CONTEXT.DECLARATION or CODE_CONTEXT.ATTRIBUTE or CODE_CONTEXT.PARAMETER)) != 0:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'A', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    elif getIdentifierType(type_of_identifier) == 3:
+    elif getIdentifierType(type_of_identifier) == CODE_CONTEXT.CLASS:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'C', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
     posse_out, posse_err = posse_process.communicate()
-    print(ParsePosse(posse_out.decode('utf-8').strip()))
+    return ParsePosse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
+
 def process_identifier_with_stanford(identifier_data, type_of_identifier):
     identifier_type_and_name = identifier_data.split()
     identifier_type_and_name = split_raw_identifier(identifier_data)
-    
-    if getIdentifierType(type_of_identifier) == 1 or getIdentifierType(type_of_identifier) == 3:
-        split_identifier_name = "{identifier_name}".format(identifier_name=' '.join(ronin.split(identifier_type_and_name[1])))
+    split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
+    if getIdentifierType(type_of_identifier) != CODE_CONTEXT.FUNCTION:
+        split_identifier_name = "{identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
     else:
-        split_identifier_name = "I {identifier_name}".format(identifier_name=' '.join(ronin.split(identifier_type_and_name[1])))
+        split_identifier_name = "I {identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
 
     stanford_process = subprocess.Popen(['java', '-mx3g', '-cp',
         '../stanford-postagger-2018-10-16/stanford-postagger.jar:','edu.stanford.nlp.tagger.maxent.MaxentTagger', '-model', '../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger'],
@@ -157,14 +190,29 @@ def process_identifier_with_stanford(identifier_data, type_of_identifier):
     stanford_process.stdin.write(split_identifier_name.encode('utf-8'))
     
     stanford_out, stanford_err = stanford_process.communicate()
-    print(ParseStanford(stanford_out.decode('utf-8').strip()))
+    return ParseStanford(stanford_out.decode('utf-8').strip(), split_identifier_name_raw)
+
+def generate_ensemble_tagger_input_format(external_tagger_outputs):
+    ensemble_input = dict()
+    for tagger_output in external_tagger_outputs:
+        identifier, grammar_pattern = tagger_output.split(',')
+        identifier_grammarPattern = zip(identifier.split(), grammar_pattern.split())
+        for word_gp_pair in identifier_grammarPattern:
+            if word_gp_pair[0] in ensemble_input:
+                ensemble_input[word_gp_pair[0]].append(word_gp_pair[1])
+            else:
+                ensemble_input[word_gp_pair[0]] = [word_gp_pair[1]]
+    return ensemble_input
+        
 
     
 def run_external_taggers(identifier_data, type_of_identifier):
-    #split and process identifier data
-    process_identifier_with_swum(identifier_data, type_of_identifier)
-    process_identifier_with_posse(identifier_data, type_of_identifier)
-    process_identifier_with_stanford(identifier_data, type_of_identifier)
+    external_tagger_outputs = []
+    #split and process identifier data into external tagger outputs
+    external_tagger_outputs.append(process_identifier_with_swum(identifier_data, type_of_identifier))
+    external_tagger_outputs.append(process_identifier_with_posse(identifier_data, type_of_identifier))
+    external_tagger_outputs.append(process_identifier_with_stanford(identifier_data, type_of_identifier))
+    return generate_ensemble_tagger_input_format(external_tagger_outputs)
 
 def categorize(key_swum, key_posse, key_stanford):
     #DTCP or RFCP
@@ -223,44 +271,30 @@ def annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_con
     y_pred = clf.predict(df_features)
     return (y_pred[0])
 
+def calculate_normalized_length(ensemble_input):
+    i = 0
+    for key, value in ensemble_input.items():
+        if i == 0:
+            ensemble_input[key].append(0)
+        elif i > 0 and i < (len(ensemble_input)-1):
+            ensemble_input[key].append(1)
+        else:
+            ensemble_input[key].append(2)
+        i = i + 1
+    return ensemble_input
+
+def add_code_context(ensemble_input, context):
+    for key, value in ensemble_input.items():
+        ensemble_input[key].append(getIdentifierType(context))
+    return ensemble_input
+
 def read_from_cmd_line():
-    run_external_taggers(sys.argv[1], sys.argv[2])
-    print("IDENTIFIER,GRAMMAR_PATTERN,WORD,SWUM,POSSE,STANFORD,CORRECT,PREDICTION,MATCH,SYSTEM,CONTEXT,IDENT", file=open("predictions.csv", "a"))
-    # result = annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context)
-    # print("{identifier},{pattern},{word},{swum},{posse},{stanford},{correct},{prediction},{agreement},{system_name},{context},{ident}"
-    # .format(identifier=(actual_identifier),word=(actual_word),pattern=(actual_pattern),swum=swum_tag, 
-    # posse=posse_tag, stanford=stanford_tag, correct=correct_tag, prediction=result, agreement=(correct_tag==result),
-    # system_name=system, context=code_context, ident=ident), file=open("predictions.csv", "a"))
-
-def read_from_database():
-    input_file = 'test_data/ensemble_test_db.db'
-    sql_statement = "select * from testing_set_conj"         #DTCP or RFCP
-    # sql_statement = "select * from testing_set_conj_other" #DTCA or RFCA
-    # sql_statement = "select * from testing_set_norm"       #DTNP OR RFNP
-    # sql_statement = "select * from testing_set_norm_other" #DTNO OR RFNO
-    connection = sqlite3.connect(input_file)
-
-    df_input = pd.read_sql_query(sql_statement, connection)
-    print(" --  --  --  -- Read " + str(len(df_input)) + " input rows --  --  --  -- ")
-    print("IDENTIFIER,GRAMMAR_PATTERN,WORD,SWUM,POSSE,STANFORD,CORRECT,PREDICTION,MATCH,SYSTEM,CONTEXT,IDENT", file=open("predictions.csv", "a"))
-    for i, row in df_input.iterrows():
-        print(i)
-        actual_word = row['WORD']
-        actual_identifier = row['IDENTIFIER']
-        actual_pattern  = row['GRAMMAR_PATTERN']
-        swum_tag = row['SWUM_TAG']
-        posse_tag = row['POSSE_TAG']
-        stanford_tag = row['STANFORD_TAG']
-        normalized_length = row['NORMALIZED_POSITION']
-        code_context = row['CONTEXT']
-        correct_tag = row['CORRECT_TAG']
-        system = row['SYSTEM']
-        ident = row['NUM']
-        result = annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context)
-        print("{identifier},{pattern},{word},{swum},{posse},{stanford},{correct},{prediction},{agreement},{system_name},{context},{ident}"
-        .format(identifier=(actual_identifier),word=(actual_word),pattern=(actual_pattern),swum=swum_tag, 
-        posse=posse_tag, stanford=stanford_tag, correct=correct_tag, prediction=result, agreement=(correct_tag==result),
-        system_name=system, context=code_context, ident=ident), file=open("predictions.csv", "a"))
-
+    ensemble_input = run_external_taggers(sys.argv[1], sys.argv[2])
+    emsemble_input = calculate_normalized_length(ensemble_input)
+    ensemble_input = add_code_context(ensemble_input, sys.argv[2])
+    for key, value in ensemble_input.items():
+        result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
+        print("{identifier},{word},{swum},{posse},{stanford},{prediction}"
+        .format(identifier=(sys.argv[1]),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
 
 read_from_cmd_line()
