@@ -16,12 +16,93 @@ def getIdentifierType(id_type):
    else:
         print("ERROR")
         sys.exit()
+pos_dictionary = {
+    "VI":"V",
+    "NI":"N",
+    "PP":"P"
+}
 
-#java -mx3g -cp '../stanford-postagger-2018-10-16/stanford-postagger.jar:' edu.stanford.nlp.tagger.maxent.MaxentTagger -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger
-    # if swum_annotation.split('#')[0] == 'FIELD':
-    #     pass
-    # else:
-    #     pass
+pos_dictionary = {
+    "verb":"V",
+    "noun":"N",
+    "closedlist":"P",
+    "adjective":"NM",
+}
+def ParsePosse(posse_output):
+    final_string_left = []
+    final_string_right = []
+    signature_result = posse_output.split('|')
+    signature = signature_result[0]
+    result = signature_result[1]
+    tokens = result.split(',')
+    for token in tokens:
+        tokenPair = token.split(':')
+        if len(tokenPair)>1:
+            final_string_left.append(tokenPair[0].strip())
+            if tokenPair[1].strip() in pos_dictionary:
+                final_string_right.append(pos_dictionary.get(tokenPair[1].strip()))
+            else:
+                final_string_right.append(tokenPair[1].strip())
+        else:
+            final_string_left.append(' '.join(ronin.split(signature.split()[1])).lower())
+            final_string_right.append("POSSEFAILURE")
+
+    if len(final_string_left) != len(final_string_right):
+        print("ERROR: "+ str(final_string_left) +' '+ str(final_string_right))
+        sys.exit()
+
+    return ' '.join(final_string_left) +','+ ' '.join(final_string_right)
+
+stanford_pos_dictionary = {
+"CC":"CJ",
+"CD":"D",
+"DT":"DT",
+"EX":"N",
+"FW":"N",
+"IN":"P",
+"JJ":"NM",
+"JJR":"NM",
+"JJS":"NM",
+"LS":"N",
+"MD":"V",
+"NN":"N",
+"NNS":"NPL",
+"NNP":"N",
+"NNPS":"NPL",
+"PDT":"DT",
+"POS":"N",
+"PRP":"P",
+"PRP":"P",
+"RB":"VM",
+"RBR":"VM",
+"RBS":"VM",
+"RP":"N",
+"SYM":"N",
+"TO":"P",
+"UH":"N",
+"VB":"V",
+"WDT":"DT",
+"WP":"P",
+"WP,":"P",
+"WRB":"VM"
+}
+
+def ParseStanford(stanford_output):
+    line = stanford_output.split(' ')
+    grammarPattern = str()
+    identifier = str()
+    for id_pair in line:
+        this_pair = id_pair.split('_')
+        if this_pair[1].upper() in stanford_pos_dictionary:
+            this_pair[1] = stanford_pos_dictionary[this_pair[1]]
+        grammarPattern+=this_pair[1]+' '
+        identifier+=this_pair[0]+' '
+    if(len(identifier.split()) != len(grammarPattern.split())):
+        print("ERROR: " + str(identifier) +' '+ str(grammarPattern))
+        sys.exit()
+
+    return identifier.lower().strip()+","+grammarPattern.strip()
+
 def split_raw_identifier(identifier_data):
     if '(' in identifier_data: 
         identifier_data = identifier_data.split('(')[0]
@@ -60,7 +141,7 @@ def process_identifier_with_posse(identifier_data, type_of_identifier):
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
     posse_out, posse_err = posse_process.communicate()
-    print("posse: " + posse_out.decode('utf-8').strip())
+    print(ParsePosse(posse_out.decode('utf-8').strip()))
 def process_identifier_with_stanford(identifier_data, type_of_identifier):
     identifier_type_and_name = identifier_data.split()
     identifier_type_and_name = split_raw_identifier(identifier_data)
@@ -76,7 +157,7 @@ def process_identifier_with_stanford(identifier_data, type_of_identifier):
     stanford_process.stdin.write(split_identifier_name.encode('utf-8'))
     
     stanford_out, stanford_err = stanford_process.communicate()
-    print("stanford: " + stanford_out.decode('utf-8').strip())
+    print(ParseStanford(stanford_out.decode('utf-8').strip()))
 
     
 def run_external_taggers(identifier_data, type_of_identifier):
