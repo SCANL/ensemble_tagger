@@ -17,10 +17,11 @@ using namespace subprocess;
 class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public srcSAXEventDispatch::PolicyDispatcher, public srcSAXEventDispatch::PolicyListener 
 {
     private:
-        std::string AnnotateIdentifier(std::string identifierData){
-            auto p = Popen({"python", "../ensemble_sample_repo/model_classification.py", identifierData}, input{PIPE}, output{PIPE});
+        std::string AnnotateIdentifier(std::string identifierData, std::string codeContext){
+            auto p = Popen({"python", "../ensemble_tagger_implementation/model_classification.py", identifierData, codeContext}, input{PIPE}, output{PIPE});
+            std::cout << "Data in: " << identifierData << std::endl;
             auto obuf = p.communicate().first;
-            std::cout << "Data : " << obuf.buf.data() << std::endl;
+            std::cout << "Data out: " << obuf.buf.data() << std::endl;
             return obuf.buf.data();
         }
     public:
@@ -39,31 +40,22 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
                 decldata = *policy->Data<DeclData>();
                 if(!(decldata.nameOfIdentifier.empty()||decldata.nameOfType.empty())){
                     if(ctx.IsOpen(ParserState::function)){
-                        if(decldata.isPointer) decldata.nameOfType+="*";
-                        if(decldata.isReference) decldata.nameOfType+="&";
-                        if(decldata.usesSubscript) decldata.nameOfType+="[]";
-                        AnnotateIdentifier(decldata.nameOfType + ' ' + decldata.nameOfIdentifier);
                         std::cout<<"Raw Decl:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
+                        AnnotateIdentifier(decldata.nameOfType + ' ' + decldata.nameOfIdentifier, "DECLARATION");
                     }else if(ctx.IsOpen(ParserState::classn) && !decldata.nameOfContainingClass.empty() && !decldata.nameOfType.empty() && !decldata.nameOfIdentifier.empty()){
-                        if(decldata.isPointer) decldata.nameOfType+="*";
-                        if(decldata.isReference) decldata.nameOfType+="&";
-                        if(decldata.usesSubscript) decldata.nameOfType+="[]";
                         std::cout<<"Raw Attr:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
+                        AnnotateIdentifier(decldata.nameOfType + ' ' + decldata.nameOfIdentifier, "ATTRIBUTE");
                     }
                 }
             }else if(typeid(ParamTypePolicy) == typeid(*policy)){
                 paramdata = *policy->Data<DeclData>();
                 if(!(paramdata.nameOfIdentifier.empty() || paramdata.nameOfType.empty())){
-                    if(paramdata.isPointer) paramdata.nameOfType+="*";
-                    if(paramdata.isReference) paramdata.nameOfType+="&";
-                    if(paramdata.usesSubscript) paramdata.nameOfType+="[]";
                     std::cout<<"Raw Param:"<<paramdata.nameOfType<<" "<<paramdata.nameOfIdentifier<<std::endl;
+                    AnnotateIdentifier(paramdata.nameOfType + ' ' + paramdata.nameOfIdentifier, "PARAMETER");
                 }
             }else if(typeid(FunctionSignaturePolicy) == typeid(*policy)){
                 functiondata = *policy->Data<SignatureData>();
                 if(!(functiondata.name.empty() || functiondata.returnType.empty())){
-                    if(functiondata.hasAliasedReturn) functiondata.returnType+="*";
-                    if(functiondata.hasArrayReturn) functiondata.returnType+="[]";
                     std::cout<<"Raw Func:"<<functiondata.returnType<<" "<<functiondata.name<<std::endl;
                 }
                 //std::cout<<functiondata.name<<std::endl;
@@ -103,6 +95,8 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
             closeEventMap[ParserState::classn] = [this](srcSAXEventContext& ctx){
                 if(isupper(ctx.currentClassName[0])){ //heuristic-- class names that are not capitalized might be false positives
                     std::cout<<"Raw Class:"<<ctx.currentClassName<<std::endl;
+                    AnnotateIdentifier("class "+ ctx.currentClassName, "CLASS");
+
                 }
             };
             closeEventMap[ParserState::functionblock] = [this](srcSAXEventContext& ctx){

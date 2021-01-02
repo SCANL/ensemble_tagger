@@ -26,7 +26,7 @@ def getIdentifierType(id_type):
    else:
         print("ERROR")
         sys.exit()
-pos_dictionary = {
+swum_pos_dictionary = {
     "VI":"V",
     "NI":"N",
     "PP":"P"
@@ -35,13 +35,19 @@ pos_dictionary = {
 
 def ParseSwum(swum_output, split_identifier_name):
     code_context = swum_output.split('#')
-    grammar_pattern = identifier = str()
+    raw_grammar_pattern = grammar_pattern = identifier = []
     if code_context[0] == 'FIELD':
         identifier = code_context[1].split('-')[1].split()
-        grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
+        raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
     else:
         identifier = code_context[1].split('@')[1].split('|')
-        grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
+        raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
+    
+    for pos in raw_grammar_pattern:
+        if pos in swum_pos_dictionary:
+            grammar_pattern.append(swum_pos_dictionary[pos])
+        else:
+            grammar_pattern.append(pos)
 
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
@@ -292,6 +298,7 @@ def read_from_cmd_line():
     ensemble_input = run_external_taggers(sys.argv[1], sys.argv[2])
     emsemble_input = calculate_normalized_length(ensemble_input)
     ensemble_input = add_code_context(ensemble_input, sys.argv[2])
+    print(ensemble_input)
     for key, value in ensemble_input.items():
         result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
         print("{identifier},{word},{swum},{posse},{stanford},{prediction}"
