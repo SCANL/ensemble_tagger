@@ -24,7 +24,7 @@ project(SEPosTagging)
 
 # find needed libraries
 find_package(LibXml2 REQUIRED)
-
+find_package(PythonLibs REQUIRED)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-O3 -Wno-reorder -Wunused-variable -Wunused-parameter")
@@ -42,7 +42,8 @@ include_directories(/usr/local/include
                     ${CMAKE_CURRENT_SOURCE_DIR}/srcSAXEventDispatch/srcSAX/src/windows
                     ${CMAKE_CURRENT_SOURCE_DIR}/srcSAXEventDispatch/src/dispatcher
                     ${CMAKE_CURRENT_SOURCE_DIR}/srcSAXEventDispatch/src/policy_classes
-                    cpp-subprocess
+                    HTTPRequest/include
+                    ${PYTHON_INCLUDE_DIRS}
                     src)
 
 add_subdirectory(srcSAXEventDispatch)

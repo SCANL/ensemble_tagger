@@ -13,3 +13,6 @@
 [submodule "cpp-subprocess"]
 	path = cpp-subprocess
 	url = https://github.com/arun11299/cpp-subprocess.git
+[submodule "HTTPRequest"]
+	path = HTTPRequest
+	url = https://github.com/elnormous/HTTPRequest.git

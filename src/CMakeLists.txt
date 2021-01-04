@@ -5,4 +5,4 @@ file(GLOB SLICE_SOURCE *.cpp)
 file(GLOB SLICE_HEADER *.hpp)
 
 add_executable(grabidentifiers ${DISPATCHER_SOURCE} ${DISPATCHER_HEADER} ${SLICE_SOURCE} ${SLICE_HEADER})
-target_link_libraries(grabidentifiers srcsaxeventdispatch srcsax_static ${LIBXML2_LIBRARIES} pthread)
+target_link_libraries(grabidentifiers srcsaxeventdispatch srcsax_static ${LIBXML2_LIBRARIES} ${PYTHON_LIBRARIES} pthread)

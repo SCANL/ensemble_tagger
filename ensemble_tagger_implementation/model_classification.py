@@ -6,6 +6,29 @@ import subprocess
 import re
 from spiral import ronin
 from enum import IntEnum
+from flask import Flask
+import pexpect
+
+app = Flask(__name__)
+
+stanford_process = pexpect.spawn("java -mx3g -cp '../stanford-postagger-2018-10-16/stanford-postagger.jar:' edu.stanford.nlp.tagger.maxent.MaxentTagger -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger")
+stanford_process.expect("(For EOF, use Return, Ctrl-D on Unix; Enter, Ctrl-Z, Enter on Windows.)")
+
+@app.route('/<identifier_type>/<identifier_name>/<identifier_context>')
+def listen(identifier_type, identifier_name, identifier_context):
+    print("CONTENTY: "+identifier_type + " "+ identifier_name+ " "+identifier_context)
+    ensemble_input = run_external_taggers(identifier_type + ' ' + identifier_name, identifier_context)
+    emsemble_input = calculate_normalized_length(ensemble_input)
+    ensemble_input = add_code_context(ensemble_input,identifier_context)
+    
+    output = []
+    for key, value in ensemble_input.items():
+        result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
+        #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
+        #.format(identifier=(identifier_name),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
+        output.append("{word}|{prediction}".format(word=(key),prediction=result))
+    output_str = ','.join(output)
+    return str(output_str)
 
 class CODE_CONTEXT(IntEnum):
     ATTRIBUTE = 1
@@ -29,7 +52,18 @@ def getIdentifierType(id_type):
 swum_pos_dictionary = {
     "VI":"V",
     "NI":"N",
-    "PP":"P"
+    "PP":"P",
+    "CJ":"CJ",
+    "D":"D",
+    "DT":"DT",
+    "N":"N",
+    "NM":"NM",
+    "V":"V",
+    "VM":"VM",
+    "V3PS":"V",
+    "NPL":"NPL",
+    "PR":"PR",
+    "P":"P"
 }
 
 
@@ -46,12 +80,13 @@ def ParseSwum(swum_output, split_identifier_name):
     for pos in raw_grammar_pattern:
         if pos in swum_pos_dictionary:
             grammar_pattern.append(swum_pos_dictionary[pos])
-        else:
-            grammar_pattern.append(pos)
 
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
-        raise Exception("Mismatch between name and grammar pattern")
+        return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
+        #raise Exception("Mismatch between name ({idname}) and grammar pattern ({gp})".format(idname=split_identifier_name, gp=grammar_pattern))
 
     return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
@@ -76,7 +111,9 @@ def ParsePosse(posse_output, split_identifier_name):
     
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
-        raise Exception("Mismatch between name and grammar pattern")
+        return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
     
     return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
@@ -140,7 +177,9 @@ def ParseStanford(stanford_output, split_identifier_name):
 
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
-        raise Exception("Mismatch between name and grammar pattern")
+        return("{identifier_names},{grammar_pattern}"
+          .format(identifier_names=' '.join(split_identifier_name), 
+            grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
     
     return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
@@ -162,7 +201,9 @@ def process_identifier_with_swum(identifier_data, type_of_identifier):
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '1', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     swum_out, swum_err = swum_process.communicate()
-    return ParseSwum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
+    swum_parsed_out = ParseSwum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
+    print("SWUM: " + swum_parsed_out)
+    return swum_parsed_out
 
 def process_identifier_with_posse(identifier_data, type_of_identifier):
     #format identifier string in preparation to send it to POSSE
@@ -179,7 +220,9 @@ def process_identifier_with_posse(identifier_data, type_of_identifier):
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     
     posse_out, posse_err = posse_process.communicate()
-    return ParsePosse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
+    posse_out_parsed = ParsePosse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
+    print("Posse: " + posse_out_parsed)
+    return posse_out_parsed
 
 def process_identifier_with_stanford(identifier_data, type_of_identifier):
     identifier_type_and_name = identifier_data.split()
@@ -189,14 +232,13 @@ def process_identifier_with_stanford(identifier_data, type_of_identifier):
         split_identifier_name = "{identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
     else:
         split_identifier_name = "I {identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
-
-    stanford_process = subprocess.Popen(['java', '-mx3g', '-cp',
-        '../stanford-postagger-2018-10-16/stanford-postagger.jar:','edu.stanford.nlp.tagger.maxent.MaxentTagger', '-model', '../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger'],
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
-    stanford_process.stdin.write(split_identifier_name.encode('utf-8'))
     
-    stanford_out, stanford_err = stanford_process.communicate()
-    return ParseStanford(stanford_out.decode('utf-8').strip(), split_identifier_name_raw)
+    stanford_process.sendline(split_identifier_name)
+    stanford_process.expect(' '.join([word+'_[A-Z]+' for word in split_identifier_name_raw]))
+    #stanford_out, stanford_err = stanford_process.communicate()
+    stanford_out = ParseStanford(stanford_process.after.decode('utf-8').strip(), split_identifier_name_raw)
+    print("Stanford: " + stanford_out)
+    return stanford_out
 
 def generate_ensemble_tagger_input_format(external_tagger_outputs):
     ensemble_input = dict()
@@ -294,14 +336,4 @@ def add_code_context(ensemble_input, context):
         ensemble_input[key].append(getIdentifierType(context))
     return ensemble_input
 
-def read_from_cmd_line():
-    ensemble_input = run_external_taggers(sys.argv[1], sys.argv[2])
-    emsemble_input = calculate_normalized_length(ensemble_input)
-    ensemble_input = add_code_context(ensemble_input, sys.argv[2])
-    print(ensemble_input)
-    for key, value in ensemble_input.items():
-        result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
-        print("{identifier},{word},{swum},{posse},{stanford},{prediction}"
-        .format(identifier=(sys.argv[1]),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
-
-read_from_cmd_line()
+#read_from_cmd_line()
