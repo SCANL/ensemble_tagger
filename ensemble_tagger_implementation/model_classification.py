@@ -3,7 +3,6 @@ root_logger = logging.getLogger(__name__)
 root_logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler('tagger_error.log', 'a', 'utf-8')
 root_logger.addHandler(handler)
-
 import sqlite3
 import sys
 import joblib
@@ -211,7 +210,6 @@ def process_identifier_with_swum(identifier_data, type_of_identifier):
 
     swum_out, swum_err = swum_process.communicate()
     swum_parsed_out = ParseSwum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
-    print("SWUM: " + swum_parsed_out)
     return swum_parsed_out
 
 def process_identifier_with_posse(identifier_data, type_of_identifier):
@@ -230,7 +228,6 @@ def process_identifier_with_posse(identifier_data, type_of_identifier):
     
     posse_out, posse_err = posse_process.communicate()
     posse_out_parsed = ParsePosse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
-    print("Posse: " + posse_out_parsed)
     return posse_out_parsed
 
 def process_identifier_with_stanford(identifier_data, type_of_identifier):
@@ -246,7 +243,6 @@ def process_identifier_with_stanford(identifier_data, type_of_identifier):
     stanford_process.expect(' '.join([word+'_[A-Z]+' for word in split_identifier_name_raw]))
     #stanford_out, stanford_err = stanford_process.communicate()
     stanford_out = ParseStanford(stanford_process.after.decode('utf-8').strip(), split_identifier_name_raw)
-    print("Stanford: " + stanford_out)
     return stanford_out
 
 def generate_ensemble_tagger_input_format(external_tagger_outputs):
