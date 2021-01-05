@@ -32,7 +32,7 @@ def listen(identifier_type, identifier_name, identifier_context):
         result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
         #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
         #.format(identifier=(identifier_name),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
-        output.append("{word}|{prediction}".format(word=(key[0:]),prediction=result))
+        output.append("{word}|{prediction}".format(word=(key[:-1]),prediction=result))
     output_str = ','.join(output)
     return str(output_str)
 
@@ -220,10 +220,10 @@ def process_identifier_with_posse(identifier_data, type_of_identifier):
     split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
     split_identifier_name = ' '.join(split_identifier_name_raw)
     posse_string = "{data} | {identifier_name}".format(data = identifier_data, identifier_name = split_identifier_name)
-    
-    if getIdentifierType(type_of_identifier) and ((CODE_CONTEXT.DECLARATION or CODE_CONTEXT.ATTRIBUTE or CODE_CONTEXT.PARAMETER)) != 0:
+    type_value = getIdentifierType(type_of_identifier)
+    if any([type_value == x for x in [CODE_CONTEXT.DECLARATION, CODE_CONTEXT.ATTRIBUTE, CODE_CONTEXT.PARAMETER]]):
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'A', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    elif getIdentifierType(type_of_identifier) == CODE_CONTEXT.CLASS:
+    elif type_value == CODE_CONTEXT.CLASS:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'C', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)

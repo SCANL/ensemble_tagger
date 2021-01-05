@@ -13,8 +13,7 @@
 #include <ParamTypePolicy.hpp>
 #include <srcSAXEventDispatcher.hpp>
 #include <FunctionSignaturePolicy.hpp>
-void hexchar(unsigned char c, unsigned char &hex1, unsigned char &hex2)
-{
+void hexchar(unsigned char c, unsigned char &hex1, unsigned char &hex2){
     hex1 = c / 16;
     hex2 = c % 16;
     hex1 += hex1 <= 9 ? '0' : 'a' - 10;
@@ -25,8 +24,7 @@ std::string urlencode(std::string s){
     const char *str = s.c_str();
     std::vector<char> v(s.size());
     v.clear();
-    for (size_t i = 0, l = s.size(); i < l; i++)
-    {
+    for (size_t i = 0, l = s.size(); i < l; i++){
         char c = str[i];
         if ((c >= '0' && c <= '9') ||
             (c >= 'a' && c <= 'z') ||
@@ -36,8 +34,7 @@ std::string urlencode(std::string s){
         {
             v.push_back(c);
         }
-        else
-        {
+        else{
             v.push_back('%');
             unsigned char d1, d2;
             hexchar(c, d1, d2);
@@ -61,13 +58,14 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
 
                 // send a get request
                 const http::Response response = request.send("GET");
-                std::cout << "RESPONSE: " + std::string(response.body.begin(), response.body.end()) << '\n'; // print the result
+                return std::string(response.body.begin(), response.body.end());
             }
             catch (const std::exception& e)
             {
                 std::cerr << "Request failed, error: " << e.what() << '\n';
+                return "ERROR";
             }
-            return "HI";
+            
         }
     public:
         ~WordsFromArchivePolicy(){};
@@ -79,31 +77,35 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
             paramPolicy.AddListener(this);
             functionPolicy.AddListener(this);
         }
-        void Notify(const PolicyDispatcher *policy, const srcSAXEventDispatch::srcSAXEventContext &ctx) override {
+        void Notify(const PolicyDispatcher *policy, const srcSAXEventDispatch::srcSAXEventContext &ctx) override {}
+        void NotifyWrite(const PolicyDispatcher *policy, srcSAXEventDispatch::srcSAXEventContext &ctx){
             using namespace srcSAXEventDispatch;
             if(typeid(DeclTypePolicy) == typeid(*policy)){
                 decldata = *policy->Data<DeclData>();
                 if(!(decldata.nameOfIdentifier.empty()||decldata.nameOfType.empty())){
                     if(ctx.IsOpen(ParserState::function)){
-                        std::cout<<"Raw Decl:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
-                        AnnotateIdentifier(decldata.nameOfType, decldata.nameOfIdentifier, "DECLARATION");
+                        std::cerr<<"Raw Decl:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
+                        auto annotation = AnnotateIdentifier(decldata.nameOfType, decldata.nameOfIdentifier, "DECLARATION");
+                        WriteElementToArchive(ctx, annotation);
                     }else if(ctx.IsOpen(ParserState::classn) && !decldata.nameOfContainingClass.empty() && !decldata.nameOfType.empty() && !decldata.nameOfIdentifier.empty()){
-                        std::cout<<"Raw Attr:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
-                        AnnotateIdentifier(decldata.nameOfType, decldata.nameOfIdentifier, "ATTRIBUTE");
+                        std::cerr<<"Raw Attr:"<<decldata.nameOfType<<" "<<decldata.nameOfIdentifier<<std::endl;
+                        auto annotation = AnnotateIdentifier(decldata.nameOfType, decldata.nameOfIdentifier, "ATTRIBUTE");
+                        WriteElementToArchive(ctx, annotation);
                     }
                 }
             }else if(typeid(ParamTypePolicy) == typeid(*policy)){
                 paramdata = *policy->Data<DeclData>();
                 if(!(paramdata.nameOfIdentifier.empty() || paramdata.nameOfType.empty())){
-                    std::cout<<"Raw Param:"<<paramdata.nameOfType<<" "<<paramdata.nameOfIdentifier<<std::endl;
-                    AnnotateIdentifier(paramdata.nameOfType, paramdata.nameOfIdentifier, "PARAMETER");
+                    std::cerr<<"Raw Param:"<<paramdata.nameOfType<<" "<<paramdata.nameOfIdentifier<<std::endl;
+                    auto annotation = AnnotateIdentifier(paramdata.nameOfType, paramdata.nameOfIdentifier, "PARAMETER");
+                    WriteElementToArchive(ctx, annotation);
                 }
             }else if(typeid(FunctionSignaturePolicy) == typeid(*policy)){
                 functiondata = *policy->Data<SignatureData>();
                 std::string result;
                 if(!(functiondata.name.empty() || functiondata.returnType.empty())){
                     if(functiondata.hasAliasedReturn) functiondata.returnType+="*";
-                    std::cout<<"Raw Func:"<<functiondata.returnType<<" "<<functiondata.name;
+                    std::cerr<<"Raw Func:"<<functiondata.returnType<<" "<<functiondata.name;
                     
                     result = "(";
                     for(auto param : functiondata.parameters){
@@ -116,12 +118,16 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
                     result.append(")");
                     std::cout<<result;
                 }
-                AnnotateIdentifier(functiondata.returnType, functiondata.name+result, "FUNCTION");
+                auto annotation = AnnotateIdentifier(functiondata.returnType, functiondata.name+result, "FUNCTION");
+                WriteElementToArchive(ctx, annotation);
                 //std::cout<<functiondata.name<<std::endl;
             }
-            
+
         }
-        void NotifyWrite(const PolicyDispatcher *policy, srcSAXEventDispatch::srcSAXEventContext &ctx){}
+        void WriteElementToArchive(srcSAXEventDispatch::srcSAXEventContext &ctx, std::string posTag){
+            //write the return type into srcML archive at the call site
+            xmlTextWriterWriteElementNS(ctx.writer, (const xmlChar*)"src",(const xmlChar*) "grammar_pattern", (const xmlChar*)"http://www.srcML.org/srcML/src", BAD_CAST posTag.c_str());
+        }
     
     protected:
         void *DataInner() const override {
@@ -153,7 +159,7 @@ class WordsFromArchivePolicy : public srcSAXEventDispatch::EventListener, public
             };
             closeEventMap[ParserState::classn] = [this](srcSAXEventContext& ctx){
                 if(isupper(ctx.currentClassName[0])){ //heuristic-- class names that are not capitalized might be false positives
-                    std::cout<<"Raw Class:"<<ctx.currentClassName<<std::endl;
+                    std::cerr<<"Raw Class:"<<ctx.currentClassName<<std::endl;
                     AnnotateIdentifier("class", ctx.currentClassName, "CLASS");
 
                 }

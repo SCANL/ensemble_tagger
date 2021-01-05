@@ -6,6 +6,6 @@ int main(int argc, char** argv){
         }
         WordsFromArchivePolicy* cat = new WordsFromArchivePolicy();
         srcSAXController control(argv[1]);
-        srcSAXEventDispatch::srcSAXEventDispatcher<> handler({cat});
+        srcSAXEventDispatch::srcSAXEventDispatcher<> handler({cat}, true);
         control.parse(&handler); //Start parsing
 }
