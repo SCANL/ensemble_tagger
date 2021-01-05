@@ -10,9 +10,6 @@
 [submodule "ensemble_sample_repo"]
 	path = ensemble_sample_repo
 	url = https://github.com/SCANL/ensemble_sample_repo.git
-[submodule "cpp-subprocess"]
-	path = cpp-subprocess
-	url = https://github.com/arun11299/cpp-subprocess.git
 [submodule "HTTPRequest"]
 	path = HTTPRequest
 	url = https://github.com/elnormous/HTTPRequest.git
