@@ -1,3 +1,9 @@
+import logging
+root_logger = logging.getLogger(__name__)
+root_logger.setLevel(logging.DEBUG)
+handler = logging.FileHandler('tagger_error.log', 'a', 'utf-8')
+root_logger.addHandler(handler)
+
 import sqlite3
 import sys
 import joblib
@@ -8,7 +14,6 @@ from spiral import ronin
 from enum import IntEnum
 from flask import Flask
 import pexpect
-
 app = Flask(__name__)
 
 stanford_process = pexpect.spawn("java -mx3g -cp '../stanford-postagger-2018-10-16/stanford-postagger.jar:' edu.stanford.nlp.tagger.maxent.MaxentTagger -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger")
@@ -16,17 +21,18 @@ stanford_process.expect("(For EOF, use Return, Ctrl-D on Unix; Enter, Ctrl-Z, En
 
 @app.route('/<identifier_type>/<identifier_name>/<identifier_context>')
 def listen(identifier_type, identifier_name, identifier_context):
-    print("CONTENTY: "+identifier_type + " "+ identifier_name+ " "+identifier_context)
+    root_logger.debug("INPUT: {ident_type} {ident_name} {ident_context}".format(ident_type=identifier_type, ident_name=identifier_name, ident_context=identifier_context))
     ensemble_input = run_external_taggers(identifier_type + ' ' + identifier_name, identifier_context)
     emsemble_input = calculate_normalized_length(ensemble_input)
     ensemble_input = add_code_context(ensemble_input,identifier_context)
     
     output = []
+    print(ensemble_input)
     for key, value in ensemble_input.items():
         result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
         #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
         #.format(identifier=(identifier_name),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
-        output.append("{word}|{prediction}".format(word=(key),prediction=result))
+        output.append("{word}|{prediction}".format(word=(key[0:]),prediction=result))
     output_str = ','.join(output)
     return str(output_str)
 
@@ -83,6 +89,7 @@ def ParseSwum(swum_output, split_identifier_name):
 
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
+        root_logger.debug("SWUM: {taggerout} {ident}".format(taggerout=swum_output, ident=split_identifier_name))
         return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
             grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
@@ -111,6 +118,7 @@ def ParsePosse(posse_output, split_identifier_name):
     
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
+        root_logger.debug("POSSE: {taggerout} {ident}".format(taggerout=posse_output, ident=split_identifier_name))
         return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
             grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
@@ -177,6 +185,7 @@ def ParseStanford(stanford_output, split_identifier_name):
 
     #Sanity check: Identifier name can't be longer than grammar pattern
     if len(split_identifier_name) != len(grammar_pattern):
+        root_logger.debug("Stanford: {taggerout} {ident}".format(taggerout=stanford_output, ident=split_identifier_name))
         return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
             grammar_pattern=' '.join(["FAILURE" for x in split_identifier_name])))
@@ -245,11 +254,14 @@ def generate_ensemble_tagger_input_format(external_tagger_outputs):
     for tagger_output in external_tagger_outputs:
         identifier, grammar_pattern = tagger_output.split(',')
         identifier_grammarPattern = zip(identifier.split(), grammar_pattern.split())
+        i = 0
         for word_gp_pair in identifier_grammarPattern:
-            if word_gp_pair[0] in ensemble_input:
-                ensemble_input[word_gp_pair[0]].append(word_gp_pair[1])
+            if word_gp_pair[0]+str(i) in ensemble_input:
+                ensemble_input[word_gp_pair[0]+str(i)].append(word_gp_pair[1])
             else:
-                ensemble_input[word_gp_pair[0]] = [word_gp_pair[1]]
+                ensemble_input[word_gp_pair[0]+str(i)] = [word_gp_pair[1]]
+            i = i + 1
+    root_logger.debug("Final ensemble input: {identifierDat}".format(identifierDat=ensemble_input))
     return ensemble_input
         
 
@@ -260,6 +272,7 @@ def run_external_taggers(identifier_data, type_of_identifier):
     external_tagger_outputs.append(process_identifier_with_swum(identifier_data, type_of_identifier))
     external_tagger_outputs.append(process_identifier_with_posse(identifier_data, type_of_identifier))
     external_tagger_outputs.append(process_identifier_with_stanford(identifier_data, type_of_identifier))
+    root_logger.debug("raw ensemble input: {identifierDat}".format(identifierDat=external_tagger_outputs))
     return generate_ensemble_tagger_input_format(external_tagger_outputs)
 
 def categorize(key_swum, key_posse, key_stanford):
