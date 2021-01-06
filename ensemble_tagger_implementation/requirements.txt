@@ -4,3 +4,4 @@ scikit-learn==0.23.2
 Matplotlib
 SciPy
 imblearn
+Flask
