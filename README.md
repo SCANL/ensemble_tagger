@@ -66,7 +66,7 @@ This is where the C++ script comes in. You can run this script using the followi
 
     ./bin/grabidentifiers {srcML file name}
 
-This will run the program that automatically queries the route above using all identifiers in the srcml file.
+This will run the program that automatically queries the route above using all identifiers in the srcml file. **Make sure the server is running before you run the C++ script**. Otherwise, it won't be able to communicate with the server.
 
 ## Configure the script
 ### Choose a model
