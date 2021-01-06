@@ -4,6 +4,11 @@
 # Ensemble tagger 
 This the official release of the SCANL ensemble part-of-speech tagger.
 
+## Cloning the repo
+Please clone recursive since we are currently using submodules. This may change in the future.
+
+	git clone --recursive https://github.com/SCANL/ensemble_tagger.git
+
 ## Setup and Run
 You will need **python3** installed. We will explicitly use the **python3** command below but, of course, if your environment is configured to use python3 by default, you do not need to. We have also only tested this on **Ubuntu 18**. It most likely works on all recent versions of Ubuntu, but we cannot guarantee it will work in other environments.
 
