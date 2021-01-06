@@ -22,11 +22,10 @@ stanford_process.expect("(For EOF, use Return, Ctrl-D on Unix; Enter, Ctrl-Z, En
 def listen(identifier_type, identifier_name, identifier_context):
     root_logger.debug("INPUT: {ident_type} {ident_name} {ident_context}".format(ident_type=identifier_type, ident_name=identifier_name, ident_context=identifier_context))
     ensemble_input = run_external_taggers(identifier_type + ' ' + identifier_name, identifier_context)
-    emsemble_input = calculate_normalized_length(ensemble_input)
+    ensemble_input = calculate_normalized_length(ensemble_input)
     ensemble_input = add_code_context(ensemble_input,identifier_context)
     
     output = []
-    print(ensemble_input)
     for key, value in ensemble_input.items():
         result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
         #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
