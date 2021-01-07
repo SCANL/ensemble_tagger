@@ -51,8 +51,7 @@ def getIdentifierType(id_type):
    if id_type in IDENTIFIER_TYPE:
         return IDENTIFIER_TYPE[id_type]
    else:
-        print("ERROR")
-        sys.exit()
+        raise Exception("CONTEXT {context} NOT FOUND".format(context=id_type))
 swum_pos_dictionary = {
     "VI":"V",
     "NI":"N",
@@ -341,7 +340,10 @@ def calculate_normalized_length(ensemble_input):
 
 def add_code_context(ensemble_input, context):
     for key, value in ensemble_input.items():
-        ensemble_input[key].append(getIdentifierType(context))
+        try:
+            ensemble_input[key].append(getIdentifierType(context))
+        except Exception as context_exception:
+            raise context_exception
     return ensemble_input
 
 #read_from_cmd_line()
