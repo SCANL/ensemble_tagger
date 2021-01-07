@@ -27,7 +27,7 @@ To compile the C++ script, do the following in the root (i.e., ensemble_tagger) 
 - cmake ..
 - make (consider using -j3 to make it go faster)
 
-Once it is compiled, you should have an executable in the buil/bin folder. 
+Once it is compiled, you should have an executable in the build/bin folder. 
 
 Before running the python server, you need to install required modules. To download all of the required modules, use:
 
