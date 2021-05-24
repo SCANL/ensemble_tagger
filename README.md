@@ -1,7 +1,7 @@
 
 
 
-# Ensemble tagger 
+# SCANL Ensemble tagger 
 This the official release of the SCANL ensemble part-of-speech tagger.
 
 ## Cloning the repo
