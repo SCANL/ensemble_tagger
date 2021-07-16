@@ -81,3 +81,12 @@ You will also need to comment/uncomment the tagsets at the top depending on whic
 
 ## Errors?
 Please make an issue if you run into errors
+
+# Please Cite the Paper!
+(COMING SOON)
+
+# Training set
+The data used to train this tagger can be found here: https://github.com/SCANL/datasets/tree/master/ensemble_tagger_training_data
+
+# Interested in our other work?
+Find our other research here: https://www.scanl.org/
