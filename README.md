@@ -83,7 +83,7 @@ You will also need to comment/uncomment the tagsets at the top depending on whic
 Please make an issue if you run into errors
 
 # Please Cite the Paper!
-(COMING SOON)
+1. C.  D.  Newman,  M.  J.  Decker,  R.  S.  AlSuhaibani,  A.  Peruma,  S.  Mohapatra,  T.  Vishoi, M. Zampieri, M. W. Mkaouer, T. J. Sheldon, and E. Hill, “An ensemble approach for annotating source code identifiers with part-of-speech tags,” Transactions  on  Software  Engineering, Accepted July 2021.
 
 # Training set
 The data used to train this tagger can be found here: https://github.com/SCANL/datasets/tree/master/ensemble_tagger_training_data
