@@ -12,6 +12,8 @@ Please clone recursive since we are currently using submodules. This may change 
 ## Setup and Run
 You will need **python3** installed. We will explicitly use the **python3** command below but, of course, if your environment is configured to use python3 by default, you do not need to. We have also only tested this on **Ubuntu 18**. It most likely works on all recent versions of Ubuntu, but we cannot guarantee it will work in other environments.
 
+**If you are on Windows, the tagger has been confirmed to work on [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)**
+
 You will also need to install **JDK 15** or later.
 
 The tagger is split into two parts: 
