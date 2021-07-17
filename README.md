@@ -35,7 +35,7 @@ Once it is compiled, you should have an executable in the build/bin folder.
 
 Before running the python server, you need to install required modules. To download all of the required modules, use:
 
-    pip3 install -r requirements.txt
+    sudo pip3 install -r requirements.txt
 
 You will then need to configure flask, so that it knows how to run the server:
 
@@ -51,7 +51,7 @@ Finally, you need to install Spiral, which we use for identifier splitting:
 
     sudo pip3 install git+https://github.com/casics/spiral.git
 
-Once it is all installed, you should be able to run the server:
+Once it is all installed, you should be able to run the server (you may need to go into the ``ensemble_tagger_implementation`` directory before you do the following comamand):
 
     flask run
 
