@@ -70,7 +70,9 @@ Where "code context" is one of:
 - DECLARATION
 - PARAMETER
 
-This is where the C++ script comes in. You can run this script using the following command, assuming you're in the build folder:
+For example: ``http://127.0.0.1:5000/int/numberArray/DECLARATION``
+
+You can use HTTP to interact with the server and get part-of-speech annotations. This is where the C++ script comes in. You can run this script using the following command, assuming you're in the build folder:
 
     ./bin/grabidentifiers {srcML file name}
 
