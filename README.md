@@ -26,14 +26,14 @@ The tagger is split into two parts:
 2. A Python Flask server that listens to a port for input on a specific route. Once it receives input in the form of an identifier, it runs three external taggers: SWUM, POSSE, and Stanford tagger. It then takes the output of these taggers and feeds it into a machine learning algorithm which decides the final POS tag for each word. 
 
 Before compiling the C++ script, you need to install:
-- Cmake (tested on 3.5)
-- libxml2-dev
+- Cmake (tested on 3.5) - ``sudo apt install cmake``
+- libxml2-dev - ``sudo apt install libxml2-dev``
 
 To compile the C++ script, do the following in the root (i.e., ensemble_tagger) directory:
-- mkdir build
-- cd build
-- cmake ..
-- make (consider using -j3 to make it go faster)
+- ``mkdir build``
+- ``cd build``
+- ``cmake ..``
+- ``make -j3`` (-j3 to make it go faster)
 
 Once it is compiled, you should have an executable in the build/bin folder. 
 
