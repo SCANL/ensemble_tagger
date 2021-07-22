@@ -3,6 +3,6 @@ pandas
 scikit-learn==0.23.2
 Matplotlib
 SciPy
-imblearn
+imbalanced-learn==0.7.0
 Flask
 pexpect
