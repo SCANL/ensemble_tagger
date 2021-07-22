@@ -14,7 +14,11 @@ You will need **python3** installed. We will explicitly use the **python3** comm
 
 **If you are on Windows, the tagger has been confirmed to work on Ubuntu via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)**
 
-You will also need to install **JDK 15** or later.
+You will also need to install **JDK 15** or later. This page can help - https://www.linuxuprising.com/2020/09/how-to-install-oracle-java-15-on-ubuntu.html
+
+You'll need to install pip3:
+
+``sudo apt-get install python3-pip``
 
 The tagger is split into two parts: 
 1. A C++ script which SAX parses a srcML archive and sends identifier names, along with other sorts of static information, to the python script via RESTful HTTP.
