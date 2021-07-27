@@ -78,6 +78,8 @@ You can use HTTP to interact with the server and get part-of-speech annotations.
 
 This will run the program that automatically queries the route above using all identifiers in the srcml file. **Make sure the server is running before you run the C++ script**. Otherwise, it won't be able to communicate with the server.
 
+If you are unfamiliar with srcML, [check it out](https://www.srcml.org/). Since the actual tagger is a web server, you don't have to use srcML. You could always use other AST-based code representations. If you do, you should ignore the C++ script.
+
 ## Configure the script
 ### Choose a model
 You can configure the yourself by commenting out various parts of it and uncommenting others. There is a comment after each .pkl file, telling you which configuration each model represents. Uncomment the one you want to run, comment the ones you don't want to run. The code looks like this:
