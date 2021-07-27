@@ -70,7 +70,13 @@ Where "code context" is one of:
 - DECLARATION
 - PARAMETER
 
-For example: ``http://127.0.0.1:5000/int/numberArray/DECLARATION``
+For example:
+
+Tag a declaration: ``http://127.0.0.1:5000/int/numberArray/DECLARATION``
+
+Tag a function: ``http://127.0.0.1:5000/int/GetNumberArray(int* begin, int* end)/FUNCTION``
+
+Tag an class: ``http://127.0.0.1:5000/class/PersonRecord/CLASS``
 
 You can use HTTP to interact with the server and get part-of-speech annotations. This is where the C++ script comes in. You can run this script using the following command, assuming you're in the build folder:
 
@@ -78,7 +84,7 @@ You can use HTTP to interact with the server and get part-of-speech annotations.
 
 This will run the program that automatically queries the route above using all identifiers in the srcml file. **Make sure the server is running before you run the C++ script**. Otherwise, it won't be able to communicate with the server.
 
-If you are unfamiliar with srcML, [check it out](https://www.srcml.org/). Since the actual tagger is a web server, you don't have to use srcML. You could always use other AST-based code representations. If you do, you should ignore the C++ script.
+If you are unfamiliar with srcML, [check it out](https://www.srcml.org/). Since the actual tagger is a web server, you don't have to use srcML. You could always use other AST-based code representations, or any other method of obtaining identifier information. If you decide not to use srcML, you should ignore the C++ script.
 
 ## Configure the script
 ### Choose a model
