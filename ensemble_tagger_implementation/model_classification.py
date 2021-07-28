@@ -1,3 +1,4 @@
+from ensemble_tagger.ensemble_tagger_implementation.tagset_maps import swum_pos_dictionary, posse_pos_dictionary, stanford_pos_dictionary
 import logging
 root_logger = logging.getLogger(__name__)
 root_logger.setLevel(logging.DEBUG)
@@ -11,28 +12,10 @@ import subprocess
 import re
 from spiral import ronin
 from enum import IntEnum
-from flask import Flask
 import pexpect
-app = Flask(__name__)
 
 stanford_process = pexpect.spawn("java -mx3g -cp '../stanford-postagger-2018-10-16/stanford-postagger.jar:' edu.stanford.nlp.tagger.maxent.MaxentTagger -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger")
 stanford_process.expect("(For EOF, use Return, Ctrl-D on Unix; Enter, Ctrl-Z, Enter on Windows.)")
-
-@app.route('/<identifier_type>/<identifier_name>/<identifier_context>')
-def listen(identifier_type, identifier_name, identifier_context):
-    root_logger.debug("INPUT: {ident_type} {ident_name} {ident_context}".format(ident_type=identifier_type, ident_name=identifier_name, ident_context=identifier_context))
-    ensemble_input = run_external_taggers(identifier_type + ' ' + identifier_name, identifier_context)
-    ensemble_input = calculate_normalized_length(ensemble_input)
-    ensemble_input = add_code_context(ensemble_input,identifier_context)
-    
-    output = []
-    for key, value in ensemble_input.items():
-        result = annotate_word(value[0], value[1], value[2], value[3], value[4].value)
-        #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
-        #.format(identifier=(identifier_name),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
-        output.append("{word}|{prediction}".format(word=(key[:-1]),prediction=result))
-    output_str = ','.join(output)
-    return str(output_str)
 
 class CODE_CONTEXT(IntEnum):
     ATTRIBUTE = 1
@@ -41,7 +24,7 @@ class CODE_CONTEXT(IntEnum):
     FUNCTION = 4
     PARAMETER = 5
 
-def getIdentifierType(id_type):
+def get_identifier_context(id_type):
    IDENTIFIER_TYPE = {}
    IDENTIFIER_TYPE['ATTRIBUTE'] = CODE_CONTEXT.ATTRIBUTE
    IDENTIFIER_TYPE['CLASS'] = CODE_CONTEXT.CLASS
@@ -52,23 +35,33 @@ def getIdentifierType(id_type):
         return IDENTIFIER_TYPE[id_type]
    else:
         raise Exception("CONTEXT {context} NOT FOUND".format(context=id_type))
-swum_pos_dictionary = {
-    "VI":"V",
-    "NI":"N",
-    "PP":"P",
-    "CJ":"CJ",
-    "D":"D",
-    "DT":"DT",
-    "N":"N",
-    "NM":"NM",
-    "V":"V",
-    "VM":"VM",
-    "V3PS":"V",
-    "NPL":"NPL",
-    "PR":"PR",
-    "P":"P"
-}
 
+def split_raw_identifier(identifier_data):
+    if '(' in identifier_data: 
+        identifier_data = identifier_data.split('(')[0]
+    identifier_type_and_name = identifier_data.split()
+    if len(identifier_type_and_name) < 2: 
+        raise Exception("Malformed identifier")
+    return identifier_type_and_name
+def calculate_normalized_length(ensemble_input):
+    i = 0
+    for key, value in ensemble_input.items():
+        if i == 0:
+            ensemble_input[key].append(0)
+        elif i > 0 and i < (len(ensemble_input)-1):
+            ensemble_input[key].append(1)
+        else:
+            ensemble_input[key].append(2)
+        i = i + 1
+    return ensemble_input
+
+def add_code_context(ensemble_input, context):
+    for key, value in ensemble_input.items():
+        try:
+            ensemble_input[key].append(get_identifier_context(context))
+        except Exception as context_exception:
+            raise context_exception
+    return ensemble_input
 
 def ParseSwum(swum_output, split_identifier_name):
     code_context = swum_output.split('#')
@@ -98,12 +91,6 @@ def ParseSwum(swum_output, split_identifier_name):
     
     return swum_output
 
-posse_pos_dictionary = {
-    "verb":"V",
-    "noun":"N",
-    "closedlist":"P",
-    "adjective":"NM",
-}
 def ParsePosse(posse_output, split_identifier_name):
     grammar_pattern = []
     raw_grammar_pattern = re.findall(':([A-Z-a-z]+)', posse_output)
@@ -123,48 +110,6 @@ def ParsePosse(posse_output, split_identifier_name):
     return("{identifier_names},{grammar_pattern}"
           .format(identifier_names=' '.join(split_identifier_name), 
             grammar_pattern=' '.join(grammar_pattern)))
-
-stanford_pos_dictionary = {
-"CC":"CJ",
-"CD":"D",
-"DT":"DT",
-"EX":"N",
-"FW":"N",
-"IN":"P",
-"JJ":"NM",
-"JJR":"NM",
-"JJS":"NM",
-"LS":"N",
-"MD":"V",
-"NN":"N",
-"NNS":"NPL",
-"NNP":"N",
-"NNPS":"NPL",
-"PDT":"DT",
-"POS":"N",
-"PRP":"P",
-"PRP":"P",
-"RB":"VM",
-"RBR":"VM",
-"RBS":"VM",
-"RP":"N",
-"SYM":"N",
-"TO":"P",
-"UH":"N",
-"VB":"V",
-"WDT":"DT",
-"WP":"P",
-"WP,":"P",
-"WRB":"VM"
-}
-
-def split_raw_identifier(identifier_data):
-    if '(' in identifier_data: 
-        identifier_data = identifier_data.split('(')[0]
-    identifier_type_and_name = identifier_data.split()
-    if len(identifier_type_and_name) < 2: 
-        raise Exception("Malformed identifier")
-    return identifier_type_and_name
 
 def ParseStanford(stanford_output, split_identifier_name):
     grammar_pattern = []
@@ -193,12 +138,12 @@ def ParseStanford(stanford_output, split_identifier_name):
 
 
 
-def process_identifier_with_swum(identifier_data, type_of_identifier):
+def process_identifier_with_swum(identifier_data, context_of_identifier):
     #format identifier string in preparation to send it to SWUM
     identifier_type_and_name = split_raw_identifier(identifier_data)
     split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
     split_identifier_name = '_'.join(ronin.split(identifier_type_and_name[1]))
-    if getIdentifierType(type_of_identifier) != CODE_CONTEXT.FUNCTION:
+    if get_identifier_context(context_of_identifier) != CODE_CONTEXT.FUNCTION:
         swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
@@ -210,13 +155,13 @@ def process_identifier_with_swum(identifier_data, type_of_identifier):
     swum_parsed_out = ParseSwum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
     return swum_parsed_out
 
-def process_identifier_with_posse(identifier_data, type_of_identifier):
+def process_identifier_with_posse(identifier_data, context_of_identifier):
     #format identifier string in preparation to send it to POSSE
     identifier_type_and_name = split_raw_identifier(identifier_data)
     split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
     split_identifier_name = ' '.join(split_identifier_name_raw)
     posse_string = "{data} | {identifier_name}".format(data = identifier_data, identifier_name = split_identifier_name)
-    type_value = getIdentifierType(type_of_identifier)
+    type_value = get_identifier_context(context_of_identifier)
     if any([type_value == x for x in [CODE_CONTEXT.DECLARATION, CODE_CONTEXT.ATTRIBUTE, CODE_CONTEXT.PARAMETER]]):
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'A', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     elif type_value == CODE_CONTEXT.CLASS:
@@ -228,11 +173,11 @@ def process_identifier_with_posse(identifier_data, type_of_identifier):
     posse_out_parsed = ParsePosse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
     return posse_out_parsed
 
-def process_identifier_with_stanford(identifier_data, type_of_identifier):
+def process_identifier_with_stanford(identifier_data, context_of_identifier):
     identifier_type_and_name = identifier_data.split()
     identifier_type_and_name = split_raw_identifier(identifier_data)
     split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
-    if getIdentifierType(type_of_identifier) != CODE_CONTEXT.FUNCTION:
+    if get_identifier_context(context_of_identifier) != CODE_CONTEXT.FUNCTION:
         split_identifier_name = "{identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
     else:
         split_identifier_name = "I {identifier_name}".format(identifier_name=' '.join(split_identifier_name_raw))
@@ -260,12 +205,12 @@ def generate_ensemble_tagger_input_format(external_tagger_outputs):
         
 
     
-def run_external_taggers(identifier_data, type_of_identifier):
+def run_external_taggers(identifier_data, context_of_identifier):
     external_tagger_outputs = []
     #split and process identifier data into external tagger outputs
-    external_tagger_outputs.append(process_identifier_with_swum(identifier_data, type_of_identifier))
-    external_tagger_outputs.append(process_identifier_with_posse(identifier_data, type_of_identifier))
-    external_tagger_outputs.append(process_identifier_with_stanford(identifier_data, type_of_identifier))
+    external_tagger_outputs.append(process_identifier_with_swum(identifier_data, context_of_identifier))
+    external_tagger_outputs.append(process_identifier_with_posse(identifier_data, context_of_identifier))
+    external_tagger_outputs.append(process_identifier_with_stanford(identifier_data, context_of_identifier))
     root_logger.debug("raw ensemble input: {identifierDat}".format(identifierDat=external_tagger_outputs))
     return generate_ensemble_tagger_input_format(external_tagger_outputs)
 
@@ -325,25 +270,5 @@ def annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_con
     clf = joblib.load(input_model)
     y_pred = clf.predict(df_features)
     return (y_pred[0])
-
-def calculate_normalized_length(ensemble_input):
-    i = 0
-    for key, value in ensemble_input.items():
-        if i == 0:
-            ensemble_input[key].append(0)
-        elif i > 0 and i < (len(ensemble_input)-1):
-            ensemble_input[key].append(1)
-        else:
-            ensemble_input[key].append(2)
-        i = i + 1
-    return ensemble_input
-
-def add_code_context(ensemble_input, context):
-    for key, value in ensemble_input.items():
-        try:
-            ensemble_input[key].append(getIdentifierType(context))
-        except Exception as context_exception:
-            raise context_exception
-    return ensemble_input
 
 #read_from_cmd_line()
