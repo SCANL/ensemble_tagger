@@ -1,5 +1,6 @@
-import unittest
-from model_classification import calculate_normalized_length, add_code_context, generate_ensemble_tagger_input_format
+from model_classification import annotate_word
+import unittest, csv
+from model_classification import calculate_normalized_length, add_code_context, generate_ensemble_tagger_input_format, root_logger
 from model_classification import CODE_CONTEXT
 class TestNormalizeLength(unittest.TestCase):
     def setUp(self):
@@ -52,6 +53,25 @@ class TestGenerateEnsembleTaggerInputFormat(unittest.TestCase):
     def test_generate_input_format_with_failure(self):
         processed_input = generate_ensemble_tagger_input_format(self.raw_input)
         self.assertEqual({'Get0': ['V', 'FAILURE', 'VBP'], 'Identifier1': ['N', 'FAILURE', 'N']},processed_input)
+
+class TestTaggerAccuracy(unittest.TestCase):
+    def setUp(self):
+        self.tagged_identifier_list = []
+        with open('test_data/testing_set_CP.csv', newline='') as csvfile:
+            pos_reader = csv.DictReader(csvfile, quotechar='"')
+            for row in pos_reader:
+                identifier = row['IDENTIFIER']
+                stanford_pos = row['STANFORD']
+                swum_pos = row ['SWUM']
+                posse_pos = row ['POSSE']
+                normalized_position = row['NORMALIZED_POSITION']
+                context = row['CONTEXT']
+                expected = row['PREDICTION']
+                self.tagged_identifier_list.append([identifier, swum_pos, posse_pos, stanford_pos, normalized_position, context, expected])
+    def test_generate_input_format_with_failure(self):
+        for tagged_identifier in self.tagged_identifier_list:
+            prediction = annotate_word(tagged_identifier[1], tagged_identifier[2], tagged_identifier[3], int(tagged_identifier[4]), int(tagged_identifier[5]))
+            self.assertEqual(prediction, tagged_identifier[6])
 
 if __name__ == '__main__':
     unittest.main()
