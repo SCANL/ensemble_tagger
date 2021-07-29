@@ -1,4 +1,4 @@
-from ensemble_tagger.ensemble_tagger_implementation.tagset_maps import swum_pos_dictionary, posse_pos_dictionary, stanford_pos_dictionary
+from tagset_maps import swum_pos_dictionary, posse_pos_dictionary, stanford_pos_dictionary
 import logging
 root_logger = logging.getLogger(__name__)
 root_logger.setLevel(logging.DEBUG)

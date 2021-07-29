@@ -1,4 +1,4 @@
-from ensemble_tagger.ensemble_tagger_implementation.model_classification import annotate_word, add_code_context, calculate_normalized_length, run_external_taggers, root_logger
+from model_classification import annotate_word, add_code_context, calculate_normalized_length, run_external_taggers, root_logger
 from flask import Flask
 
 app = Flask(__name__)
