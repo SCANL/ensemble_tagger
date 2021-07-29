@@ -4,7 +4,7 @@ from preprocess_identifiers import Parse_posse, Parse_stanford, Parse_swum, Spli
 import logging
 root_logger = logging.getLogger(__name__)
 root_logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler('tagger_error.log', 'w', 'utf-8')
+handler = logging.FileHandler('tagger_error.log', 'a', 'utf-8')
 root_logger.addHandler(handler)
 import joblib
 import pandas as pd

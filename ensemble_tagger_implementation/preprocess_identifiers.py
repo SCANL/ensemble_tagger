@@ -1,7 +1,15 @@
-from tagset_maps import swum_pos_dictionary, posse_pos_dictionary, stanford_pos_dictionary
 import re
 import logging
+import yaml
 root_logger = logging.getLogger(__name__)
+
+tagger_dictionary = None
+with open("tagger_config/tagsets.yml", 'r') as stream:
+    tagger_dictionary = yaml.safe_load(stream)
+
+swum_pos_dictionary = tagger_dictionary['tagsets']['swum_tags']
+posse_pos_dictionary = tagger_dictionary['tagsets']['posse_tags']
+stanford_pos_dictionary = tagger_dictionary['tagsets']['stanford_tags']
 
 def Split_raw_identifier(identifier_data):
     if '(' in identifier_data: 
