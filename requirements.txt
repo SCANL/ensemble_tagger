@@ -6,3 +6,4 @@ SciPy
 imbalanced-learn==0.7.0
 Flask
 pexpect
+pyyaml
