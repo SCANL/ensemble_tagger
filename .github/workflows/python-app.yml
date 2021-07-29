@@ -37,4 +37,6 @@ jobs:
     - name: Test with unittest
       run: |
         cd ensemble_tagger_implementation
+        export PYTHONPATH=.
+        export PERL5LIB=./POSSE/Scripts
         python -m unittest

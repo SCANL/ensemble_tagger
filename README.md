@@ -1,6 +1,3 @@
-
-
-
 # SCANL Ensemble tagger 
 This the official release of the SCANL ensemble part-of-speech tagger.
 
@@ -39,26 +36,31 @@ Once it is compiled, you should have an executable in the build/bin folder.
 
 Before running the python server, you need to install required modules. To download all of the required modules, use:
 
-    sudo pip3 install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 
 You will then need to configure flask, so that it knows how to run the server:
 
-    export FLASK_APP=model_classification.py
+	export FLASK_APP=~/path/to/ensemble_tagger/ensemble_tagger_implementation/routes.py
+
+Configure ``PYTHONPATH`` as well:
+
+	export PYTHONPATH=~/path/to/ensemble_tagger/ensemble_tagger_implementation
 
 You will also need to configure POSSE (one of the taggers).  Do the following:
 1. Install wordnet-dev
 2. Open POSSE/Scripts/getWordNetType.sh
-3. You **MAY** need to modify this line, which is at the top of the file: `/usr/bin/wn $1 | grep "Information available for (noun|verb|adj|adv) $1" | cut -d " " -f4` by changing the path to wordnet (/usr/bin/wn) to the path on your own system. But usr/bin is the typical installation directory so it is unlikely you need to do this step.
-4. set your PERL5LIB path to point to the Scripts folder in POSSE's directory: `export PERL5LIB=/path/from/root/ensemble_tagger/POSSE/Scripts`
+3. You **MAY** need to modify this line, which is at the top of the file: ``/usr/bin/wn $1 | grep "Information available for (noun|verb|adj|adv) $1" | cut -d " " -f4`` by changing the path to wordnet (/usr/bin/wn) to the path on your own system. But usr/bin is the typical installation directory so it is unlikely you need to do this step.
+4. set your PERL5LIB path to point to the Scripts folder in POSSE's directory: ``export PERL5LIB=~/path/to/ensemble_tagger/POSSE/Scripts``
 
 Finally, you need to install Spiral, which we use for identifier splitting:
 
     sudo pip3 install git+https://github.com/casics/spiral.git
 
-Once it is all installed, you should be able to run the server (you may need to go into the ``ensemble_tagger_implementation`` directory before you do the following comamand):
+Once it is all installed, you should be able to run the server:
 
+    cd ensemble_tagger_implementation
     flask run
-
+    
 This will start the server, which will listen for identifier names sent via HTTP over the route:
 
 http://127.0.0.1:5000/{identifier_type}/{identifier_name}/{code_context}
@@ -77,6 +79,14 @@ Tag a declaration: ``http://127.0.0.1:5000/int/numberArray/DECLARATION``
 Tag a function: ``http://127.0.0.1:5000/int/GetNumberArray(int* begin, int* end)/FUNCTION``
 
 Tag an class: ``http://127.0.0.1:5000/class/PersonRecord/CLASS``
+
+**You should run the tests the validate that everything is set up at this point**
+
+Make sure you're in the ``ensemble_tagger_implementation`` directory, then run:
+```
+python -m unittest
+```
+If the tests do not pass, something above is misconfigured. Re-scan over the instructions carefully. If you can't figure out what's wrong, make an issue.
 
 You can use HTTP to interact with the server and get part-of-speech annotations. This is where the C++ script comes in. You can run this script using the following command, assuming you're in the build folder:
 
