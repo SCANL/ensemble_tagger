@@ -38,10 +38,6 @@ Before running the python server, you need to install required modules. To downl
 
 	sudo pip3 install -r requirements.txt
 
-You will then need to configure flask, so that it knows how to run the server:
-
-	export FLASK_APP=~/path/to/ensemble_tagger/ensemble_tagger_implementation/routes.py
-
 Configure ``PYTHONPATH`` as well:
 
 	export PYTHONPATH=~/path/to/ensemble_tagger/ensemble_tagger_implementation
@@ -59,8 +55,18 @@ Finally, you need to install Spiral, which we use for identifier splitting:
 Once it is all installed, you should be able to run the server:
 
     cd ensemble_tagger_implementation
-    flask run
-    
+    python3 routes.py [MODEL]
+
+Where MODEL can be:
+1. DTCP
+2. RFCP
+3. DTCA
+4. RFCA
+5. DTNP
+6. RFNP
+7. DTNA
+8. RFNA
+
 This will start the server, which will listen for identifier names sent via HTTP over the route:
 
 http://127.0.0.1:5000/{identifier_type}/{identifier_name}/{code_context}

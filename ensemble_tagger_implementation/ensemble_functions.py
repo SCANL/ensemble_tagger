@@ -6,11 +6,10 @@ root_logger = logging.getLogger(__name__)
 root_logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler('tagger_error.log', 'a', 'utf-8')
 root_logger.addHandler(handler)
-import joblib
 import pandas as pd
-import subprocess
+import sys, subprocess, joblib, pexpect
+import yaml
 from spiral import ronin
-import pexpect
 
 stanford_process = pexpect.spawn(
     """java -mx3g -cp 
@@ -95,18 +94,16 @@ def Run_external_taggers(identifier_data, context_of_identifier):
     return Generate_ensemble_tagger_input_format(external_tagger_outputs)
 
 def Annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context):
-    input_model = 'models/model_DecisionTreeClassifier_training_set_conj.pkl'        #DTCP
-    #input_model = 'models/model_RandomForestClassifier_training_set_conj.pkl'       #RFCP
-    #input_model = 'models/model_DecisionTreeClassifier_training_set_conj_other.pkl' #DTCA
-    #input_model = 'models/model_RandomForestClassifier_training_set_conj_other.pkl' #RFCA
-    #input_model = 'models/model_DecisionTreeClassifier_training_set_norm.pkl'       #DTNP
-    #input_model = 'models/model_RandomForestClassifier_training_set_norm.pkl'       #RFNP
-    #input_model = 'models/model_DecisionTreeClassifier_training_set_norm_other.pkl' #DTNA
-    #input_model = 'models/model_RandomForestClassifier_training_set_norm_other.pkl' #RFNA
-
-    # if len(sys.argv) < 2:
-    #     print("Syntax: python3 model_classification.py [model]")
-    #     quit()
+    model_dictionary = input_model = None
+    
+    #Determine whether to go with default model (DTCP) or if user selected one
+    with open("tagger_config/model_config.yml", 'r') as stream:
+        model_dictionary = yaml.safe_load(stream)
+        if len(sys.argv) < 2:
+            input_model = model_dictionary['models']['DTCP']
+        else:
+            input_model = model_dictionary['models'][sys.argv[1]]
+    
     swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag)
 
     data = {'SWUM_TAG': [swum],

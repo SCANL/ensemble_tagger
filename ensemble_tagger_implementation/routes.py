@@ -1,6 +1,6 @@
-from .ensemble_functions import Annotate_word, Run_external_taggers
-from .process_features import Calculate_normalized_length, Add_code_context
-import logging
+from ensemble_functions import Annotate_word, Run_external_taggers
+from process_features import Calculate_normalized_length, Add_code_context
+import logging, os
 root_logger = logging.getLogger(__name__)
 from flask import Flask
 
@@ -20,3 +20,22 @@ def listen(identifier_type, identifier_name, identifier_context):
         output.append("{word}|{prediction}".format(word=(key[:-1]),prediction=result))
     output_str = ','.join(output)
     return str(output_str)
+
+
+class MSG_COLORS:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+if __name__ == '__main__':
+    if 'PERL5LIB' not in os.environ or os.environ.get('PERL5LIB') == '':
+        print(f"{MSG_COLORS.WARNING}****Warning: PERL5LIB not set; accuracy of the tagger may be compromised.**** {MSG_COLORS.ENDC}")
+    if 'PYTHONPATH' not in os.environ or os.environ.get('PYTHONPATH') == '':
+        print(f"{MSG_COLORS.WARNING}***Warning: PYTHONPATH not set; if something isn't working, try setting PYTHONPATH***{MSG_COLORS.ENDC}")
+    app.run()
