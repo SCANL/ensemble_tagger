@@ -57,7 +57,7 @@ Once it is all installed, you should be able to run the server:
     cd ensemble_tagger_implementation
     python3 routes.py [MODEL]
 
-Where MODEL can be:
+Where MODEL can one of the below. ``DTCP`` is the default if you do not specify a model:
 1. DTCP
 2. RFCP
 3. DTCA
@@ -112,4 +112,4 @@ Please make an issue if you run into errors
 The data used to train this tagger can be found here: https://github.com/SCANL/datasets/tree/master/ensemble_tagger_training_data
 
 # Interested in our other work?
-Find our other research here: https://www.scanl.org/
+Find our other research [at our webpage](https://www.scanl.org/) and check out the [Identifier Name Structure Catalogue](https://github.com/SCANL/identifier_name_structure_catalogue)
