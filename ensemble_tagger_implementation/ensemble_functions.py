@@ -94,17 +94,17 @@ def Run_external_taggers(identifier_data, context_of_identifier):
     return Generate_ensemble_tagger_input_format(external_tagger_outputs)
 
 def Annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context):
-    model_dictionary = input_model = None
+    model_dictionary = input_model = swum = posse = stanford = None
     
     #Determine whether to go with default model (DTCP) or if user selected one
     with open("tagger_config/model_config.yml", 'r') as stream:
         model_dictionary = yaml.safe_load(stream)
         if len(sys.argv) < 2:
             input_model = model_dictionary['models']['DTCP']
+            swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag, 'DTCP')
         else:
             input_model = model_dictionary['models'][sys.argv[1]]
-    
-    swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag)
+            swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag, sys.argv[1])
 
     data = {'SWUM_TAG': [swum],
             'POSSE_TAG': [posse],
