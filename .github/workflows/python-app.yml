@@ -5,9 +5,11 @@ name: Python application
 
 on:
   push:
-    branches: [ main ]
+    branches:
+     - '*'
   pull_request:
-    branches: [ main ]
+    branches:
+     - '*'
 
 jobs:
   build:
@@ -35,4 +37,6 @@ jobs:
     - name: Test with unittest
       run: |
         cd ensemble_tagger_implementation
+        export PYTHONPATH=.
+        export PERL5LIB=./POSSE/Scripts
         python -m unittest

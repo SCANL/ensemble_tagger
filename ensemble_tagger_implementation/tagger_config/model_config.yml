@@ -1,0 +1,17 @@
+models:
+  DTCP:
+    'models/model_DecisionTreeClassifier_training_set_conj.pkl'
+  RFCP:
+    'models/model_RandomForestClassifier_training_set_conj.pkl'
+  DTCA:
+    'models/model_DecisionTreeClassifier_training_set_conj_other.pkl'
+  RFCA:
+    'models/model_RandomForestClassifier_training_set_conj_other.pkl'
+  DTNP:
+    'models/model_DecisionTreeClassifier_training_set_norm.pkl'
+  RFNP:
+    'models/model_RandomForestClassifier_training_set_norm.pkl' 
+  DTNA:
+    'models/model_DecisionTreeClassifier_training_set_norm_other.pkl'
+  RFNA:
+    'models/model_RandomForestClassifier_training_set_norm_other.pkl'

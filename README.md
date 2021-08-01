@@ -1,6 +1,3 @@
-
-
-
 # SCANL Ensemble tagger 
 This the official release of the SCANL ensemble part-of-speech tagger.
 
@@ -39,25 +36,36 @@ Once it is compiled, you should have an executable in the build/bin folder.
 
 Before running the python server, you need to install required modules. To download all of the required modules, use:
 
-    sudo pip3 install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 
-You will then need to configure flask, so that it knows how to run the server:
+Configure ``PYTHONPATH`` as well:
 
-    export FLASK_APP=model_classification.py
+	export PYTHONPATH=~/path/to/ensemble_tagger/ensemble_tagger_implementation
 
 You will also need to configure POSSE (one of the taggers).  Do the following:
 1. Install wordnet-dev
 2. Open POSSE/Scripts/getWordNetType.sh
-3. You **MAY** need to modify this line, which is at the top of the file: `/usr/bin/wn $1 | grep "Information available for (noun|verb|adj|adv) $1" | cut -d " " -f4` by changing the path to wordnet (/usr/bin/wn) to the path on your own system. But usr/bin is the typical installation directory so it is unlikely you need to do this step.
-4. set your PERL5LIB path to point to the Scripts folder in POSSE's directory: `export PERL5LIB=/path/from/root/ensemble_tagger/POSSE/Scripts`
+3. You **MAY** need to modify this line, which is at the top of the file: ``/usr/bin/wn $1 | grep "Information available for (noun|verb|adj|adv) $1" | cut -d " " -f4`` by changing the path to wordnet (/usr/bin/wn) to the path on your own system. But usr/bin is the typical installation directory so it is unlikely you need to do this step.
+4. set your PERL5LIB path to point to the Scripts folder in POSSE's directory: ``export PERL5LIB=~/path/to/ensemble_tagger/POSSE/Scripts``
 
 Finally, you need to install Spiral, which we use for identifier splitting:
 
     sudo pip3 install git+https://github.com/casics/spiral.git
 
-Once it is all installed, you should be able to run the server (you may need to go into the ``ensemble_tagger_implementation`` directory before you do the following comamand):
+Once it is all installed, you should be able to run the server:
 
-    flask run
+    cd ensemble_tagger_implementation
+    python3 routes.py [MODEL]
+
+Where MODEL can one of the below. ``DTCP`` is the default if you do not specify a model:
+1. DTCP
+2. RFCP
+3. DTCA
+4. RFCA
+5. DTNP
+6. RFNP
+7. DTNA
+8. RFNA
 
 This will start the server, which will listen for identifier names sent via HTTP over the route:
 
@@ -78,6 +86,14 @@ Tag a function: ``http://127.0.0.1:5000/int/GetNumberArray(int* begin, int* end)
 
 Tag an class: ``http://127.0.0.1:5000/class/PersonRecord/CLASS``
 
+**You should run the tests the validate that everything is set up at this point**
+
+Make sure you're in the ``ensemble_tagger_implementation`` directory, then run:
+```
+python -m unittest
+```
+If the tests do not pass, something above is misconfigured. Re-scan over the instructions carefully. If you can't figure out what's wrong, make an issue.
+
 You can use HTTP to interact with the server and get part-of-speech annotations. This is where the C++ script comes in. You can run this script using the following command, assuming you're in the build folder:
 
     ./bin/grabidentifiers {srcML file name}
@@ -85,15 +101,6 @@ You can use HTTP to interact with the server and get part-of-speech annotations.
 This will run the program that automatically queries the route above using all identifiers in the srcml file. **Make sure the server is running before you run the C++ script**. Otherwise, it won't be able to communicate with the server.
 
 If you are unfamiliar with srcML, [check it out](https://www.srcml.org/). Since the actual tagger is a web server, you don't have to use srcML. You could always use other AST-based code representations, or any other method of obtaining identifier information. If you decide not to use srcML, you should ignore the C++ script.
-
-## Configure the script
-### Choose a model
-You can configure the yourself by commenting out various parts of it and uncommenting others. There is a comment after each .pkl file, telling you which configuration each model represents. Uncomment the one you want to run, comment the ones you don't want to run. The code looks like this:
-
-    input_model = 'models/model_DecisionTreeClassifier_training_set_conj.pkl'  #DTCP
-
-### Choose a tagset
-You will also need to comment/uncomment the tagsets at the top depending on which model you are using.  You can look at the comment above each tagset to see which two configurations each one should be used for. Each tagset is used for one decision tree configuration and one random forest configuration, so two configurations in total.
 
 ## Errors?
 Please make an issue if you run into errors
@@ -105,4 +112,4 @@ Please make an issue if you run into errors
 The data used to train this tagger can be found here: https://github.com/SCANL/datasets/tree/master/ensemble_tagger_training_data
 
 # Interested in our other work?
-Find our other research here: https://www.scanl.org/
+Find our other research [at our webpage](https://www.scanl.org/) and check out the [Identifier Name Structure Catalogue](https://github.com/SCANL/identifier_name_structure_catalogue)
