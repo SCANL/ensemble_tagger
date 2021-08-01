@@ -102,15 +102,6 @@ This will run the program that automatically queries the route above using all i
 
 If you are unfamiliar with srcML, [check it out](https://www.srcml.org/). Since the actual tagger is a web server, you don't have to use srcML. You could always use other AST-based code representations, or any other method of obtaining identifier information. If you decide not to use srcML, you should ignore the C++ script.
 
-## Configure the script
-### Choose a model
-You can configure the yourself by commenting out various parts of it and uncommenting others. There is a comment after each .pkl file, telling you which configuration each model represents. Uncomment the one you want to run, comment the ones you don't want to run. The code looks like this:
-
-    input_model = 'models/model_DecisionTreeClassifier_training_set_conj.pkl'  #DTCP
-
-### Choose a tagset
-You will also need to comment/uncomment the tagsets at the top depending on which model you are using.  You can look at the comment above each tagset to see which two configurations each one should be used for. Each tagset is used for one decision tree configuration and one random forest configuration, so two configurations in total.
-
 ## Errors?
 Please make an issue if you run into errors
 
