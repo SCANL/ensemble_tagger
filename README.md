@@ -57,7 +57,7 @@ Once it is all installed, you should be able to run the server:
     cd ensemble_tagger_implementation
     python3 routes.py [MODEL]
 
-Where MODEL can one of the below. ``DTCP`` is the default if you do not specify a model:
+Where MODEL can be one of the below. ``DTCP`` is the default if you do not specify a model:
 1. DTCP
 2. RFCP
 3. DTCA
