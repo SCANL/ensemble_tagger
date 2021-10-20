@@ -38,4 +38,4 @@ if __name__ == '__main__':
         print(f"{MSG_COLORS.FAIL}**** Warning: PERL5LIB not set; accuracy of the tagger may be compromised.****{MSG_COLORS.ENDC}")
     if 'PYTHONPATH' not in os.environ or os.environ.get('PYTHONPATH') == '':
         print(f"{MSG_COLORS.FAIL}**** Warning: PYTHONPATH not set; if something isn't working, try setting PYTHONPATH****{MSG_COLORS.ENDC}")
-    app.run()
+    app.run(host='0.0.0.0')
