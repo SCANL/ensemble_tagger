@@ -1,5 +1,5 @@
 from process_features import Get_identifier_context, CODE_CONTEXT, Convert_tag_to_numeric_category
-from preprocess_identifiers import Parse_stanford, Split_raw_identifier
+from preprocess_identifiers import Parse_stanford, Parse_swum, Split_raw_identifier
 
 import logging
 root_logger = logging.getLogger(__name__)
@@ -18,6 +18,23 @@ stanford_process = pexpect.spawn(
     -model ../stanford-postagger-2018-10-16/models/english-bidirectional-distsim.tagger""")
 
 stanford_process.expect("(For EOF, use Return, Ctrl-D on Unix; Enter, Ctrl-Z, Enter on Windows.)")
+
+def Process_identifier_with_swum(identifier_data, context_of_identifier):
+    #format identifier string in preparation to send it to SWUM
+    identifier_type_and_name = Split_raw_identifier(identifier_data)
+    split_identifier_name_raw = ronin.split(identifier_type_and_name[1])
+    split_identifier_name = '_'.join(ronin.split(identifier_type_and_name[1]))
+    if Get_identifier_context(context_of_identifier) != CODE_CONTEXT.FUNCTION:
+        swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
+        swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    else:
+        split_identifier_name = split_identifier_name+'('+identifier_data.split('(')[1]
+        swum_string = " {identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
+        swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '1', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    swum_out, swum_err = swum_process.communicate()
+    swum_parsed_out = Parse_swum(swum_out.decode('utf-8').strip(), split_identifier_name_raw)
+    return swum_parsed_out
 
 def Process_identifier_with_stanford(identifier_data, context_of_identifier):
     identifier_type_and_name = identifier_data.split()
@@ -52,30 +69,32 @@ def Generate_ensemble_tagger_input_format(external_tagger_outputs):
 def Run_external_taggers(identifier_data, context_of_identifier):
     external_tagger_outputs = []
     #split and process identifier data into external tagger outputs
+    external_tagger_outputs.append(Process_identifier_with_swum(identifier_data, context_of_identifier))
     external_tagger_outputs.append(Process_identifier_with_stanford(identifier_data, context_of_identifier))
     root_logger.debug("raw ensemble input: {identifierDat}".format(identifierDat=external_tagger_outputs))
     return Generate_ensemble_tagger_input_format(external_tagger_outputs)
 
-def Annotate_word(swum_tag, posse_tag, stanford_tag, normalized_length, code_context):
-    model_dictionary = input_model = swum = posse = stanford = None
+def Annotate_word(swum_tag, stanford_tag, normalized_length, code_context):
+    model_dictionary = input_model = swum = stanford = None
     
     #Determine whether to go with default model (DTCP) or if user selected one
     with open("tagger_config/model_config.yml", 'r') as stream:
         model_dictionary = yaml.safe_load(stream)
         if len(sys.argv) < 2:
             input_model = model_dictionary['models']['DTCP']
-            swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag, 'DTCP')
+            swum, stanford = Convert_tag_to_numeric_category(swum_tag, stanford_tag, 'DTCP')
         else:
             input_model = model_dictionary['models'][sys.argv[1]]
-            swum, posse, stanford = Convert_tag_to_numeric_category(swum_tag, posse_tag, stanford_tag, sys.argv[1])
+            swum, stanford = Convert_tag_to_numeric_category(swum_tag, stanford_tag, sys.argv[1])
 
-    data = {'STANFORD_TAG': [stanford],
-            'NORMALIZED_POSITION': [normalized_length],
-            'CONTEXT': [code_context]
+    data = {'NORMALIZED_POSITION': [normalized_length],
+            'CONTEXT': [code_context],
+            'STANFORD_TAG': [stanford],
+            'SWUM_TAG': [swum],
             }
 
     df_features = pd.DataFrame(data,
-                               columns=['STANFORD_TAG', 'NORMALIZED_POSITION', 'CONTEXT'])
+                               columns=['NORMALIZED_POSITION', 'CONTEXT', 'STANFORD_TAG', 'SWUM_TAG'])
 
     clf = joblib.load(input_model)
     y_pred = clf.predict(df_features)

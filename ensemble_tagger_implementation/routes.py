@@ -14,7 +14,7 @@ def listen(identifier_type, identifier_name, identifier_context):
     
     output = []
     for key, value in ensemble_input.items():
-        result = Annotate_word(value[0], value[1], value[2], value[3], value[4].value)
+        result = Annotate_word(value[0], value[1], value[2], value[3].value)
         #output.append("{identifier},{word},{swum},{posse},{stanford},{prediction}"
         #.format(identifier=(identifier_name),word=(key),swum=value[0], posse=value[1], stanford=value[2], prediction=result))
         output.append("{word}|{prediction}".format(word=(key[:-1]),prediction=result))
