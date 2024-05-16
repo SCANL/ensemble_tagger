@@ -7,15 +7,16 @@
 
 import csv
 import requests
+import re
 
 with open('names_for_tagger.csv', 'rt') as dataset:
-    dataset_rows = csv.reader(dataset)
+    dataset_rows = csv.reader(dataset, dialect='excel')
 
     for line in dataset_rows:
         identifier_type = line[0]
         identifier_name = line[1]
         identifier_context = line[2]
-        
+        identifier_type = re.sub(r'[^a-zA-Z0-9]', '', identifier_type) 
         try:
             r = requests.get(f'http://127.0.0.1:5000/{identifier_type}/{identifier_name}/{identifier_context}')
             print (r.text)

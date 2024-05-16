@@ -28,7 +28,9 @@ def Process_identifier_with_swum(identifier_data, context_of_identifier):
         swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
-        split_identifier_name = split_identifier_name+'('+identifier_data.split('(')[1]
+        split_identifier_name = split_identifier_name+'()'
+        print("NAME\n")
+        print(split_identifier_name)
         swum_string = " {identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '1', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
@@ -49,8 +51,9 @@ def Process_identifier_with_posse(identifier_data, context_of_identifier):
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'C', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         posse_process = subprocess.Popen(['../POSSE/Scripts/mainParser.pl', 'M', posse_string], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    
+   
     posse_out, posse_err = posse_process.communicate()
+    print(posse_err.decode('utf-8').strip())
     posse_out_parsed = Parse_posse(posse_out.decode('utf-8').strip(), split_identifier_name_raw)
     return posse_out_parsed
 

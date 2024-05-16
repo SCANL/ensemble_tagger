@@ -26,6 +26,8 @@ def Parse_swum(swum_output, split_identifier_name):
         identifier = code_context[1].split('-')[1].split()
         raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
     else:
+        print("CONTEXT\n")
+        print(code_context)
         identifier = code_context[1].split('@')[1].split('|')
         raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
     
