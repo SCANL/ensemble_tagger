@@ -20,13 +20,14 @@ def Split_raw_identifier(identifier_data):
     return identifier_type_and_name
 
 def Parse_swum(swum_output, split_identifier_name):
-    code_context = swum_output.split('#')
+    code_context = swum_output.split(':')
+    print(code_context)
     raw_grammar_pattern = grammar_pattern = identifier = []
     if code_context[0] == 'FIELD':
-        identifier = code_context[1].split('-')[1].split()
+        identifier = code_context[2].split('-')[1].split()
         raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
     else:
-        identifier = code_context[1].split('@')[1].split('|')
+        identifier = code_context[3].split('|')
         raw_grammar_pattern = re.findall('([A-Z]+)', ' '.join(identifier))
     
     for pos in raw_grammar_pattern:

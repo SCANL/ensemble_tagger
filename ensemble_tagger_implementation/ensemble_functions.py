@@ -26,6 +26,7 @@ def Process_identifier_with_swum(identifier_data, context_of_identifier):
     split_identifier_name = '_'.join(ronin.split(identifier_type_and_name[1]))
     if Get_identifier_context(context_of_identifier) != CODE_CONTEXT.FUNCTION:
         swum_string = "{identifier_type} {identifier_name}".format(identifier_name = split_identifier_name, identifier_type = identifier_type_and_name[0])
+        print(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'])
         swum_process = subprocess.Popen(['java', '-jar', '../SWUM/SWUM_POS/swum.jar', swum_string, '2', 'true'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     else:
         split_identifier_name = split_identifier_name+'('+identifier_data.split('(')[1]
